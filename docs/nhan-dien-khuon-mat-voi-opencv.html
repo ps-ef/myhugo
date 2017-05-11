@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="https://imlinh.com/images/logo.jpg">
+<meta name="generator" content="Hugo 0.20.2" />
+
+
+    <title>Nhận diện khuôn mặt với OpenCV - Im Linh</title>
+    <meta property="og:title" content="Nhận diện khuôn mặt với OpenCV - Im Linh">
+    <meta property="og:site_name" content="Im Linh" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Những đặc điểm như hình dáng khuôn mặt,mắt,mũi,miệng liệu đã đủ để máy tính nhận diện khuôn mặt? Làm thế nào để giúp máy tính thực hiện được việc đó..." />
+    <meta property="og:url" content="https://imlinh.com/nhan-dien-khuon-mat-voi-opencv.html" />
+    <meta property="article:published_time" content="2017-04-05T01:29:00Z" />
+    
+
+    <meta property="article:publisher" content="https://facebook.com/tanlinh.nd" />
+    <meta property="article:author" content="https://facebook.com/tanlinh.nd" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Nhận diện khuôn mặt với OpenCV - Im Linh" />
+    <meta name="twitter:description" content="Những đặc điểm như hình dáng khuôn mặt,mắt,mũi,miệng liệu đã đủ để máy tính nhận diện khuôn mặt? Làm thế nào để giúp máy tính thực hiện được việc đó..." />
+    <meta name="twitter:url" content="https://imlinh.com/nhan-dien-khuon-mat-voi-opencv.html" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Tan Linh" />
+    <meta name="twitter:site" content="https://twitter.com/@tanlinhnd" />
+    <meta name="twitter:creator" content="@tanlinhnd" />
+
+
+
+  
+    <meta property="description" content="Những đặc điểm như hình dáng khuôn mặt,mắt,mũi,miệng liệu đã đủ để máy tính nhận diện khuôn mặt? Làm thế nào để giúp máy tính thực hiện được việc đó...">
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://imlinh.com/css/main.css" media="all">
+<link rel="stylesheet" href="https://imlinh.com/css/font-awesome.min.css" media="all">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://imlinh.com/" class="nav-logo">
+    <img src="https://imlinh.com/images/logo.jpg" 
+         width="50" 
+         height="50" 
+         alt="Im Linh">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/tag/golang">Golang</a></li>
+    
+    <li><a href="/tag/linh-ba-tinh">Linh ba tinh</a></li>
+    
+    <li><a href="/tag/linux">Linux</a></li>
+    
+    <li><a href="/tag/python">Python</a></li>
+    
+    <li><a href="/tag/til">TIL</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+<article class="article">
+    
+    <span class="article-duration"><i class="fa fa-clock-o"></i> 2 min read</span>
+    
+
+    <h1 class="article-title">Nhận diện khuôn mặt với OpenCV</h1>
+
+    
+    <span class="article-date"><i class="fa fa-calendar"></i> April 5, 2017</span>
+    
+
+    <div class="article-content">
+        
+
+<h2 id="giới-thiệu-opencv">Giới thiệu OpenCV</h2>
+
+<p><a href="http://opencv.org/">OpenCV (Open source Computer Vision)</a> là thư viện hàng đầu trong lĩnh vực Computer Vision (Thị giác máy tính???) được phát triển bởi Intel từ năm 1999. Hiện tại, OpenCV được phát hành miễn phí theo giấy phép BSD và do Itseez duy trì.</p>
+
+<p>Bắt đầu từ phiên bản OpenCV 2.4, lớp <code>FaceRecognizer</code> cung cấp cho người dùng cách thức nhận diện khuôn mặt(Face recognition) vô cùng đơn giản. Ở phần tiếp theo của bài viết, mình sẽ hướng dẫn cách thức triển khai thuật toán Face recognition với <code>FaceRecognizer</code> trong OpenCV cũng như cung cấp cái nhìn tổng quan về giải thuật phía sau nó, bao gồm các giải thuật sau:</p>
+
+<ul>
+<li>Eigenfaces</li>
+<li>Fisherfaces</li>
+<li>Local Binary Patterns Histograms</li>
+</ul>
+
+<h2 id="tổng-quan-về-nhận-diện-khuôn-mặt">Tổng quan về nhận diện khuôn mặt</h2>
+
+<p>Với con người, việc nhận diện hay phân biệt khuôn mặt cực kỳ đơn giản. Một đứa trẻ từ 1-3 tuổi đã có khả năng phân biệt được các khuôn mặt khác nhau mà nó từng gặp. Với máy tính, mọi việc không đơn giản như vậy. Những đặc điểm như hình dáng khuôn mặt, mắt, mũi, miệng liệu đã đủ ? David Hubel và Torsten Wiesel đã nghiên cứu về não bộ con người và đưa ra kết luận. Thay vì nhìn thế giới xung quanh như những mảnh ghép riêng biệt, phần vỏ não thị giác kết hợp các mảnh ghép đó thành một mô hình xác định để đưa ra kết quả chính xác. Với nhận diện khuôn mặt cũng vậy.</p>
+
+<p>Face recognition dựa trên các đặc điểm hình học của khuôn mặt là hướng tiếp cận trực quan nhất và được công nhận rộng rãi nhất. Nó được thực hiện như sau:</p>
+
+<ul>
+<li>Đánh dấu vị trí của những đặc điểm như mắt, mũi .v.v.</li>
+<li>Sử dụng những thông số đó để xây dựng vector đặc trưng thể hiện khoảng cách, góc giữa các đặc điểm</li>
+</ul>
+
+<p>Việc nhận diện khuôn mặt sẽ được thực hiện bằng cách tính toán các thông số của vector trên ảnh và so sánh với vector đã xây dựng từ trước.</p>
+
+<p>Hướng tiếp cận này gần như không bị ảnh hưởng bởi sự thay đổi ánh sáng. Tuy nhiên, việc xác định chính xác vị trí các điểm đánh dấu đòi hỏi những thuật toán vô cùng phức tạp. Một số công trình nghiên cứu mới chỉ ra rằng việc sử dụng các đặc điểm hình học cho kết quả không cao.</p>
+
+<p><em>To be continued&hellip;</em></p>
+
+    </div>
+    
+    <h2>Tags:</h2>
+        
+        <a href="/tag/opencv" class="tags"><i class="fa fa-hashtag"></i> OpenCV</a>
+        
+        <a href="/tag/face-recognition" class="tags"><i class="fa fa-hashtag"></i> Face recognition</a>
+        
+        <a href="/tag/python" class="tags"><i class="fa fa-hashtag"></i> Python</a>
+        
+    
+</article>
+
+</main>
+
+<footer class="footer">
+    <ul class="footer-links">
+        <li>
+            <a href="https://imlinh.com/">© 2017 Im Linh</a>
+        </li>
+        <li>
+            <a href="https://imlinh.com/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+        </li>
+        <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <i class="fa fa-heart" style="color:#D14;"></i> using <img src="https://imlinh.com/images/hugo-logo.png" width="22" height="22"></a>
+        </li>
+    </ul>
+    <ul class="footer-social">
+        <li><a href="https://github.com/tanlinhnd" target="_blank"><i class="fa fa-github"></i></a>
+        <li><a href="https://facebook.com/tanlinh.nd" target="_blank"><i class="fa fa-facebook-square"></i></a>
+        <li><a href="https://www.instagram.com/tanlinhnd/" target="_blank"><i class="fa fa-instagram"></i></a>
+    </ul>
+</footer>
+
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-75596542-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+</body>
+</html>
+
