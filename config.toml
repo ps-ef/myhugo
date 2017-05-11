@@ -6,6 +6,7 @@ googleAnalytics = "UA-75596542-1"
 disqusShortname = ""
 preserveTaxonomyNames = true
 uglyURLs = true
+publishDir = "docs"
 
 [permalinks]
     post = "/:slug/"
