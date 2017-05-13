@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="https://imlinh.com/images/logo.jpg">
+<meta name="generator" content="Hugo 0.20.1" />
+
+
+    <title>Some useful bash script - Im Linh</title>
+    <meta property="og:title" content="Some useful bash script - Im Linh">
+    <meta property="og:site_name" content="Im Linh" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Dạo này công việc động chạm nhiều đến bash shell. Mình note lại một số điều mà mình sử dụng trong quá trình làm việc. " />
+    <meta property="og:url" content="https://imlinh.com/til-some-useful-bash-script.html" />
+    <meta property="article:published_time" content="2017-05-08T16:16:30Z" />
+    
+
+    <meta property="article:publisher" content="https://facebook.com/tanlinh.nd" />
+    <meta property="article:author" content="https://facebook.com/tanlinh.nd" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Some useful bash script - Im Linh" />
+    <meta name="twitter:description" content="Dạo này công việc động chạm nhiều đến bash shell. Mình note lại một số điều mà mình sử dụng trong quá trình làm việc. " />
+    <meta name="twitter:url" content="https://imlinh.com/til-some-useful-bash-script.html" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Tan Linh" />
+    <meta name="twitter:site" content="https://twitter.com/@tanlinhnd" />
+    <meta name="twitter:creator" content="@tanlinhnd" />
+
+
+
+  
+    <meta property="description" content="Dạo này công việc động chạm nhiều đến bash shell. Mình note lại một số điều mà mình sử dụng trong quá trình làm việc. ">
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://imlinh.com/css/main.css" media="all">
+<link rel="stylesheet" href="https://imlinh.com/css/font-awesome.min.css" media="all">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://imlinh.com/" class="nav-logo">
+    <img src="https://imlinh.com/images/logo.jpg" 
+         width="50" 
+         height="50" 
+         alt="Im Linh">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/tag/golang">Golang</a></li>
+    
+    <li><a href="/tag/linh-ba-tinh">Linh ba tinh</a></li>
+    
+    <li><a href="/tag/linux">Linux</a></li>
+    
+    <li><a href="/tag/python">Python</a></li>
+    
+    <li><a href="/tag/til">TIL</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+<article class="article">
+    
+    <span class="article-duration"><i class="fa fa-clock-o"></i> 2 min read</span>
+    
+
+    <h1 class="article-title">Some useful bash script</h1>
+
+    
+    <span class="article-date"><i class="fa fa-calendar"></i> May 8, 2017</span>
+    
+
+    <div class="article-content">
+        
+
+<p>Dạo này công việc động chạm nhiều đến bash shell. Mình note lại một số điều mà mình sử dụng trong quá trình làm việc.</p>
+
+<h2 id="1-array">1. Array</h2>
+
+<p>Array[1] là kiểu dữ liệu cơ bản trong tất cả các ngôn ngữ lập trình (NNLT). Bash shell cũng hỗ trợ array và bạn có thể sử dụng bằng cách khai báo như sau:</p>
+
+<script src="https://gist.github.com/tanlinhnd/59084712a6266bffad4115ea1cd4f98a.js"></script>
+
+<p>Giống như các NNLT khác, chỉ số của mảng bắt đầu từ 0 -&gt; n. Để sử dụng mảng, các bạn theo dõi bên dưới như sau:</p>
+
+<script src="https://gist.github.com/tanlinhnd/67c329ddec924b42bfbdf0aed8f6e024.js"></script>
+
+<p>Ở đây, bạn có thể sử dụng <code>*</code> hoặc <code>@</code> để lấy toàn bộ phần tử của mảng.</p>
+
+<p>Ngoài cách sử dụng chỉ số mảng tăng dần, bạn cũng có thể khai báo mảng dạng dictionary như sau:</p>
+
+<script src="https://gist.github.com/tanlinhnd/3edb1fbdebb90f6f40cdd48fd6ece5fb.js"></script>
+
+<p>Sau khi google thì mình sử dụng dictionary như sau, khai báo và sử dụng có tí trong sáng :D</p>
+
+<script src="https://gist.github.com/tanlinhnd/dd86c3e4b99c3e2d7b043776aeb6cb0b.js"></script>
+
+<h2 id="2-variable">2. Variable <code>$?</code></h2>
+
+<p>Biến <code>$?</code> lưu trữ kết quả của command vừa được thực thi. Nếu command thực thi thành công, <code>$?</code> có giá trị là <code>0</code>, ngược lại <code>$?</code> có giá trị <code>1</code>. Mình sử dụng nó để kiểm tra việc move file sang phân vùng backup có thành công không, sau đó mới zip file nguồn. Ví dụ sau đối với trường hợp kiểm tra ping:</p>
+
+<script src="https://gist.github.com/tanlinhnd/7490d0e174f9b3c76e1ba0e7f98d3fd0.js"></script>
+
+<h2 id="3-append-text-to-end-of-line">3. Append text to end of line</h2>
+
+<p>Hàng ngày, mình có một lượng lớn dữ liệu file CDR lưu trữ dạng CSV cần làm sạch. Sếp yêu cầu thêm một trường tên file CDR vào cuối các dòng của file để kiểm soát dữ liệu bla bla. Ok im fine!</p>
+
+<p>Mình implement sử dụng vim như sau, các bạn có thể tham khảo:</p>
+
+<script src="https://gist.github.com/tanlinhnd/132757112e192e53ef47ea10ac0d0ebd.js"></script>
+
+<p>Không có gì cao siêu cả, mình dùng <code>replace</code> trong vim thôi. Hehe</p>
+
+<p>tanlinhnd, 08-05-2017</p>
+
+<h2 id="reference">Reference</h2>
+
+<p>[1] The Linux Documentation Project <em>&ldquo;Array variables&rdquo;</em> <a href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_10_02.html">Bash Guide for Beginners</a></p>
+
+    </div>
+    
+    <h2>Tags:</h2>
+        
+        <a href="/tag/til" class="tags"><i class="fa fa-hashtag"></i> TIL</a>
+        
+        <a href="/tag/linux" class="tags"><i class="fa fa-hashtag"></i> Linux</a>
+        
+        <a href="/tag/vim" class="tags"><i class="fa fa-hashtag"></i> Vim</a>
+        
+    
+</article>
+
+</main>
+
+<footer class="footer">
+    <ul class="footer-links">
+        <li>
+            <a href="https://imlinh.com/">© 2017 Im Linh</a>
+        </li>
+        <li>
+            <a href="https://imlinh.com/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+        </li>
+        <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <i class="fa fa-heart" style="color:#D14;"></i> using <img src="https://imlinh.com/images/hugo-logo.png" width="22" height="22"></a>
+        </li>
+    </ul>
+    <ul class="footer-social">
+        <li><a href="https://github.com/tanlinhnd" target="_blank"><i class="fa fa-github"></i></a>
+        <li><a href="https://facebook.com/tanlinh.nd" target="_blank"><i class="fa fa-facebook-square"></i></a>
+        <li><a href="https://www.instagram.com/tanlinhnd/" target="_blank"><i class="fa fa-instagram"></i></a>
+    </ul>
+</footer>
+
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-75596542-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+</body>
+</html>
+

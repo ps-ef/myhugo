@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tag on Im Linh</title>
+    <link>https://imlinh.com/tag.html</link>
+    <description>Recent content in Tag on Im Linh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>hi@imlinh.com (Tan Linh)</managingEditor>
+    <webMaster>hi@imlinh.com (Tan Linh)</webMaster>
+    <copyright>© 2017 Im Linh</copyright>
+    <lastBuildDate>Wed, 05 Apr 2017 01:29:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://imlinh.com/tag/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Face recognition</title>
+      <link>https://imlinh.com/tag/face-recognition.html</link>
+      <pubDate>Wed, 05 Apr 2017 01:29:00 +0000</pubDate>
+      <author>hi@imlinh.com (Tan Linh)</author>
+      <guid>https://imlinh.com/tag/face-recognition.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://imlinh.com/tag/linux.html</link>
+      <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
+      <author>hi@imlinh.com (Tan Linh)</author>
+      <guid>https://imlinh.com/tag/linux.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OpenCV</title>
+      <link>https://imlinh.com/tag/opencv.html</link>
+      <pubDate>Wed, 05 Apr 2017 01:29:00 +0000</pubDate>
+      <author>hi@imlinh.com (Tan Linh)</author>
+      <guid>https://imlinh.com/tag/opencv.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://imlinh.com/tag/python.html</link>
+      <pubDate>Wed, 05 Apr 2017 01:29:00 +0000</pubDate>
+      <author>hi@imlinh.com (Tan Linh)</author>
+      <guid>https://imlinh.com/tag/python.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TIL</title>
+      <link>https://imlinh.com/tag/til.html</link>
+      <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
+      <author>hi@imlinh.com (Tan Linh)</author>
+      <guid>https://imlinh.com/tag/til.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>https://imlinh.com/tag/vim.html</link>
+      <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
+      <author>hi@imlinh.com (Tan Linh)</author>
+      <guid>https://imlinh.com/tag/vim.html</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
