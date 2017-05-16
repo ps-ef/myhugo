@@ -25,8 +25,11 @@ publishDir = "docs"
     name = "TIL"
     url = "/tag/til"
 [[menu.main]]
-    name = "Linh ba tinh"
-    url = "/tag/linh-ba-tinh"
+    name = "Random"
+    url = "/tag/random"
+[[menu.main]]
+    name = "Friend Sites"
+    url = "/friend-sites.html"
 
 [params]
     description = "Ghi chép linh ba tinh"

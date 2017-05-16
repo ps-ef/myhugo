@@ -9,10 +9,19 @@
     <managingEditor>hi@imlinh.com (Tan Linh)</managingEditor>
     <webMaster>hi@imlinh.com (Tan Linh)</webMaster>
     <copyright>© 2017 Im Linh</copyright>
-    <lastBuildDate>Fri, 12 May 2017 21:58:31 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 16 May 2017 13:51:01 +0700</lastBuildDate>
     
 	<atom:link href="https://imlinh.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Một số blog kĩ thuật nhà hàng xóm</title>
+      <link>https://imlinh.com/friend-sites.html</link>
+      <pubDate>Tue, 16 May 2017 13:51:01 +0700</pubDate>
+      <author>hi@imlinh.com (Tan Linh)</author>
+      <guid>https://imlinh.com/friend-sites.html</guid>
+      <description> Huytd&amp;rsquo;s Blog - https://thefullsnack.com IntoIterator::repeat(☕️) - https://giangnh.me Minh Quy Blog - https://mquy.github.io Tea, Coffee &amp;amp; Code - https://trietphm.github.io Saitama&amp;rsquo;s Punch - http://hieuk09.github.io Runi Blog - http://runikitkat.com Codeaholicguy - https://codeaholicguy.com Hieu&amp;rsquo;s Blog - https://hieuhtr.github.io HQC&amp;rsquo;s Blog - https://hqc.io/essays HuyDX&amp;rsquo;s Blog - https://huydx.com Long Hoang&amp;rsquo;s Blog - https://sfzxc.github.io  </description>
+    </item>
     
     <item>
       <title>Gửi con trai Hải Đăng của ba</title>
