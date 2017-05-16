@@ -1,9 +1,11 @@
 +++
 date = "2017-05-16T13:51:01+07:00"
-title = "Một số blog kĩ thuật nhà hàng xóm"
+title = "Blog kỹ thuật nhà hàng xóm"
 slug = "friend-sites"
-description = "Một số blog kĩ thuật nhà hàng xóm hay nên đọc."
+description = "Một số trang blog đến từ các thành viên của các cộng đồng Rust Việt Nam, Ruby Việt Nam, Kipalog và nhiều nơi khác."
 +++
+
+#### Đến từ các thành viên của các cộng đồng *"Rust Việt Nam", "Ruby Việt Nam", "Kipalog* và nhiều nơi khác.
 
 - [Huytd's Blog - https://thefullsnack.com](https://thefullsnack.com)
 - [IntoIterator::repeat(☕️) - https://giangnh.me](https://giangnh.me)
