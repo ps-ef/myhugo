@@ -16,17 +16,11 @@ publishDir = "docs"
     name = "Linux"
     url = "/tag/linux"
 [[menu.main]]
-    name = "Python"
-    url = "/tag/python"
-[[menu.main]]
     name = "Golang"
     url = "/tag/golang"
 [[menu.main]]
     name = "TIL"
     url = "/tag/til"
-[[menu.main]]
-    name = "Random"
-    url = "/tag/random"
 [[menu.main]]
     name = "Friend Sites"
     url = "/friend-sites.html"
