@@ -5,7 +5,9 @@ slug = "friend-sites"
 description = "Một số trang blog đến từ các thành viên của các cộng đồng Rust Việt Nam, Ruby Việt Nam, Kipalog và nhiều nơi khác."
 +++
 
-#### Đến từ các thành viên của các cộng đồng *"Rust Việt Nam", "Ruby Việt Nam", "Kipalog* và nhiều nơi khác.
+Viết blog là cách cực kỳ hiệu quả để học và hệ thống hóa lại kiến thức của bản thân. Mình xin phép giới thiệu một số blog chất lượng để các bạn theo dõi, chắc chắn bạn sẽ học hỏi được rất nhiều đấy.
+
+#### Đến từ các thành viên của các cộng đồng *"Rust Việt Nam", "Ruby Việt Nam", "Kipalog"* và nhiều nơi khác.
 
 - [Huytd's Blog - https://thefullsnack.com](https://thefullsnack.com)
 - [IntoIterator::repeat(☕️) - https://giangnh.me](https://giangnh.me)
