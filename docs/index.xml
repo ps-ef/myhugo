@@ -9,19 +9,10 @@
     <managingEditor>hi@imlinh.com (Tan Linh)</managingEditor>
     <webMaster>hi@imlinh.com (Tan Linh)</webMaster>
     <copyright>© 2017 Im Linh</copyright>
-    <lastBuildDate>Mon, 25 Sep 2017 17:26:42 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 16 May 2017 13:51:01 +0700</lastBuildDate>
     
 	<atom:link href="https://imlinh.com/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Iota thật là vi diệu</title>
-      <link>https://imlinh.com/iota-that-la-vi-dieu.html</link>
-      <pubDate>Mon, 25 Sep 2017 17:26:42 +0700</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/iota-that-la-vi-dieu.html</guid>
-      <description>Theo Go Wiki Go&amp;rsquo;s iota identifier is used in const declarations to simplify definitions of incrementing numbers. Because it can be used in expressions, it provides a generality beyond that of simple enumerations.</description>
-    </item>
     
     <item>
       <title>Blog kỹ thuật nhà hàng xóm</title>
@@ -96,15 +87,6 @@ Log thế nào cho đúng? Đó là nội dung của bài viết hôm nay.</desc
       <description>fmt.Print(&amp;lsquo;Hello world!&amp;rsquo;) My name is Linh, I am a web developer from Ha Noi, Viet Nam. My hobby is playing football, table tennis and Doto :D.
 I spend free time on this blog talking about Linux, Python, Golang and something in my life. This is how I review my knowledge, learn something new and make new friends.
 I used Hugo to build a modern static website. You can find a tutorial on here</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://imlinh.com/.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/.html</guid>
-      <description></description>
     </item>
     
   </channel>
