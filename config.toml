@@ -31,6 +31,8 @@ publishDir = "docs"
 [params]
     description = "Ghi chép linh ba tinh"
     copyright = "© 2017 Im Linh"
+    disqus_url="https://imlinh.com"
+    disqus_identifier="imlinh"
 
     [params.logo]
     url = "logo.jpg"
