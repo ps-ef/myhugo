@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="https://imlinh.com/images/logo.jpg">
+<meta name="generator" content="Hugo 0.26" />
+
+
+    <title>Algorithm 001: Non-descreasing Array - Im Linh</title>
+    <meta property="og:title" content="Algorithm 001: Non-descreasing Array - Im Linh">
+    <meta property="og:site_name" content="Im Linh" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Bài viết mở đầu cho chuỗi ngày try easy Algorithm của mình. Problem hôm nay cực kỳ đơn giản, đó là Non-descreasing array" />
+    <meta property="og:url" content="https://imlinh.com/algorithm-001-non-descreasing-array.html" />
+    <meta property="article:published_time" content="2017-12-06T23:26:00Z" />
+    
+
+    <meta property="article:publisher" content="https://facebook.com/tanlinh.nd" />
+    <meta property="article:author" content="https://facebook.com/tanlinh.nd" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Algorithm 001: Non-descreasing Array - Im Linh" />
+    <meta name="twitter:description" content="Bài viết mở đầu cho chuỗi ngày try easy Algorithm của mình. Problem hôm nay cực kỳ đơn giản, đó là Non-descreasing array" />
+    <meta name="twitter:url" content="https://imlinh.com/algorithm-001-non-descreasing-array.html" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Tan Linh" />
+    <meta name="twitter:site" content="https://twitter.com/@tanlinhnd" />
+    <meta name="twitter:creator" content="@tanlinhnd" />
+
+
+
+  
+    <meta property="description" content="Bài viết mở đầu cho chuỗi ngày try easy Algorithm của mình. Problem hôm nay cực kỳ đơn giản, đó là Non-descreasing array">
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://imlinh.com/css/main.css" media="all">
+<link rel="stylesheet" href="https://imlinh.com/css/font-awesome.min.css" media="all">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://imlinh.com/" class="nav-logo">
+    <img src="https://imlinh.com/images/logo.jpg" 
+         width="50" 
+         height="50" 
+         alt="Im Linh">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/tag/algorithm">Algorithm</a></li>
+    
+    <li><a href="/friend-sites.html">Friend Sites</a></li>
+    
+    <li><a href="/tag/golang">Golang</a></li>
+    
+    <li><a href="/tag/linux">Linux</a></li>
+    
+    <li><a href="/tag/til">TIL</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+<article class="article">
+    
+    <span class="article-duration"><i class="fa fa-clock-o"></i> 3 min read</span>
+    
+
+    <h1 class="article-title">Algorithm 001: Non-descreasing Array</h1>
+
+    
+    <span class="article-date"><i class="fa fa-calendar"></i> December 6, 2017</span>
+    
+
+    <div class="article-content">
+        
+
+<p>Xin chào xin chào,</p>
+
+<p>Sau một thời gian dài ngụp lặn, tới hôm nay mình mới nổi. Thời gian vừa rồi khá bận vì nhà mình có thêm thành viên mới vô cùng lém lỉnh. Công việc thời gian qua không được happy cho lắm nên gần như mình chỉ chém gió trên <code>#random</code> là chính. Thực tình rất phí phạm thời gian.</p>
+
+<p>Mấy hôm nay, anh em trong hội Ruby Việt Nam đang try hard Algorithm, rất nhiều siêu xayda đã lộ mặt. Mặc dù cũng nằm trong channel nhưng tự thấy bản thân mình còn ngu muội quá nên lẳng lặng ôn lại kiến thức vỡ lòng về <code>Data Structure</code> trước. Goal đến hết tuần sau là <code>Array</code>, <code>List</code>, <code>Queue</code>, <code>Heap</code> và <code>Tree</code>. Mình bắt đầu bằng level <strong>Easy</strong> trên <a href="https://leetcode.com/">https://leetcode</a></p>
+
+<p>Bài viết này là ghi chép về problem đầu tiên với array: <code>Non-descreasing Array</code>. Dù là level easy nhưng mình cũng phải mất 4 lần <code>Wrong Answer</code> và 1 lần <code>Runtime Error</code> mới pass được. Đầu óc chán chường kinh khủng. Vì thế, mình càng quyết tâm phải dùi mài kinh sử và uống <code>Hoạt huyết dưỡng não</code> mỗi ngày :omg:</p>
+
+<h2 id="1-problem">1. Problem</h2>
+
+<p>Problem đọc qua có vẻ cực kỳ đơn giản, các bạn xem ở đây <a href="https://leetcode.com/problems/non-decreasing-array/">Non-decreasing Array - LeetCode</a></p>
+
+<p>Cho một array có <code>n</code> số nguyên, nhiệm vụ của bạn là kiểm tra array này có khả năng trở thành <code>non-descreasing</code> array hay không với việc chỉ modify nhiều nhất 1 phần tử. Một array được gọi là <code>non-descreasing</code>  nếu <code>a[i] &lt;= a[i+1]</code> với mọi <code>i (1 &lt;= i &lt; n)</code> . Chỗ này mình vẫn thắc mắc là <code>0 &lt;= i &lt; n</code> chứ nhỉ?</p>
+
+<h4 id="example-1">Example 1</h4>
+
+<pre><code class="language-golang">Input: [4,2,3]
+Output: true
+Explanation: Bạn có thể modify phần tử đầu tiên, từ 4 thành 1 để có được non-desceasing array.
+</code></pre>
+
+<h4 id="example-2">Example 2</h4>
+
+<pre><code class="language-golang">Input: [4,2,1]
+Output: false
+Explanation: Bạn không thể có non-desceasing array với duy nhất 1 lần modify.
+</code></pre>
+
+<h2 id="2-solution">2. Solution</h2>
+
+<p>Về solution, mình sẽ dùng 1 vòng <code>for</code> để duyệt qua tất cả phần tử và biến array này thành <code>non-descreasing</code> thỏa mãn <code>a[i] &lt;= a[i+1]</code>, đồng thời tính số lần thực hiện modify. Nếu <code>modified &lt;= 1</code> đương nhiên array này có khả năng trở thành <code>non-descreasing</code> array. Đơn giản vậy thôi. Các bạn tham khảo bên dưới.</p>
+
+<pre><code class="language-golang">func checkPossibility(nums []int) bool {
+	var modified int
+	for i := 1; i &lt; len(nums) &amp;&amp; modified &lt;= 1; i++ {
+		if nums[i-1] &gt; nums[i] {
+			modified++
+			if i - 2 &lt; 0 || nums[i-2] &lt;= nums[i] {
+				nums[i-1] = nums[i]
+			} else {
+				nums[i] = nums[i-1]
+			}
+		}
+	}
+	return modified &lt;= 1
+}
+</code></pre>
+
+<p>Ở đây có một điểm cần chú ý là việc gán <code>nums[i-1] = nums[i]</code> hay <code>nums[i] = num[i]</code>. Vậy thôi, có mỗi cái này làm mình sai tận 4 lần. Kém cỏi vãi :sad: Với solution này, time complexity là <code>O(N)</code> và space complexity là <code>O(1)</code>. Có một solution khác là <code>Reduce to Smaller Problem</code>, các bạn theo dõi thêm ở đây <a href="https://leetcode.com/problems/non-decreasing-array/solution/">Non-decreasing Array Solution</a></p>
+
+<p>Bài viết chỉ mang tính take note, mở đầu cho chuỗi ngày <code>Try Easy Algorithm</code> sắp tới :omg:. Rule của channel <code>#algorithm</code> là 3 problem mỗi tuần nên mình sẽ cố gắng giải quyết và viết blog một cách chăm chỉ.</p>
+
+<p>P/s: Nếu bạn nào có nhã hứng, xin mời join channel <code>#random</code> của Ruby Việt Nam và ới ông bạn <a href="https://thefullsnack.com/">@snacky</a> để tham gia nhé. Lệ phí 10$ cho him :troll:</p>
+
+<h2 id="reference">Reference</h2>
+
+<p>[1] <em>Non-decreasing Array Problem</em> <a href="https://leetcode.com/problems/non-decreasing-array/">https://leetcode.com/problems/non-decreasing-array/</a></p>
+
+<p>[2] <em>Slack Ruby VietNam</em> <a href="http://chat.ruby.org.vn/">http://chat.ruby.org.vn/</a></p>
+
+    </div>
+    
+    <h2>Tags:</h2>
+        
+        <a href="/tag/algorithm" class="tags"><i class="fa fa-hashtag"></i> algorithm</a>
+        
+        <a href="/tag/golang" class="tags"><i class="fa fa-hashtag"></i> golang</a>
+        
+    
+</article>
+
+<footer class="footer">
+    <ul class="footer-links">
+        <li>
+            <a href="https://imlinh.com/">© 2017 Im Linh</a>
+        </li>
+        <li>
+            <a href="https://imlinh.com/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+        </li>
+        <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <i class="fa fa-heart" style="color:#D14;"></i> using <img src="https://imlinh.com/images/hugo-logo.png" width="22" height="22"></a>
+        </li>
+    </ul>
+    <ul class="footer-social">
+        <li><a href="https://github.com/tanlinhnd" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+        <li><a href="https://facebook.com/tanlinh.nd" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+        <li><a href="https://www.instagram.com/tanlinhnd/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
+        <li><a href="@tanlinhnd" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+    </ul>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>
+</footer>
+
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-75596542-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+</body>
+
+</html>
+
+
+</main>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+      
+      
+      if (window.location.hostname == "localhost")
+                return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'tanlinhnd';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+

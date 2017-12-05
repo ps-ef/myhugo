@@ -9,10 +9,19 @@
     <managingEditor>hi@imlinh.com (Tan Linh)</managingEditor>
     <webMaster>hi@imlinh.com (Tan Linh)</webMaster>
     <copyright>© 2017 Im Linh</copyright>
-    <lastBuildDate>Wed, 05 Apr 2017 01:29:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 Dec 2017 23:26:00 +0700</lastBuildDate>
     
 	<atom:link href="https://imlinh.com/tag/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Algorithm</title>
+      <link>https://imlinh.com/tag/algorithm.html</link>
+      <pubDate>Wed, 06 Dec 2017 23:26:00 +0700</pubDate>
+      <author>hi@imlinh.com (Tan Linh)</author>
+      <guid>https://imlinh.com/tag/algorithm.html</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Face recognition</title>
@@ -20,6 +29,15 @@
       <pubDate>Wed, 05 Apr 2017 01:29:00 +0000</pubDate>
       <author>hi@imlinh.com (Tan Linh)</author>
       <guid>https://imlinh.com/tag/face-recognition.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>https://imlinh.com/tag/golang.html</link>
+      <pubDate>Wed, 06 Dec 2017 23:26:00 +0700</pubDate>
+      <author>hi@imlinh.com (Tan Linh)</author>
+      <guid>https://imlinh.com/tag/golang.html</guid>
       <description></description>
     </item>
     

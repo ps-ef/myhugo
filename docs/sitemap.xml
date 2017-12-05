@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://imlinh.com/algorithm-001-non-descreasing-array.html</loc>
+    <lastmod>2017-12-06T23:26:00+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://imlinh.com/friend-sites.html</loc>
     <lastmod>2017-05-16T13:51:01+07:00</lastmod>
   </url>
@@ -38,14 +43,26 @@
   </url>
   
   <url>
+    <loc>https://imlinh.com/tag/algorithm.html</loc>
+    <lastmod>2017-12-06T23:26:00+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://imlinh.com/tag/face-recognition.html</loc>
     <lastmod>2017-04-05T01:29:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://imlinh.com/tag/golang.html</loc>
+    <lastmod>2017-12-06T23:26:00+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://imlinh.com/</loc>
-    <lastmod>2017-05-16T13:51:01+07:00</lastmod>
+    <lastmod>2017-12-06T23:26:00+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -69,7 +86,7 @@
   
   <url>
     <loc>https://imlinh.com/post.html</loc>
-    <lastmod>2017-05-12T21:58:31+07:00</lastmod>
+    <lastmod>2017-12-06T23:26:00+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -93,7 +110,7 @@
   
   <url>
     <loc>https://imlinh.com/tag.html</loc>
-    <lastmod>2017-04-05T01:29:00+00:00</lastmod>
+    <lastmod>2017-12-06T23:26:00+07:00</lastmod>
     <priority>0</priority>
   </url>
   

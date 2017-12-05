@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Im Linh"
 theme = "hugo-injoker-theme"
 googleAnalytics = "UA-75596542-1"
-disqusShortname = ""
+disqusShortname = "tanlinhnd"
 preserveTaxonomyNames = true
 uglyURLs = true
 publishDir = "docs"
@@ -21,6 +21,9 @@ publishDir = "docs"
 [[menu.main]]
     name = "TIL"
     url = "/tag/til"
+[[menu.main]]
+    name = "Algorithm"
+    url = "/tag/algorithm"
 [[menu.main]]
     name = "Friend Sites"
     url = "/friend-sites.html"

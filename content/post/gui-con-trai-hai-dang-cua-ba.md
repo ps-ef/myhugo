@@ -8,9 +8,6 @@ tag = ["random"]
 
 *Hải Đăng của ba, ba yêu con rất nhiều!*
 
-<div align="center">
-<iframe width="860" height="315" src="https://www.youtube.com/embed/M9CsWtep_IE" frameborder="0" allowfullscreen></iframe>
-</div>
 
 Tình cờ nghe lại nhạc Bức tường, ba bắt gặp hình ảnh hai cha con mình trong bài hát. Chỉ 2 tháng nữa thôi, con sẽ chào đời trong tình yêu thương của cả ba và mẹ. Ngoài tình yêu, hình hài và máu thịt mẹ đã cho, con sẽ có một người ba luôn luôn yêu thương, một người bạn luôn luôn bên cạnh.
 

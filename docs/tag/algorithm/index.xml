@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Golang on Im Linh</title>
-    <link>https://imlinh.com/tag/golang.html</link>
-    <description>Recent content in Golang on Im Linh</description>
+    <title>Algorithm on Im Linh</title>
+    <link>https://imlinh.com/tag/algorithm.html</link>
+    <description>Recent content in Algorithm on Im Linh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>hi@imlinh.com (Tan Linh)</managingEditor>
@@ -11,7 +11,7 @@
     <copyright>© 2017 Im Linh</copyright>
     <lastBuildDate>Wed, 06 Dec 2017 23:26:00 +0700</lastBuildDate>
     
-	<atom:link href="https://imlinh.com/tag/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://imlinh.com/tag/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
