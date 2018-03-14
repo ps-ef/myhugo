@@ -177,6 +177,29 @@
 
 <p>Projectile là thư viện của Emacs hỗ trợ làm việc với project.  Goal của Projectile là <code>nice set of features operating on a project level without introducing external dependencies</code>. Vì vậy, bạn không thấy sự xuất hiện của những thư mục cấu hình theo dạng <code>.vscode</code> hoặc <code>.idea</code> như Visual Code hay IntelliJ. Bạn không còn thi thoảng phải chửi thề: <code>Douma quên ignore folder .vscode rồi!!!</code>. Đối với Projectile, những thư mục chứa những tập tin đặc biệt chính là project. <code>Git</code>, <code>Mercurial</code>, <code>darcs</code> hay <code>bazaar</code> sẽ được để ý đầu tiên. Bạn cũng có thể tạo một file rỗng <code>.projectile</code> trong thư mục nếu muốn Projectile hiểu đó là một project.</p>
 
+<p>Những tính năng của Projectile bao gồm:</p>
+
+<ul>
+<li>jump to a file in project</li>
+<li>jump to files at point in project</li>
+<li>jump to a directory in project</li>
+<li>jump to a file in a directory</li>
+<li>jump to a project buffer</li>
+<li>jump to a test in project</li>
+<li>toggle between files with same names but different extensions (e.g. <code>.h</code> &lt;-&gt; <code>.c/.cpp</code>, <code>Gemfile</code> &lt;-&gt; <code>Gemfile.lock</code>)</li>
+<li>toggle between code and its test (e.g. <code>main.service.js</code> &lt;-&gt; <code>main.service.spec.js</code>)</li>
+<li>jump to recently visited files in the project</li>
+<li>switch between projects you have worked on</li>
+<li>kill all project buffers</li>
+<li>replace in project</li>
+<li>multi-occur in project buffers</li>
+<li>grep in project</li>
+<li>regenerate project etags or gtags (requires <a href="https://github.com/leoliu/ggtags">ggtags</a>).</li>
+<li>visit project in dired</li>
+<li>run make in a project with a single key chord</li>
+<li>check for dirty repositories</li>
+</ul>
+
 <h1 id="5-helpful-hotkeys">5. Helpful hotkeys</h1>
 
 <p>Như mình đã nói ở trên, tất cả command của Spacemacs đều bắt đầu bằng <code>SPC</code>. Ngoài ra, key binding của Spacemacs cực kỳ dễ nhớ, ví dụ như <code>b</code> cho buffer, <code>p</code> cho project, <code>s</code> cho tìm kiếm .v.v. Tổng hòa hai điều trên, bạn mất chưa tới 30 phút để nhớ làm việc thoải mái với Spacemacs. Trường hợp quên đi nữa, bạn gõ <code>SPC</code> bật Spacemacs root để học thuộc lòng lại từ đầu :troll:</p>

@@ -93,7 +93,28 @@ Ví dụ về vụ tìm kiếm file siêu nhanh, cho phép tìm kiếm đồng t
 
 ### b. Projectile
 
-Projectile là thư viện của Emacs hỗ trợ làm việc với project.  Goal của Projectile là `nice set of features operating on a project level without introducing external dependencies`. Vì vậy, bạn không thấy sự xuất hiện của những thư mục cấu hình theo dạng `.vscode` hoặc `.idea` như Visual Code hay IntelliJ. Bạn không còn thi thoảng phải chửi thề: `Douma quên ignore folder .vscode rồi!!!`. Đối với Projectile, những thư mục chứa những tập tin đặc biệt chính là project. `Git`, `Mercurial`, `darcs` hay `bazaar` sẽ được để ý đầu tiên. Bạn cũng có thể tạo một file rỗng `.projectile` trong thư mục nếu muốn Projectile hiểu đó là một project. 
+Projectile là thư viện của Emacs hỗ trợ làm việc với project.  Goal của Projectile là `nice set of features operating on a project level without introducing external dependencies`. Vì vậy, bạn không thấy sự xuất hiện của những thư mục cấu hình theo dạng `.vscode` hoặc `.idea` như Visual Code hay IntelliJ. Bạn không còn thi thoảng phải chửi thề: `Douma quên ignore folder .vscode rồi!!!`. Đối với Projectile, những thư mục chứa những tập tin đặc biệt chính là project. `Git`, `Mercurial`, `darcs` hay `bazaar` sẽ được để ý đầu tiên. Bạn cũng có thể tạo một file rỗng `.projectile` trong thư mục nếu muốn Projectile hiểu đó là một project.
+
+Những tính năng của Projectile bao gồm:
+
+* jump to a file in project
+* jump to files at point in project
+* jump to a directory in project
+* jump to a file in a directory
+* jump to a project buffer
+* jump to a test in project
+* toggle between files with same names but different extensions (e.g. `.h` <-> `.c/.cpp`, `Gemfile` <-> `Gemfile.lock`)
+* toggle between code and its test (e.g. `main.service.js` <-> `main.service.spec.js`)
+* jump to recently visited files in the project
+* switch between projects you have worked on
+* kill all project buffers
+* replace in project
+* multi-occur in project buffers
+* grep in project
+* regenerate project etags or gtags (requires [ggtags](https://github.com/leoliu/ggtags)).
+* visit project in dired
+* run make in a project with a single key chord
+* check for dirty repositories
 
 # 5. Helpful hotkeys
 
