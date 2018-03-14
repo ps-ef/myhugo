@@ -49,6 +49,7 @@ publishDir = "docs"
   twitter = "@tanlinhnd"
   reddit = "https://www.reddit.com/user/tanlinhnd/"
   instagram = "https://www.instagram.com/tanlinhnd/"
+  linkedin = "https://linkedin.com/in/tanlinhnd/"
 
 [taxonomies]
     tag = "tag"
