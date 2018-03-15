@@ -7,6 +7,7 @@ draft = false
 slug = "moving-from-neovim-to-spacemacs"
 tag = ["vim", "neovim", "spacemacs"]
 title = "Moving from Neovim to Spacemacs"
+og_image = "https://i.imgur.com/8Vly4kq.png"
 +++
 
 Một năm trước, mình nghe theo lời đường mật Di cư sang Vim <sup>[[1]](#references)</sup> của CTO. Sau một năm xài Vim (thực ra là Neovim) một cách nghiêm túc, lần này mình lại bị dụ dỗ sang Spacemacs. Với những ai chưa biết, Spacemacs là một distribution của Emacs với description là `The best editor is neither Emacs nor Vim, it's Emacs and Vim!` cho bạn một trải nghiệm Emacs rất tuyệt vời, riêng Vimmer sẽ cảm giác thân thuộc như ở nhà. Bởi vậy, bài viết này nhằm lôi kéo anh em Vimmer sang Spacemacs kẻo mình cô đơn quá :adore:
