@@ -88,15 +88,15 @@
     <div class="article-content">
         
 
-<p>Một năm trước, mình nghe theo lời đường mật <a href="https://trietphm.github.io/post/sublime-text-to-vim/">Di cư sang Vim</a> của CTO. Sau một năm xài Vim (thực ra là Neovim) một cách nghiêm túc, lần này mình lại bị dụ dỗ sang Spacemacs. Với những ai chưa biết, Spacemacs là một distribution của Emacs với description là <code>The best editor is neither Emacs nor Vim, it's Emacs and Vim!</code> cho bạn một trải nghiệm Emacs rất tuyệt vời, riêng Vimmer sẽ cảm giác thân thuộc như ở nhà. Bởi vậy, bài viết này nhằm lôi kéo anh em Vimmer sang Spacemacs kẻo mình cô đơn quá :adore:</p>
+<p>Một năm trước, mình nghe theo lời đường mật Di cư sang Vim <sup><a href="#references">[1]</a></sup> của CTO. Sau một năm xài Vim (thực ra là Neovim) một cách nghiêm túc, lần này mình lại bị dụ dỗ sang Spacemacs. Với những ai chưa biết, Spacemacs là một distribution của Emacs với description là <code>The best editor is neither Emacs nor Vim, it's Emacs and Vim!</code> cho bạn một trải nghiệm Emacs rất tuyệt vời, riêng Vimmer sẽ cảm giác thân thuộc như ở nhà. Bởi vậy, bài viết này nhằm lôi kéo anh em Vimmer sang Spacemacs kẻo mình cô đơn quá :adore:</p>
 
-<h1 id="1-first-impression">1. First impression</h1>
+<h1 id="first-impression">First impression</h1>
 
 <p>Sau một tuần sử dụng Spacemacs, mình thấy một số điểm như sau:</p>
 
 <ul>
 <li>UI đẹp, nuột, rất giống <code>hắc cơ</code></li>
-<li>Cảm giác nhanh mà nuột hơn Neovim. Trừ việc startup time cực lâu nếu so với vim thì còn lại là tuyệt vời. Nếu muốn giảm thời gian startup time, bạn có thể tham khảo bài viết <a href="https://kipalog.com/posts/Chay-spacemacs-emacs-voi-daemon-mode">Chạy spacemacs/emacs với daemon mode</a> của lão Huytd</li>
+<li>Cảm giác nhanh mà nuột hơn Neovim. Trừ việc startup time cực lâu nếu so với vim thì còn lại là tuyệt vời. Nếu muốn giảm thời gian startup time, bạn có thể tham khảo bài viết <sup><a href="#references">[2]</a></sup> của lão Huytd</li>
 <li>Toàn bộ command sẽ bắt đầu bằng <code>leader key</code>. Mặc định là <code>SPC</code> (spacebar) khi sử dụng Vim style hoặc hybrid style, <code>M-m</code> khi sử dụng emacs style. Mình thấy điểm này khá hay khi toàn bộ command bắt nguồn từ một phím cố định, nếu bạn nhỡ quên một chút thôi thì đã có <code>Spacemacs root menu</code> gợi ý với giao diện cực kỳ trực quan. Bạn có thể xem ở screenshot bên dưới.</li>
 </ul>
 
@@ -106,7 +106,7 @@
 <li>Custom Spacemacs đòi hỏi bạn phải vận động tay chân nhiều hơn so với Vim. Tuy nhiên khi cài xong Spacemacs và enable một số layers là mình có thể bơi vào code luôn được rồi. Spacemacs có sẵn <code>go</code> layer cho anh em Gopher luôn.</li>
 </ul>
 
-<h1 id="2-installation">2. Installation</h1>
+<h1 id="installation">Installation</h1>
 
 <p>Cài đặt Spacemacs khá đơn giản, bạn cần Emacs version 24.4 hoặc cao hơn, sau đó clone repository của Spacemacs về là xong.</p>
 
@@ -117,9 +117,9 @@
 
 <p><img src="https://i.imgur.com/8Vly4kq.png" alt="Screenshot" /></p>
 
-<h1 id="3-migrate-from-vim">3. Migrate from Vim</h1>
+<h1 id="migrate-from-vim">Migrate from Vim</h1>
 
-<p>Về cơ bản, những concept như <code>mode</code>, <code>buffer</code>, <code>plugin</code> .v.v. bên Vim có thì Spacemacs hay nói đúng hơn là Emacs cũng có nhưng với một tên gọi khác. Anh em Vimmer có thể đọc ở bài viết <a href="http://spacemacs.org/doc/VIMUSERS.html">Migrating from Vim</a> để hiểu rõ hơn.</p>
+<p>Về cơ bản, những concept như <code>mode</code>, <code>buffer</code>, <code>plugin</code> .v.v. bên Vim có thì Spacemacs hay nói đúng hơn là Emacs cũng có nhưng với một tên gọi khác. Anh em Vimmer có thể đọc ở bài viết Migration from Vim <sup><a href="#references">[3]</a></sup> để hiểu rõ hơn.</p>
 
 <p>Để bắt đầu cấu hình Spacemacs, bạn có thể dùng Vim edit file <code>~/.spacemacs</code> :troll:. Mình đùa thôi, bạn có thể sửa file <code>.spacemacs</code> ngay trong Spacemacs bằng tổ hợp phím <code>SPC f e d</code> và apply modifications bằng tổ hợp <code>SPC f e R</code>. Vô cùng tiện lợi.</p>
 
@@ -153,21 +153,21 @@
      )
 </code></pre>
 
-<p>Hiện tại, Spacemacs có hơn 150 layers chia làm 20 group. Với số lượng layer lớn như vậy, mình tin là thỏa mãn đại đa số nhu cầu của mọi người. Danh sách layer các bạn xem tại <a href="http://spacemacs.org/layers/LAYERS.html">đây</a>. Muốn cài đặt layer nào, bạn chỉ việc thêm nó vào block <code>dotspacemacs-configuration-layers</code> và apply để cài đặt là xong. Cực kỳ nhanh gọn phải khôngfo nào</p>
+<p>Hiện tại, Spacemacs có hơn 150 layers <sup><a href="#references">[4]</a></sup> chia làm 20 group. Với số lượng layer lớn như vậy, mình tin là thỏa mãn đại đa số nhu cầu của mọi người. Muốn cài đặt layer nào, bạn chỉ việc thêm nó vào block <code>dotspacemacs-configuration-layers</code> và apply để cài đặt là xong. Cực kỳ nhanh gọn phải khôngfo nào</p>
 
-<h1 id="4-usage">4. Usage</h1>
+<h1 id="usage">Usage</h1>
 
 <p>Nếu bạn không cấu hình linh tinh, mặc định Spacemacs có editing style là <code>vim</code>. Điều này có nghĩa là gì? Anh em Vimmer sẽ thấy thoải mái như ở nhà. Di chuyển, select, copy, paste, undo .. vân vân và vân vân dễ như ăn kẹo.</p>
 
 <p><a href="https://gyazo.com/820e09e1d46e8b4a5fc8042cb3a6e7ab"><img src="https://i.gyazo.com/820e09e1d46e8b4a5fc8042cb3a6e7ab.gif" alt="https://gyazo.com/820e09e1d46e8b4a5fc8042cb3a6e7ab" /></a></p>
 
-<p>Nếu bạn không phải là Vimmer hoặc lần đầu tiên sử dụng Spacemacs? Không sao cả, hãy đọc bài viết sau: <a href="https://kipalog.com/posts/Lam-quen-VIM-trong-5-phut">Làm quen với Vim trong 5 phút</a>.</p>
+<p>Nếu bạn không phải là Vimmer hoặc lần đầu tiên sử dụng Spacemacs? Không sao cả, hãy tìm đọc bài viết &ldquo;Làm quen với Vim trong 5 phút&rdquo; <sup><a href="#references">[5]</a> </sup> ở phần References</p>
 
 <p>Khi đã làm quen với các thao tác cơ bản trong bài viết trên, chúng ta cùng tìm hiểu về <code>Helm</code> và <code>Projectile</code>. Bạn chắc chắn sẽ dành phần lớn thời gian làm việc với chúng đấy.</p>
 
 <h3 id="a-helm-layer">a. Helm layer</h3>
 
-<p><code>Helm</code> là một layer tiêu chuẩn mặc định của Spacemacs, vì vậy bạn không cần động tay chân thêm một giây nào nữa để cài đặt nó. Người anh em với <code>Helm</code> là <code>Ivy</code> nhưng thú thật mình chưa biết nó ngang dọc như nào nên cũng chẳng nói thêm gì được. Nói một cách chính xác, <code>Helm</code> là một <code>completion framework</code> và nếu dùng một mỹ từ dành cho <code>Helm</code> thì nó là bộ não của Spacemacs. Helm được dùng để manage buffer, projects, search results, configuration layers và hàng tá công việc khác&hellip; Đầy đủ và chi tiết nhất, các bạn đọc phần <a href="http://develop.spacemacs.org/layers/+completion/helm/README.html">Helm layer</a></p>
+<p>Helm <sup><a href="#references">[6]</a></sup> là một layer tiêu chuẩn mặc định của Spacemacs, vì vậy bạn không cần động tay chân thêm một giây nào nữa để cài đặt nó. Người anh em với <code>Helm</code> là <code>Ivy</code> nhưng thú thật mình chưa biết nó ngang dọc như nào nên cũng chẳng nói thêm gì được. Nói một cách chính xác, <code>Helm</code> là một <code>completion framework</code> và nếu dùng một mỹ từ dành cho <code>Helm</code> thì nó là bộ não của Spacemacs. Helm được dùng để manage buffer, projects, search results, configuration layers và hàng tá công việc khác..</p>
 
 <p>Ví dụ về vụ tìm kiếm file siêu nhanh, cho phép tìm kiếm đồng thời cả buffer và file.</p>
 
@@ -200,7 +200,7 @@
 <li>check for dirty repositories</li>
 </ul>
 
-<h1 id="5-helpful-hotkeys">5. Helpful hotkeys</h1>
+<h1 id="helpful-hotkeys">Helpful hotkeys</h1>
 
 <p>Như mình đã nói ở trên, tất cả command của Spacemacs đều bắt đầu bằng <code>SPC</code>. Ngoài ra, key binding của Spacemacs cực kỳ dễ nhớ, ví dụ như <code>b</code> cho buffer, <code>p</code> cho project, <code>s</code> cho tìm kiếm .v.v. Tổng hòa hai điều trên, bạn mất chưa tới 30 phút để nhớ làm việc thoải mái với Spacemacs. Trường hợp quên đi nữa, bạn gõ <code>SPC</code> bật Spacemacs root để học thuộc lòng lại từ đầu :troll:</p>
 
@@ -226,11 +226,27 @@
 <li><code>SPC m g g</code> : Go to definition</li>
 </ul>
 
-<p>Biển trời hotkey biết đâu là bờ, mình sẽ liên tục cập nhật list hotkeys để các bạn theo dõi. Với những bạn muốn trải nghiệm Vim, có thể tham khảo <a href="https://github.com/tanlinhnd/dotfiles">dotfiles</a> của mình.</p>
+<p>Biển trời hotkey biết đâu là bờ, mình sẽ liên tục cập nhật list hotkeys để các bạn theo dõi. Với những bạn muốn trải nghiệm Vim, có thể tham khảo dotfiles <sup><a href="#references">[7]</a></sup>  của mình.</p>
 
 <p>Cuối cùng, bài viết này chỉ duy nhất một mục đích là lôi kéo và rủ rê, mặc dù sau khi đọc lại bài viết mình chẳng thấy nó có gì bổ ích. Anh em quan tâm có thể comment bên dưới nhé. Rất mong nhận được góp ý từ anh em.</p>
 
 <p>Many thanks,</p>
+
+<h1 id="references">References</h1>
+
+<p>[1] Triết Phạm, <a href="https://trietphm.github.io/post/sublime-text-to-vim/">Di cư từ Sublime text sang Vim</a>, Tee, Coffe &amp; Code Blog</p>
+
+<p>[2] Huytd, <a href="https://kipalog.com/posts/Chay-spacemacs-emacs-voi-daemon-mode">Chạy spacemacs/emacs với daemon mode</a>, Kipalog</p>
+
+<p>[3] <a href="http://spacemacs.org/doc/VIMUSERS.html">Migration from Vim</a>, Spacemacs</p>
+
+<p>[4] <a href="http://spacemacs.org/layers/LAYERS.html">Configuration Layers</a>, Spacemacs</p>
+
+<p>[5] Huytd, <a href="https://kipalog.com/posts/Lam-quen-VIM-trong-5-phut">Làm quen với vim trong 5 phút</a>, Kipalog</p>
+
+<p>[6] <a href="http://develop.spacemacs.org/layers/+completion/helm/README.html">Helm Layer</a>, Spacemacs</p>
+
+<p>[7] Tanlinhnd, <a href="https://github.com/tanlinhnd/dotfiles">dotfiles</a>, Github</p>
 
 <p>P/s: Hi vọng năm sau không có bài <code>Di cư từ Spacemacs sang Vim</code> nữa :troll:</p>
 
