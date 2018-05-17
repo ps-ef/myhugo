@@ -17,6 +17,7 @@ Viết blog là cách cực kỳ hiệu quả để học và hệ thống hóa 
 - [Runi Blog - http://runikitkat.com](http://runikitkat.com)
 - [Codeaholicguy - https://codeaholicguy.com](https://codeaholicguy.com)
 - [Hieu's Blog - https://hieuhtr.github.io](https://hieuhtr.github.io)
-- [HQC's Blog - https://hqc.io/essays](https://hqc.io/essays)
+- [Quần Cam - https://quan-cam.com/](https://quan-cam.com/)
 - [HuyDX's Blog - https://huydx.com](https://huydx.com)
+- [Thinh Tran - https://5kbps.io/](https://5kbps.io/)
 - [Long Hoang's Blog - https://sfzxc.github.io](https://sfzxc.github.io/)

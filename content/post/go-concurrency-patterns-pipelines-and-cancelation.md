@@ -1,7 +1,7 @@
 +++
 author = "Tan Linh"
 
-date = 2018-03-30T14:47:39+07:00
+date = 2018-04-09T11:27:39+07:00
 description = ""
 draft = true
 slug = "go-concurrency-patterns-pipelines-and-cancellation"
@@ -25,7 +25,7 @@ Concurrency là một mảng quan trọng và thú vị trong Go. Nhân tiện c
     * Làm trò mèo gì đó với đống data vừa nhận được
     * Gửi giá trị mới tới downstream qua outbound channels
 
-Mỗi stage có thể có 1 hay nhiều inbound/outbound channels. Ngoại trừ stage đầu tiên và stage cuối cùng chỉ có duy nhất inbound hoặc outbound. Thi thoảng, stage đầu tiên sẽ được gọi là source hoặc producer. Và đôi khi, người ta sẽ gọi stage cuối cùng là sink hoặc consumer. Giống như trong Kafka ý. Hehe
+Ngoại trừ stage đầu tiên và stage cuối cùng chỉ có duy nhất inbound hoặc outbound, những stage còn lại có thể có 1 hay nhiều inbound/outbound channels. Thi thoảng, stage đầu tiên sẽ được gọi là source hoặc producer. Và đôi khi, người ta sẽ gọi stage cuối cùng là sink hoặc consumer. Giống như trong Kafka ý. Hehe
 
 Tiếp theo, chúng ta sẽ tìm hiểu một pipeline đơn giản để hiểu rõ ideas và techniques của nó. Sau đó sẽ đến ví dụ thực tế hơn.
 
@@ -91,9 +91,9 @@ func main() {
 
 Nhiều goroutines có thể read từ cùng một channel cho đến khi nó đóng thì được gọi là Fan-out. Việc này có ích lợi gì? Chúng ta có 1 nhóm các goroutiness và muốn chia việc cho chúng nhằm tăng tốc độ xử lý thì đấy là lúc chúng ta nên sử dụng Fan-out.
 
-Với Fan-in thì ngược lại, một goroutine có thể read từ nhiều channel cho đến khi tất cả channel đóng. Để biết được khi nào tất cả channel đều đóng thì phải thinking một chút, đó là chúng ta sẽ gộp toàn bộ channel vào 1 single channel, nếu single channel này đóng chứng tỏ toàn bộ input của chúng ta cũng không còn.
+Với Fan-in thì ngược lại, một goroutine có thể read từ nhiều channel cho đến khi tất cả channel đóng. Làm sao để biết lúc nào thì tất cả channel đã đóng? Chúng ta sẽ gộp toàn bộ channel vào 1 single channel, nếu single channel này đóng chứng tỏ toàn bộ input của chúng ta cũng không còn.
 
-Code ví dụ về Fan-in, Fan-out như sau:
+Ví dụ về Fan-in, Fan-out như sau:
 
 ```go
 func main() {
@@ -110,7 +110,7 @@ func main() {
 }
 ```
 
-Ở đây, chúng ta dễ thấy sự có mặt của function `merge`. Giải thích như nào nhỉ. Merge function convert toàn bộ channel thành 1 single channel bằng cách start từng goroutine cho mỗi inbound channel, sau đó copy dữ liệu tới 1 outbound channel. Chưa hết, khi output gouroutines đã started, merge function start thêm một gouroutine nữa làm nhiệm vụ close outbound channel khi tất cả value đã được gửi đi.
+Ở đây, chúng ta dễ thấy sự có mặt của function `merge`. Như mình đã nói ở trên. Merge function convert toàn bộ channels thành 1 single channel bằng cách start từng goroutine cho mỗi inbound channel, sau đó copy value tới 1 outbound channel. Chưa hết, khi output gouroutines đã started, merge function start thêm một gouroutine nữa làm nhiệm vụ close outbound channel khi tất cả value đã được gửi đi.
 
 Ngoài ra còn phải quan tâm việc đảm bảo tất cả data đã được gửi đi trước khi close channel. Điều này có thể được giải quyết bằng cách sử dụng `sync.WaitGroup`.
 
@@ -143,3 +143,12 @@ func merge(cs ...<-chan int) <-chan int {
     return out
 }
 ```
+
+# Stopping short
+
+Chúng ta có một số pattern như sau:
+
+* Stages đóng luôn outbound channel khi send hết đống value
+* Stages keep value nhận được từ inbound channel cho đến khi chúng bị đóng
+
+Pattern này cho chúng ta điều gì? Nó đảm bảo việc tất cả goroutines chỉ đóng khi tất cả value đã được gửi đi thành công.
