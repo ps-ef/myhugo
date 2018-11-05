@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Golang on Im Linh</title>
-    <link>https://imlinh.com/tag/golang.html</link>
-    <description>Recent content in Golang on Im Linh</description>
+    <title>golang on /dev/stdout</title>
+    <link>https://dev-stdout.com/tag/golang.html</link>
+    <description>Recent content in golang on /dev/stdout</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hi@imlinh.com (Tan Linh)</managingEditor>
-    <webMaster>hi@imlinh.com (Tan Linh)</webMaster>
+    <managingEditor>tanlinh.hust@gmail.com (Tan Linh)</managingEditor>
+    <webMaster>tanlinh.hust@gmail.com (Tan Linh)</webMaster>
     <lastBuildDate>Wed, 06 Dec 2017 23:26:00 +0700</lastBuildDate>
     
-	<atom:link href="https://imlinh.com/tag/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dev-stdout.com/tag/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Algorithm 001: Non-descreasing Array</title>
-      <link>https://imlinh.com/algorithm-001-non-descreasing-array.html</link>
+      <link>https://dev-stdout.com/algorithm-001-non-descreasing-array.html</link>
       <pubDate>Wed, 06 Dec 2017 23:26:00 +0700</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/algorithm-001-non-descreasing-array.html</guid>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://dev-stdout.com/algorithm-001-non-descreasing-array.html</guid>
       <description>Xin chào xin chào,
 Sau một thời gian dài ngụp lặn, tới hôm nay mình mới nổi. Thời gian vừa rồi khá bận vì nhà mình có thêm thành viên mới vô cùng lém lỉnh. Công việc thời gian qua không được happy cho lắm nên gần như mình chỉ chém gió trên #random là chính. Thực tình rất phí phạm thời gian.
 Mấy hôm nay, anh em trong hội Ruby Việt Nam đang try hard Algorithm, rất nhiều siêu xayda đã lộ mặt.</description>

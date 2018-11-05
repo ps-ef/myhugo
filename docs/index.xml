@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Im Linh</title>
-    <link>https://imlinh.com/</link>
-    <description>Recent content on Im Linh</description>
+    <title>/dev/stdout</title>
+    <link>https://dev-stdout.com/</link>
+    <description>Recent content on /dev/stdout</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hi@imlinh.com (Tan Linh)</managingEditor>
-    <webMaster>hi@imlinh.com (Tan Linh)</webMaster>
+    <managingEditor>tanlinh.hust@gmail.com (Tan Linh)</managingEditor>
+    <webMaster>tanlinh.hust@gmail.com (Tan Linh)</webMaster>
     <lastBuildDate>Wed, 14 Mar 2018 22:20:08 +0700</lastBuildDate>
     
-	<atom:link href="https://imlinh.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dev-stdout.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Moving from Neovim to Spacemacs</title>
-      <link>https://imlinh.com/moving-from-neovim-to-spacemacs.html</link>
+      <link>https://dev-stdout.com/moving-from-neovim-to-spacemacs.html</link>
       <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/moving-from-neovim-to-spacemacs.html</guid>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://dev-stdout.com/moving-from-neovim-to-spacemacs.html</guid>
       <description>Một năm trước, mình nghe theo lời đường mật Di cư sang Vim [1] của CTO. Sau một năm xài Vim (thực ra là Neovim) một cách nghiêm túc, lần này mình lại bị dụ dỗ sang Spacemacs. Với những ai chưa biết, Spacemacs là một distribution của Emacs với description là The best editor is neither Emacs nor Vim, it&#39;s Emacs and Vim! cho bạn một trải nghiệm Emacs rất tuyệt vời, riêng Vimmer sẽ cảm giác thân thuộc như ở nhà.</description>
     </item>
     
     <item>
       <title>Algorithm 001: Non-descreasing Array</title>
-      <link>https://imlinh.com/algorithm-001-non-descreasing-array.html</link>
+      <link>https://dev-stdout.com/algorithm-001-non-descreasing-array.html</link>
       <pubDate>Wed, 06 Dec 2017 23:26:00 +0700</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/algorithm-001-non-descreasing-array.html</guid>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://dev-stdout.com/algorithm-001-non-descreasing-array.html</guid>
       <description>Xin chào xin chào,
 Sau một thời gian dài ngụp lặn, tới hôm nay mình mới nổi. Thời gian vừa rồi khá bận vì nhà mình có thêm thành viên mới vô cùng lém lỉnh. Công việc thời gian qua không được happy cho lắm nên gần như mình chỉ chém gió trên #random là chính. Thực tình rất phí phạm thời gian.
 Mấy hôm nay, anh em trong hội Ruby Việt Nam đang try hard Algorithm, rất nhiều siêu xayda đã lộ mặt.</description>
@@ -35,51 +35,31 @@ Mấy hôm nay, anh em trong hội Ruby Việt Nam đang try hard Algorithm, r�
     
     <item>
       <title>Blog kỹ thuật nhà hàng xóm</title>
-      <link>https://imlinh.com/friend-sites.html</link>
+      <link>https://dev-stdout.com/friend-sites.html</link>
       <pubDate>Tue, 16 May 2017 13:51:01 +0700</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/friend-sites.html</guid>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://dev-stdout.com/friend-sites.html</guid>
       <description>Viết blog là cách cực kỳ hiệu quả để học và hệ thống hóa lại kiến thức của bản thân. Mình xin phép giới thiệu một số blog chất lượng để các bạn theo dõi, chắc chắn bạn sẽ học hỏi được rất nhiều đấy.
 Đến từ các thành viên của các cộng đồng &amp;ldquo;Rust Việt Nam&amp;rdquo;, &amp;ldquo;Ruby Việt Nam&amp;rdquo;, &amp;ldquo;Kipalog&amp;rdquo; và nhiều nơi khác.  Huytd&amp;rsquo;s Blog - https://thefullsnack.</description>
     </item>
     
     <item>
-      <title>Gửi con trai Hải Đăng của ba</title>
-      <link>https://imlinh.com/gui-con-trai-hai-dang-cua-ba.html</link>
-      <pubDate>Fri, 12 May 2017 21:58:31 +0700</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/gui-con-trai-hai-dang-cua-ba.html</guid>
-      <description>Hải Đăng của ba, ba yêu con rất nhiều!
-Tình cờ nghe lại nhạc Bức tường, ba bắt gặp hình ảnh hai cha con mình trong bài hát. Chỉ 2 tháng nữa thôi, con sẽ chào đời trong tình yêu thương của cả ba và mẹ. Ngoài tình yêu, hình hài và máu thịt mẹ đã cho, con sẽ có một người ba luôn luôn yêu thương, một người bạn luôn luôn bên cạnh.</description>
-    </item>
-    
-    <item>
       <title>Some useful bash script</title>
-      <link>https://imlinh.com/til-some-useful-bash-script.html</link>
+      <link>https://dev-stdout.com/til-some-useful-bash-script.html</link>
       <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/til-some-useful-bash-script.html</guid>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://dev-stdout.com/til-some-useful-bash-script.html</guid>
       <description>Dạo này công việc động chạm nhiều đến bash shell. Mình note lại một số điều mà mình sử dụng trong quá trình làm việc.
 1. Array Array[1] là kiểu dữ liệu cơ bản trong tất cả các ngôn ngữ lập trình (NNLT). Bash shell cũng hỗ trợ array và bạn có thể sử dụng bằng cách khai báo như sau:
  Giống như các NNLT khác, chỉ số của mảng bắt đầu từ 0 -&amp;gt; n.</description>
     </item>
     
     <item>
-      <title>Nhận diện khuôn mặt với OpenCV</title>
-      <link>https://imlinh.com/nhan-dien-khuon-mat-voi-opencv.html</link>
-      <pubDate>Wed, 05 Apr 2017 01:29:00 +0000</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/nhan-dien-khuon-mat-voi-opencv.html</guid>
-      <description>Giới thiệu OpenCV OpenCV (Open source Computer Vision) là thư viện hàng đầu trong lĩnh vực Computer Vision (Thị giác máy tính???) được phát triển bởi Intel từ năm 1999. Hiện tại, OpenCV được phát hành miễn phí theo giấy phép BSD và do Itseez duy trì.
-Bắt đầu từ phiên bản OpenCV 2.4, lớp FaceRecognizer cung cấp cho người dùng cách thức nhận diện khuôn mặt(Face recognition) vô cùng đơn giản.</description>
-    </item>
-    
-    <item>
       <title>TIL: Reload updated configuration without restarting tmux</title>
-      <link>https://imlinh.com/til-reload-updated-configuration-withou-restarting-tmux.html</link>
+      <link>https://dev-stdout.com/til-reload-updated-configuration-withou-restarting-tmux.html</link>
       <pubDate>Wed, 29 Mar 2017 10:19:00 +0000</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/til-reload-updated-configuration-withou-restarting-tmux.html</guid>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://dev-stdout.com/til-reload-updated-configuration-withou-restarting-tmux.html</guid>
       <description>Mặc định, tmux sẽ đọc cấu hình tại đường dẫn ~/.tmux.conf trừ phi nó chưa running. Vì thế, sau khi tọc mạch phải reload config cho nó. Like this:
 tmux source-file ~/.tmux.conf  Ngoài ra, bạn có thể bind key để reload cho tiện.
 bind-key R source-file ~/.tmux.conf  Hoặc bên trong tmux typing Ctrl a :source ~/.tmux.conf
@@ -89,23 +69,12 @@ bind-key R source-file ~/.tmux.conf  Hoặc bên trong tmux typing Ctrl a :sourc
     
     <item>
       <title>Python for Dummies: Log sao cho đúng</title>
-      <link>https://imlinh.com/python-for-dummies-log-sao-cho-dung.html</link>
+      <link>https://dev-stdout.com/python-for-dummies-log-sao-cho-dung.html</link>
       <pubDate>Wed, 15 Mar 2017 16:41:00 +0000</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/python-for-dummies-log-sao-cho-dung.html</guid>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://dev-stdout.com/python-for-dummies-log-sao-cho-dung.html</guid>
       <description>Có thể bạn xem nhẹ nhưng logging cực kỳ quan trọng. Khi một phần mềm hoạt động bình thường, nó thực thi hàng tá các tác vụ khác nhau. Nếu xảy ra lỗi, làm thế nào để bạn tìm ra nguyên nhân một cách nhanh nhất? Câu trả lời đó là &amp;ldquo;Log. Log và log!!!&amp;rdquo;
 Log thế nào cho đúng? Đó là nội dung của bài viết hôm nay.</description>
-    </item>
-    
-    <item>
-      <title>Hello world!</title>
-      <link>https://imlinh.com/hello-world.html</link>
-      <pubDate>Fri, 10 Mar 2017 21:57:04 +0700</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/hello-world.html</guid>
-      <description>fmt.Print(&amp;lsquo;Hello world!&amp;rsquo;) My name is Linh, I am a web developer from Ha Noi, Viet Nam. My hobby is playing football, table tennis and Doto :D.
-I spend free time on this blog talking about Linux, Python, Golang and something in my life. This is how I review my knowledge, learn something new and make new friends.
-I used Hugo to build a modern static website. You can find a tutorial on here</description>
     </item>
     
   </channel>

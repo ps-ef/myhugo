@@ -1,34 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Im Linh</title>
-    <link>https://imlinh.com/tag/python.html</link>
-    <description>Recent content in Python on Im Linh</description>
+    <title>Python on /dev/stdout</title>
+    <link>https://dev-stdout.com/tag/python.html</link>
+    <description>Recent content in Python on /dev/stdout</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hi@imlinh.com (Tan Linh)</managingEditor>
-    <webMaster>hi@imlinh.com (Tan Linh)</webMaster>
-    <lastBuildDate>Wed, 05 Apr 2017 01:29:00 +0000</lastBuildDate>
+    <managingEditor>tanlinh.hust@gmail.com (Tan Linh)</managingEditor>
+    <webMaster>tanlinh.hust@gmail.com (Tan Linh)</webMaster>
+    <lastBuildDate>Wed, 15 Mar 2017 16:41:00 +0000</lastBuildDate>
     
-	<atom:link href="https://imlinh.com/tag/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dev-stdout.com/tag/python/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Nhận diện khuôn mặt với OpenCV</title>
-      <link>https://imlinh.com/nhan-dien-khuon-mat-voi-opencv.html</link>
-      <pubDate>Wed, 05 Apr 2017 01:29:00 +0000</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/nhan-dien-khuon-mat-voi-opencv.html</guid>
-      <description>Giới thiệu OpenCV OpenCV (Open source Computer Vision) là thư viện hàng đầu trong lĩnh vực Computer Vision (Thị giác máy tính???) được phát triển bởi Intel từ năm 1999. Hiện tại, OpenCV được phát hành miễn phí theo giấy phép BSD và do Itseez duy trì.
-Bắt đầu từ phiên bản OpenCV 2.4, lớp FaceRecognizer cung cấp cho người dùng cách thức nhận diện khuôn mặt(Face recognition) vô cùng đơn giản.</description>
-    </item>
     
     <item>
       <title>Python for Dummies: Log sao cho đúng</title>
-      <link>https://imlinh.com/python-for-dummies-log-sao-cho-dung.html</link>
+      <link>https://dev-stdout.com/python-for-dummies-log-sao-cho-dung.html</link>
       <pubDate>Wed, 15 Mar 2017 16:41:00 +0000</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/python-for-dummies-log-sao-cho-dung.html</guid>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://dev-stdout.com/python-for-dummies-log-sao-cho-dung.html</guid>
       <description>Có thể bạn xem nhẹ nhưng logging cực kỳ quan trọng. Khi một phần mềm hoạt động bình thường, nó thực thi hàng tá các tác vụ khác nhau. Nếu xảy ra lỗi, làm thế nào để bạn tìm ra nguyên nhân một cách nhanh nhất? Câu trả lời đó là &amp;ldquo;Log. Log và log!!!&amp;rdquo;
 Log thế nào cho đúng? Đó là nội dung của bài viết hôm nay.</description>
     </item>

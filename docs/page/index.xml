@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pages on Im Linh</title>
-    <link>https://imlinh.com/page.html</link>
-    <description>Recent content in Pages on Im Linh</description>
+    <title>Pages on /dev/stdout</title>
+    <link>https://dev-stdout.com/page.html</link>
+    <description>Recent content in Pages on /dev/stdout</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hi@imlinh.com (Tan Linh)</managingEditor>
-    <webMaster>hi@imlinh.com (Tan Linh)</webMaster>
+    <managingEditor>tanlinh.hust@gmail.com (Tan Linh)</managingEditor>
+    <webMaster>tanlinh.hust@gmail.com (Tan Linh)</webMaster>
     <lastBuildDate>Tue, 16 May 2017 13:51:01 +0700</lastBuildDate>
     
-	<atom:link href="https://imlinh.com/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dev-stdout.com/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blog kỹ thuật nhà hàng xóm</title>
-      <link>https://imlinh.com/friend-sites.html</link>
+      <link>https://dev-stdout.com/friend-sites.html</link>
       <pubDate>Tue, 16 May 2017 13:51:01 +0700</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/friend-sites.html</guid>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://dev-stdout.com/friend-sites.html</guid>
       <description>Viết blog là cách cực kỳ hiệu quả để học và hệ thống hóa lại kiến thức của bản thân. Mình xin phép giới thiệu một số blog chất lượng để các bạn theo dõi, chắc chắn bạn sẽ học hỏi được rất nhiều đấy.
 Đến từ các thành viên của các cộng đồng &amp;ldquo;Rust Việt Nam&amp;rdquo;, &amp;ldquo;Ruby Việt Nam&amp;rdquo;, &amp;ldquo;Kipalog&amp;rdquo; và nhiều nơi khác.  Huytd&amp;rsquo;s Blog - https://thefullsnack.</description>
     </item>
