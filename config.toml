@@ -1,6 +1,6 @@
-baseurl = "https://imlinh.com/"
+baseurl = "https://dev-stdout.com/"
 languageCode = "en-us"
-title = "Im Linh"
+title = "/dev/stdout"
 theme = "hugo-injoker-theme"
 googleAnalytics = "UA-75596542-1"
 disqusShortname = "tanlinhnd"
@@ -29,20 +29,20 @@ publishDir = "docs"
     url = "/friend-sites.html"
 
 [params]
-    description = "Ghi chép linh ba tinh"
-    copyright = "© 2017 Im Linh"
-    disqus_url="https://imlinh.com"
+    description = "Nói ít thôi và đưa code đây"
+    copyright = "© 2017 dev-stdout.com"
+    disqus_url="https://dev-stdout.com"
     disqus_identifier="imlinh"
 
     [params.logo]
     url = "logo.jpg"
     width = 50
     height = 50
-    alt = "Im Linh"
+    alt = "/dev/stdout"
 
 [Author]
   name = "Tan Linh"
-  email = "hi@imlinh.com"
+  email = "tanlinh.hust@gmail.com"
   about = "Mình là Linh - Một thằng cuồng Linux. Đừng ai nhắc đến Windows trước mặt mình nhé. Hehe"
   facebook = "https://facebook.com/tanlinh.nd"
   github = "https://github.com/tanlinhnd"

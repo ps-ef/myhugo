@@ -3,7 +3,7 @@ date = "2017-03-10T21:57:04+07:00"
 title = "Hello world!"
 slug = "hello-world"
 description = "Hello. My name is Linh, I am a web developer from Ha Noi, Viet Nam. My hobby is playing football, table tennis and Doto :D"
-draft = false
+draft = true
 +++
 
 # fmt.Print('Hello world!')

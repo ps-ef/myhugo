@@ -1,7 +1,7 @@
 baseurl = "http://127.0.0.1:1313/"
 languageCode = "en-us"
 title = "Im Linh"
-theme = "hugo-injoker-theme"
+theme = "hugo-redlounge"
 googleAnalytics = "UA-75596542-1"
 disqusShortname = ""
 preserveTaxonomyNames = true
