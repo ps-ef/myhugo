@@ -30,15 +30,17 @@ publishDir = "docs"
 
 [params]
     description = "Nói ít thôi và đưa code đây"
+    quote = "“Talk is cheap. Show me the code„"
+    quote_author = "~ Linus Torvalds ~"
     copyright = "© 2017 dev-stdout.com"
     disqus_url="https://dev-stdout.com"
     disqus_identifier="imlinh"
 
     [params.logo]
-    url = "logo.jpg"
+    url = "logo.png"
     width = 50
     height = 50
-    alt = "/dev/stdout"
+    alt = "/dev/stdout - Nói ít thôi và đưa code đây"
 
 [Author]
   name = "Tan Linh"
