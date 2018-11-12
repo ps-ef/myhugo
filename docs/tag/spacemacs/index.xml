@@ -15,10 +15,10 @@
     
     <item>
       <title>Moving from Neovim to Spacemacs</title>
-      <link>https://dev-stdout.com/moving-from-neovim-to-spacemacs.html</link>
+      <link>https://dev-stdout.com/post/moving-from-neovim-to-spacemacs.html</link>
       <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/moving-from-neovim-to-spacemacs.html</guid>
+      <guid>https://dev-stdout.com/post/moving-from-neovim-to-spacemacs.html</guid>
       <description>Một năm trước, mình nghe theo lời đường mật Di cư sang Vim [1] của CTO. Sau một năm xài Vim (thực ra là Neovim) một cách nghiêm túc, lần này mình lại bị dụ dỗ sang Spacemacs. Với những ai chưa biết, Spacemacs là một distribution của Emacs với description là The best editor is neither Emacs nor Vim, it&#39;s Emacs and Vim! cho bạn một trải nghiệm Emacs rất tuyệt vời, riêng Vimmer sẽ cảm giác thân thuộc như ở nhà.</description>
     </item>
     

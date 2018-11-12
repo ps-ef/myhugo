@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://dev-stdout.com/moving-from-neovim-to-spacemacs.html</loc>
+    <loc>https://dev-stdout.com/post/understanding-priority-on-linux-processes.html</loc>
+    <lastmod>2018-11-13T00:23:57+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev-stdout.com/post/moving-from-neovim-to-spacemacs.html</loc>
     <lastmod>2018-03-14T22:20:08+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dev-stdout.com/algorithm-001-non-descreasing-array.html</loc>
+    <loc>https://dev-stdout.com/post/algorithm-001-non-descreasing-array.html</loc>
     <lastmod>2017-12-06T23:26:00+07:00</lastmod>
   </url>
   
@@ -18,23 +23,23 @@
   </url>
   
   <url>
-    <loc>https://dev-stdout.com/til-some-useful-bash-script.html</loc>
+    <loc>https://dev-stdout.com/post/til-some-useful-bash-script.html</loc>
     <lastmod>2017-05-08T16:16:30+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dev-stdout.com/til-reload-updated-configuration-withou-restarting-tmux.html</loc>
+    <loc>https://dev-stdout.com/post/til-reload-updated-configuration-withou-restarting-tmux.html</loc>
     <lastmod>2017-03-29T10:19:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dev-stdout.com/python-for-dummies-log-sao-cho-dung.html</loc>
+    <loc>https://dev-stdout.com/post/python-for-dummies-log-sao-cho-dung.html</loc>
     <lastmod>2017-03-15T16:41:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://dev-stdout.com/</loc>
-    <lastmod>2018-03-14T22:20:08+07:00</lastmod>
+    <lastmod>2018-11-13T00:23:57+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -52,7 +57,7 @@
   
   <url>
     <loc>https://dev-stdout.com/post.html</loc>
-    <lastmod>2018-03-14T22:20:08+07:00</lastmod>
+    <lastmod>2018-11-13T00:23:57+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -87,14 +92,38 @@
   </url>
   
   <url>
+    <loc>https://dev-stdout.com/tag/devops.html</loc>
+    <lastmod>2018-11-13T00:23:57+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://dev-stdout.com/tag/golang.html</loc>
     <lastmod>2017-12-06T23:26:00+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://dev-stdout.com/tag/linux.html</loc>
+    <lastmod>2017-05-08T16:16:30+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://dev-stdout.com/tag/neovim.html</loc>
     <lastmod>2018-03-14T22:20:08+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev-stdout.com/tag/nice-value.html</loc>
+    <lastmod>2018-11-13T00:23:57+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dev-stdout.com/tag/niceness.html</loc>
+    <lastmod>2018-11-13T00:23:57+07:00</lastmod>
     <priority>0</priority>
   </url>
   

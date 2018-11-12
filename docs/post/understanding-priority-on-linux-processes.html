@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="https://dev-stdout.com/images/logo.png">
+<meta name="generator" content="Hugo 0.49" />
+
+
+    <title>Understanding Priority on Linux Processes - /dev/stdout</title>
+    <meta property="og:title" content="Understanding Priority on Linux Processes - /dev/stdout">
+    <meta property="og:site_name" content="/dev/stdout" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="" />
+       
+    <meta property="og:url" content="https://dev-stdout.com/post/understanding-priority-on-linux-processes.html" />
+    <meta property="article:published_time" content="2018-11-13T00:23:57Z" />
+    
+
+    <meta property="article:publisher" content="https://facebook.com/tanlinh.nd" />
+    <meta property="article:author" content="https://facebook.com/tanlinh.nd" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Understanding Priority on Linux Processes - /dev/stdout" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:url" content="https://dev-stdout.com/post/understanding-priority-on-linux-processes.html" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Tan Linh" />
+    <meta name="twitter:site" content="https://twitter.com/@tanlinhnd" />
+    <meta name="twitter:creator" content="@tanlinhnd" />
+
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://dev-stdout.com/css/main.css?v=1.0.2" media="all">
+<link rel="stylesheet" href="https://dev-stdout.com/css/font-awesome.min.css" media="all">
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://dev-stdout.com/" class="nav-logo">
+    <img src="https://dev-stdout.com/images/logo.png" 
+         width="50" 
+         height="50" 
+         alt="/dev/stdout - Nói ít thôi và đưa code đây">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/tag/devops">DevOps</a></li>
+    
+    <li><a href="/friend-sites.html">Friend Sites</a></li>
+    
+    <li><a href="/tag/golang">Golang</a></li>
+    
+    <li><a href="/tag/linux">Linux</a></li>
+    
+    <li><a href="/tag/til">TIL</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+<article class="article">
+    
+    <span class="article-duration"><i class="fa fa-clock-o"></i> 6 min read</span>
+    
+
+    <h1 class="article-title">Understanding Priority on Linux Processes</h1>
+
+    
+    <span class="article-date"><i class="fa fa-calendar"></i> November 13, 2018</span>
+    
+
+    <div class="article-content">
+        
+
+<p>Một buổi sáng như bao ngày bình thường, mình thức dậy và tự hỏi: Hôm nay mình phải làm những việc gì nhỉ? Đối với một người dù không biết sắp xếp kế hoạch như mình thì những việc cơ bản sau sẽ được thực hiện:</p>
+
+<ul>
+<li>Vệ sinh cá nhân. Đánh răng, rửa mặt, tắm rửa</li>
+<li>Ăn sáng và đi làm</li>
+<li>Giải quyết từng task đang tồn đọng</li>
+<li>Nghe sếp chửi. Chán đíu muốn làm nữa và nghỉ việc.</li>
+<li>Đang bực người yêu léo nhéo và chia tay</li>
+<li>Về nhà ngồi viết những dòng này….</li>
+</ul>
+
+<p>Đùa chút thôi, mình đã qua cái tuổi chia tay người yêu rồi :troll:.</p>
+
+<p>Mình chỉ định nói một điều đó là: Với một người bình thường, hàng ngày bạn phải handle hàng tá các công việc khác nhau cùng một lúc. Bạn đã chọn làm việc này hay việc kia trước như nào? Rất may mắn là nhờ não bạn biết việc A phải được ưu tiên hơn việc B. Hoặc sếp bảo bạn cứ làm đi mặc dù bạn thấy nó chẳng quan trọng méo gì cả :troll:</p>
+
+<h2 id="1-priority-là-cái-gì">1. Priority là cái gì?</h2>
+
+<p>Là các cách bạn ưu tiên việc A hay việc B hơn đó. Với con người là vậy còn Linux thì sao? Nó cũng same vậy thôi.</p>
+
+<p>Bạn sẽ nói với nó rằng:</p>
+
+<blockquote>
+<p>Mày phải ưu tiên chạy process A của tao nhé, còn process B của thằng C thì túc tắc cũng được.</p>
+</blockquote>
+
+<p>Cái guidelines đó được gọi là <code>niceness</code> hoặc <code>nice value</code> trong Linux. Với những bạn chưa biết thì <code>nice</code> là một program có trên Unix hoặc họ Unix như Linux. Nó cho phép thực thi một command hoặc một shell script với độ ưu tiên xác định. Điều đó có nghĩa rằng CPU sẽ hiểu process này được ưu tiên nhiều resources hơn process khác.</p>
+
+<p>Với khoảng giá trị của <code>nice value</code> từ -20 đến 19. Giá trị càng thấp, độ ưu tiên càng cao. Nếu một process có <code>nice value</code> lớn hơn 19, CPU sẽ thực thi nó lúc nào <strong>có thể</strong> hay nói một cách văn học là <code>Lúc nào rảnh tao sẽ chạy process của mày, OK?</code></p>
+
+<blockquote>
+<p>Lưu ý: Giá trị mặc định của <code>niceness</code> hay <code>nice value</code> là 0</p>
+</blockquote>
+
+<p>Với <code>nice value</code>, chúng ta dễ dàng kiểm soát CPU sử dụng tài nguyên một cách hiệu quả nhất. Những process nào quan trọng, bạn có thể set <code>nice value</code> thấp để CPU hiểu rằng nó cần quan tâm cẩn thận những cháu này và ngược lại.</p>
+
+<p>Ngoài ra, nếu bạn có quan hệ thân thiết với anh DevOps, bạn có thể nhờ anh ý set <code>nice value</code> cho user bạn thấp hơn default để các processes  được ngốn resources nhiều hơn. Điều này hoàn toàn hợp lệ và được công nhận trong hiến pháp luôn đó :troll:</p>
+
+<h2 id="2-tôi-kiểm-tra-process-của-tôi-được-ưu-tiên-như-nào">2. Tôi kiểm tra process của tôi được ưu tiên như nào?</h2>
+
+<p>Cách đơn giản nhất là sử dụng lệnh <code>top</code></p>
+
+<p><img src="https://i.imgur.com/iEsk2oK.png" alt="Use top command" /></p>
+
+<p>Một cách khác là sử dụng lệnh <code>ps</code>. Trong đó <code>NI</code> chính là <code>nice value</code></p>
+
+<p><code>ps -o pid,comm,nice -p 246</code></p>
+
+<p>Kết quả sẽ như hình:</p>
+
+<p><img src="https://i.imgur.com/ttxMnqo.png" alt="Use ps command" /></p>
+
+<h2 id="3-tôi-muốn-lower-nice-value-khi-chạy-process-mới-thì-làm-sao">3. Tôi muốn lower <code>nice value</code> khi chạy process mới thì làm sao?</h2>
+
+<p>Để CPU ưu ái process của bạn hơn, gõ ngay lệnh sau vào terminal</p>
+
+<p><code>nice -n -20 wget https://p**nhub.com/download/xxxxxxxxxxx.mp4</code></p>
+
+<blockquote>
+<p>Lưu ý: Không nên thử trên production. Chỉ những chuyên gia có kinh nghiệm (bị đuổi việc) như mình mới nên làm điều đó.</p>
+</blockquote>
+
+<p>Một điều ghi nhớ đó là: Giá trị của <code>nice value</code> là số dương sẽ làm độ ưu tiên của process giảm đi so với mặc định đấy.</p>
+
+<h2 id="4-process-đang-chạy-nhưng-tôi-muốn-nice-value-của-nó-thấp-hơn-nữa-thì-sao">4. Process đang chạy nhưng tôi muốn <code>nice value</code> của nó thấp hơn nữa thì sao?</h2>
+
+<p>Rõ ràng có những lúc thấy process có vẻ chậm chạp, thay vì phải chờ đến lúc CPU rảnh rang hơn chút, bạn có thể nhờ anh CPU quan tâm mình hơn bằng một cái phong bì với cú pháp sau:</p>
+
+<p><code>renice [nice value] -p [process ID]</code></p>
+
+<p>Ví dụ:</p>
+
+<p><code>renice -5 -p 4051</code></p>
+
+<p><img src="https://i.imgur.com/eqpE5Ly.png" alt="Có quan hệ tốt với anh DevOps đó" /></p>
+
+<p>Điều này làm process của bạn được ưu tiên những thằng default value bằng 0 khác :troll:</p>
+
+<blockquote>
+<p>Lưu ý quan trọng: Chỉ có root hoặc sudoers mới có quyền set giá trị <code>nice value</code> là số âm. Bạn đã hiểu vì sao phải làm thân anh DevOps rồi chứ :omg:</p>
+</blockquote>
+
+<h2 id="5-tôi-đã-làm-thân-anh-devops-rồi-làm-sao-để-process-của-tôi-được-ưu-tiên">5. Tôi đã làm thân anh DevOps rồi, làm sao để process của tôi được ưu tiên?</h2>
+
+<p>Nếu đã làm thân với anh DevOps, mọi chuyện dần dễ dàng hơn rồi đấy. Bạn nhờ anh ta sửa file <code>/etc/security/limits.conf</code> là được. Syntax như sau:</p>
+
+<p><code>[username] [hard|soft] priority [nice value]</code></p>
+
+<p>Ví dụ:</p>
+
+<p><code>tanlinhnd hard priority -10</code></p>
+
+<p>Thực ra file <code>/etc/security/limits.conf</code> không chỉ đơn thuần limit priority của từng user, mình paste luôn phần <code>man</code> để các bạn tham khảo.</p>
+
+<pre><code># /etc/security/limits.conf
+#
+#Each line describes a limit for a user in the form:
+#
+#&lt;domain&gt;        &lt;type&gt;  &lt;item&gt;  &lt;value&gt;
+#
+#Where:
+#&lt;domain&gt; can be:
+#        - a user name
+#        - a group name, with @group syntax
+#        - the wildcard *, for default entry
+#        - the wildcard %, can be also used with %group syntax,
+#                 for maxlogin limit
+#        - NOTE: group and wildcard limits are not applied to root.
+#          To apply a limit to the root user, &lt;domain&gt; must be
+#          the literal username root.
+#
+#&lt;type&gt; can have the two values:
+#        - &quot;soft&quot; for enforcing the soft limits
+#        - &quot;hard&quot; for enforcing hard limits
+#
+#&lt;item&gt; can be one of the following:
+#        - core - limits the core file size (KB)
+#        - data - max data size (KB)
+#        - fsize - maximum filesize (KB)
+#        - memlock - max locked-in-memory address space (KB)
+#        - nofile - max number of open files
+#        - rss - max resident set size (KB)
+#        - stack - max stack size (KB)
+#        - cpu - max CPU time (MIN)
+#        - nproc - max number of processes
+#        - as - address space limit (KB)
+#        - maxlogins - max number of logins for this user
+#        - maxsyslogins - max number of logins on the system
+#        - priority - the priority to run user process with
+#        - locks - max number of file locks the user can hold
+#        - sigpending - max number of pending signals
+#        - msgqueue - max memory used by POSIX message queues (bytes)
+#        - nice - max nice priority allowed to raise to values: [-20, 19]
+#        - rtprio - max realtime priority
+#        - chroot - change root to directory (Debian-specific)
+#
+#&lt;domain&gt;      &lt;type&gt;  &lt;item&gt;         &lt;value&gt;
+#
+
+#*               soft    core            0
+#root            hard    core            100000
+#*               hard    rss             10000
+#@student        hard    nproc           20
+#@faculty        soft    nproc           20
+#@faculty        hard    nproc           50
+#ftp             hard    nproc           0
+#ftp             -       chroot          /ftp
+#@student        -       maxlogins       4
+
+# End of file
+</code></pre>
+
+<p>Cuối cùng, bài viết chứa rất nhiều ví dụ được thực hiện bởi chuyên gia. Vui lòng không thử trên production để tránh bị đuổi việc :troll:.</p>
+
+<p>Cheers,</p>
+
+<h2 id="6-references">6. References</h2>
+
+<p>[1] Wikipedia <a href="https://en.wikipedia.org/wiki/Nice_(Unix)">nice (Unix)</a></p>
+
+<p>[2] nixtutor.com <a href="https://www.nixtutor.com/linux/changing-priority-on-linux-processes/">Changing Priority on Linux Processes</a></p>
+
+    </div>
+    
+    <h2>Tags:</h2>
+        
+        <a href="/tag/niceness" class="tags"><i class="fa fa-hashtag"></i> niceness</a>
+        
+        <a href="/tag/nice-value" class="tags"><i class="fa fa-hashtag"></i> nice value</a>
+        
+        <a href="/tag/devops" class="tags"><i class="fa fa-hashtag"></i> devops</a>
+        
+        <a href="/tag/linux" class="tags"><i class="fa fa-hashtag"></i> linux</a>
+        
+    
+
+    
+</article>
+
+
+</main>
+<footer class="footer">
+    <ul class="footer-links">
+        <li>
+            <a href="https://dev-stdout.com/">© 2017 dev-stdout.com</a>
+        </li>
+        <li>
+            <a href="https://dev-stdout.com/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+        </li>
+        <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <i class="fa fa-heart" style="color:#D14;"></i> using <img src="https://dev-stdout.com/images/hugo-logo.png" width="22" height="22"></a>
+        </li>
+    </ul>
+    <ul class="footer-social">
+        <li><a href="https://github.com/tanlinhnd" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+        <li><a href="https://linkedin.com/in/tanlinhnd/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+        <li><a href="https://facebook.com/tanlinh.nd" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+        <li><a href="https://www.instagram.com/tanlinhnd/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
+        <li><a href="@tanlinhnd" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+    </ul>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>
+</footer>
+
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-75596542-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</body>
+
+</html>
+

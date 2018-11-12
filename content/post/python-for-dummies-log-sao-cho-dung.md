@@ -333,7 +333,7 @@ Rất vui nếu giúp ích được bạn và mình rất sẵn lòng tiếp thu
 
 Many thanks,
 
-## Reference
+## References
 [1] Fangpelin "*Good logging practice in Python*" [Fang's coding note](https://fangpenlin.com/posts/2012/08/26/good-logging-practice-in-python/)
 
 [2] Python Software Foundation "*Logging facility for Python*" [Python 2.7.13 Documentation](https://docs.python.org/2/library/logging.html) 

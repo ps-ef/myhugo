@@ -7,36 +7,36 @@
 <meta name="generator" content="Hugo 0.49" />
 
 
-    <title>algorithm - /dev/stdout</title>
-    <meta property="og:title" content="algorithm - /dev/stdout">
+    <title>TIL: Reload updated configuration without restarting tmux - /dev/stdout</title>
+    <meta property="og:title" content="TIL: Reload updated configuration without restarting tmux - /dev/stdout">
     <meta property="og:site_name" content="/dev/stdout" />
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="" />
+    <meta property="og:description" content="Mặc định, tmux sẽ đọc cấu hình tại đường dẫn ~/.tmux.conf trừ phi nó chưa running. Vì thế, sau khi tọc mạch phải reload config cho nó. " />
        
-    <meta property="og:url" content="https://dev-stdout.com/tag/algorithm.html" />
-    <meta property="article:published_time" content="2017-12-06T23:26:00Z" />
+    <meta property="og:url" content="https://dev-stdout.com/post/til-reload-updated-configuration-withou-restarting-tmux.html" />
+    <meta property="article:published_time" content="2017-03-29T10:19:00Z" />
     
 
     <meta property="article:publisher" content="https://facebook.com/tanlinh.nd" />
     <meta property="article:author" content="https://facebook.com/tanlinh.nd" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="algorithm - /dev/stdout" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:url" content="https://dev-stdout.com/tag/algorithm.html" />
+    <meta name="twitter:title" content="TIL: Reload updated configuration without restarting tmux - /dev/stdout" />
+    <meta name="twitter:description" content="Mặc định, tmux sẽ đọc cấu hình tại đường dẫn ~/.tmux.conf trừ phi nó chưa running. Vì thế, sau khi tọc mạch phải reload config cho nó. " />
+    <meta name="twitter:url" content="https://dev-stdout.com/post/til-reload-updated-configuration-withou-restarting-tmux.html" />
     <meta name="twitter:label1" content="Written by" />
-    <meta name="twitter:data1" content="" />
+    <meta name="twitter:data1" content="Tan Linh" />
     <meta name="twitter:site" content="https://twitter.com/@tanlinhnd" />
     <meta name="twitter:creator" content="@tanlinhnd" />
 
 
 
   
+    <meta property="description" content="Mặc định, tmux sẽ đọc cấu hình tại đường dẫn ~/.tmux.conf trừ phi nó chưa running. Vì thế, sau khi tọc mạch phải reload config cho nó. ">
+  
 
 
 
 
-
-    <link href="https://dev-stdout.com/tag/algorithm/index.xml" rel="alternate" type="application/rss+xml" title="/dev/stdout" />
 
 
 <link rel="stylesheet" href="https://dev-stdout.com/css/main.css?v=1.0.2" media="all">
@@ -75,20 +75,52 @@
 
 <main class="content" role="main">
 
-<div class="archive">
-    <h2 class="archive-title"># algorithm</h2>
+<article class="article">
     
-    <article class="archive-item">
-        <a href="https://dev-stdout.com/post/algorithm-001-non-descreasing-array.html" class="archive-item-link">Algorithm 001: Non-descreasing Array</a>
-        <span class="archive-item-date">
-            December 6, 2017
-        </span>
-    </article>
+    <span class="article-duration"><i class="fa fa-clock-o"></i> 1 min read</span>
     
-</div>
+
+    <h1 class="article-title">TIL: Reload updated configuration without restarting tmux</h1>
+
+    
+    <span class="article-date"><i class="fa fa-calendar"></i> March 29, 2017</span>
+    
+
+    <div class="article-content">
+        <p>Mặc định, <code>tmux</code> sẽ đọc cấu hình tại đường dẫn <code>~/.tmux.conf</code> trừ phi nó chưa running. Vì thế, sau khi tọc mạch phải reload config cho nó.
+Like this:</p>
+
+<pre><code class="language-shell">tmux source-file ~/.tmux.conf
+</code></pre>
+
+<p>Ngoài ra, bạn có thể bind key để reload cho tiện.</p>
+
+<pre><code class="language-shell">bind-key R source-file ~/.tmux.conf
+</code></pre>
+
+<p>Hoặc bên trong <code>tmux</code> typing <code>Ctrl a :source ~/.tmux.conf</code></p>
+
+<blockquote>
+<p>Ở đây mình bind <code>Ctrl a</code> thay cho <code>Ctrl B</code></p>
+</blockquote>
+
+<p>tanlinhnd, 29-03-2017</p>
+
+    </div>
+    
+    <h2>Tags:</h2>
+        
+        <a href="/tag/til" class="tags"><i class="fa fa-hashtag"></i> TIL</a>
+        
+        <a href="/tag/linux" class="tags"><i class="fa fa-hashtag"></i> Linux</a>
+        
+    
+
+    
+</article>
+
 
 </main>
-
 <footer class="footer">
     <ul class="footer-links">
         <li>

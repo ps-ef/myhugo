@@ -15,10 +15,10 @@
     
     <item>
       <title>Python for Dummies: Log sao cho đúng</title>
-      <link>https://dev-stdout.com/python-for-dummies-log-sao-cho-dung.html</link>
+      <link>https://dev-stdout.com/post/python-for-dummies-log-sao-cho-dung.html</link>
       <pubDate>Wed, 15 Mar 2017 16:41:00 +0000</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/python-for-dummies-log-sao-cho-dung.html</guid>
+      <guid>https://dev-stdout.com/post/python-for-dummies-log-sao-cho-dung.html</guid>
       <description>Có thể bạn xem nhẹ nhưng logging cực kỳ quan trọng. Khi một phần mềm hoạt động bình thường, nó thực thi hàng tá các tác vụ khác nhau. Nếu xảy ra lỗi, làm thế nào để bạn tìm ra nguyên nhân một cách nhanh nhất? Câu trả lời đó là &amp;ldquo;Log. Log và log!!!&amp;rdquo;
 Log thế nào cho đúng? Đó là nội dung của bài viết hôm nay.</description>
     </item>

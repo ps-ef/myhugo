@@ -3,13 +3,13 @@ languageCode = "en-us"
 title = "/dev/stdout"
 theme = "hugo-injoker-theme"
 googleAnalytics = "UA-75596542-1"
-disqusShortname = "tanlinhnd"
+disqusShortname = ""
 preserveTaxonomyNames = true
 uglyURLs = true
 publishDir = "docs"
 
 [permalinks]
-    post = "/:slug/"
+    post = "post/:slug/"
     page = "/:slug/"
 
 [[menu.main]]
@@ -22,8 +22,8 @@ publishDir = "docs"
     name = "TIL"
     url = "/tag/til"
 [[menu.main]]
-    name = "Algorithm"
-    url = "/tag/algorithm"
+    name = "DevOps"
+    url = "/tag/devops"
 [[menu.main]]
     name = "Friend Sites"
     url = "/friend-sites.html"
@@ -34,7 +34,7 @@ publishDir = "docs"
     quote_author = "~ Linus Torvalds ~"
     copyright = "© 2017 dev-stdout.com"
     disqus_url="https://dev-stdout.com"
-    disqus_identifier="imlinh"
+    disqus_identifier="tanlinhnd"
 
     [params.logo]
     url = "logo.png"
