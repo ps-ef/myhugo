@@ -1,12 +1,10 @@
 +++
 date = "2017-03-10T21:57:04+07:00"
-title = "Hello world!"
-slug = "hello-world"
+title = "About me!"
+slug = "about-me"
 description = "Mình tên là Linh, hiện tại mình đang làm chân fresher tại một công ty startup ở Hà Nội."
-draft = true
+draft = false
 +++
-
-# fmt.Print('Hello world!')
 
 Chao xìn,
 
@@ -14,7 +12,7 @@ Mình tên là Linh, hiện tại mình đang làm chân fresher tại một cô
 
 Vì là fresher nên mình hay trà đá chém gió, đá bóng hoặc doto là chính. Đừng có đùa nha, rank 3k trình 10k đó.
 
-Blog đúng như domain của nó, là nơi mình viết về Linux, Golang hay cái gì hay ho mà mình học được trong công việc. Giống như Linus Torvalds đã nói `Talk is cheap. Show me the code` mà theo suy diễn của mình là `Không viết được dòng code nào thì nói chỉ cho vô nghĩa`. Do vậy, đây là một `Standard Output` của mình đó :omg: 
+Blog đúng như domain của nó, là nơi mình viết về Linux, Golang hay cái gì hay ho mà mình học được trong công việc. Giống như Linus Torvalds đã nói `Talk is cheap. Show me the code` mà theo suy diễn của mình là `Không viết được dòng code nào thì nói chi cho vô nghĩa`. Do vậy, đây là một `Standard Output` của mình đó :omg: 
 
 Blog không có comment, nếu bạn cảm thấy hay và thi thoảng tìm vào blog là mình vui lắm rồi. 
 

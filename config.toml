@@ -27,6 +27,9 @@ publishDir = "docs"
 [[menu.main]]
     name = "Friend Sites"
     url = "/friend-sites.html"
+[[menu.main]]
+    name = "About me"
+    url = "/about-me.html"
 
 [params]
     description = "Nói ít thôi và đưa code đây"
