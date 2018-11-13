@@ -7,6 +7,7 @@ disqusShortname = ""
 preserveTaxonomyNames = true
 uglyURLs = true
 publishDir = "docs"
+enableEmoji = true
 
 [permalinks]
     post = "post/:slug/"

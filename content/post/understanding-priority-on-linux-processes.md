@@ -18,9 +18,9 @@ Một buổi sáng như bao ngày bình thường, mình thức dậy và tự h
 * Đang bực người yêu léo nhéo và chia tay
 * Về nhà ngồi viết những dòng này….
 
-Đùa chút thôi, mình đã qua cái tuổi chia tay người yêu rồi :troll:. 
+Đùa chút thôi, mình đã qua cái tuổi chia tay người yêu rồi :tired_face: 
 
-Mình chỉ định nói một điều đó là: Với một người bình thường, hàng ngày bạn phải handle hàng tá các công việc khác nhau cùng một lúc. Bạn đã chọn làm việc này hay việc kia trước như nào? Rất may mắn là nhờ não bạn biết việc A phải được ưu tiên hơn việc B. Hoặc sếp bảo bạn cứ làm đi mặc dù bạn thấy nó chẳng quan trọng méo gì cả :troll:
+Mình chỉ định nói một điều đó là: Với một người bình thường, hàng ngày bạn phải handle hàng tá các công việc khác nhau cùng một lúc. Bạn đã chọn làm việc này hay việc kia trước như nào? Rất may mắn là nhờ não bạn biết việc A phải được ưu tiên hơn việc B. Hoặc sếp bảo bạn cứ làm đi mặc dù bạn thấy nó chẳng quan trọng méo gì cả :shit:
 
 ## 1. Priority là cái gì?
 
@@ -38,7 +38,7 @@ Với khoảng giá trị của `nice value` từ -20 đến 19. Giá trị càn
 
 Với `nice value`, chúng ta dễ dàng kiểm soát CPU sử dụng tài nguyên một cách hiệu quả nhất. Những process nào quan trọng, bạn có thể set `nice value` thấp để CPU hiểu rằng nó cần quan tâm cẩn thận những cháu này và ngược lại. 
 
-Ngoài ra, nếu bạn có quan hệ thân thiết với anh DevOps, bạn có thể nhờ anh ý set `nice value` cho user bạn thấp hơn default để các processes  được ngốn resources nhiều hơn. Điều này hoàn toàn hợp lệ và được công nhận trong hiến pháp luôn đó :troll:
+Ngoài ra, nếu bạn có quan hệ thân thiết với anh DevOps, bạn có thể nhờ anh ý set `nice value` cho user bạn thấp hơn default để các processes  được ngốn resources nhiều hơn. Điều này hoàn toàn hợp lệ và được công nhận trong hiến pháp luôn đó :sunglasses:
 
 ## 2. Tôi kiểm tra process của tôi được ưu tiên như nào?
 
@@ -74,7 +74,7 @@ Ví dụ:
 
 ![Có quan hệ tốt với anh DevOps đó](https://i.imgur.com/eqpE5Ly.png)
 
-Điều này làm process của bạn được ưu tiên hơn những thằng default value bằng 0 khác :troll:
+Điều này làm process của bạn được ưu tiên hơn những thằng default value bằng 0 khác :yum:
 
 > Lưu ý quan trọng: Chỉ có root hoặc sudoers mới có quyền set giá trị `nice value` là số âm. Bạn đã hiểu vì sao phải làm thân anh DevOps rồi chứ :omg:
 
@@ -148,7 +148,7 @@ Thực ra file `/etc/security/limits.conf` không chỉ đơn thuần limit prio
 # End of file
 ```
 
-Cuối cùng, bài viết chứa rất nhiều ví dụ được thực hiện bởi chuyên gia. Vui lòng không thử trên production để tránh bị đuổi việc :troll:.
+Cuối cùng, bài viết chứa rất nhiều ví dụ được thực hiện bởi chuyên gia. Vui lòng không thử trên production để tránh bị đuổi việc :stuck_out_tongue_winking_eye:.
 
 Cheers,
 
