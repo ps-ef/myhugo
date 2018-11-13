@@ -24,7 +24,7 @@ Mình chỉ định nói một điều đó là: Với một người bình thư
 
 ## 1. Priority là cái gì?
 
-Là các cách bạn ưu tiên việc A hay việc B hơn đó. Với con người là vậy còn Linux thì sao? Nó cũng same vậy thôi. 
+Là cách các bạn ưu tiên việc A hay việc B hơn đó. Với con người là vậy còn Linux thì sao? Nó cũng same vậy thôi. 
 
 Bạn sẽ nói với nó rằng: 
 
@@ -74,7 +74,7 @@ Ví dụ:
 
 ![Có quan hệ tốt với anh DevOps đó](https://i.imgur.com/eqpE5Ly.png)
 
-Điều này làm process của bạn được ưu tiên những thằng default value bằng 0 khác :troll:
+Điều này làm process của bạn được ưu tiên hơn những thằng default value bằng 0 khác :troll:
 
 > Lưu ý quan trọng: Chỉ có root hoặc sudoers mới có quyền set giá trị `nice value` là số âm. Bạn đã hiểu vì sao phải làm thân anh DevOps rồi chứ :omg:
 
