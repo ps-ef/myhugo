@@ -16,7 +16,7 @@ Blog đúng như domain của nó, là nơi mình viết về Linux, Golang hay 
 
 Blog không có comment, nếu bạn cảm thấy hay và thi thoảng tìm vào blog là mình vui lắm rồi. 
 
-Tất nhiên, bạn có thể tìm mình trên [We Build Community](https://chat.webuild.community/) hoặc [Kipalog](http://kipalog.com/), mình không ngại được khen đâu :troll:
+Tất nhiên, bạn có thể tìm mình trên [We Build Community](https://chat.webuild.community/) và cc `@tanlinhnd` hoặc [Kipalog](https://kipalog.com/users/tanlinh/mypage), mình không ngại được khen đâu :troll:
 
 Với bạn nào thắc mắc thì mình sử dụng [Hugo](https://gohugo.io/) để build blog này và dùng Github Pages để host. Tutorial đầy rẫy nhé.
 
