@@ -21,3 +21,4 @@ Viết blog là cách cực kỳ hiệu quả để học và hệ thống hóa 
 - [HuyDX's Blog - https://huydx.com](https://huydx.com)
 - [Thinh Tran - https://5kbps.io/](https://5kbps.io/)
 - [Long Hoang's Blog - https://sfzxc.github.io](https://sfzxc.github.io/)
+- [Hieu's blog - https://llnx.me/](https://llnx.me/)
