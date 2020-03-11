@@ -1,101 +1,77 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>/dev/stdout</title>
-    <link>https://dev-stdout.com/</link>
-    <description>Recent content on /dev/stdout</description>
+    <title>rbash</title>
+    <link>https://blog.rba.sh/</link>
+    <description>Recent content on rbash</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tanlinh.hust@gmail.com (Tan Linh)</managingEditor>
     <webMaster>tanlinh.hust@gmail.com (Tan Linh)</webMaster>
     <lastBuildDate>Tue, 13 Nov 2018 00:23:57 +0700</lastBuildDate>
     
-	<atom:link href="https://dev-stdout.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.rba.sh/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Understanding Priority on Linux Processes</title>
-      <link>https://dev-stdout.com/post/understanding-priority-on-linux-processes.html</link>
+      <link>https://blog.rba.sh/post/understanding-priority-on-linux-processes.html</link>
       <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/post/understanding-priority-on-linux-processes.html</guid>
+      <guid>https://blog.rba.sh/post/understanding-priority-on-linux-processes.html</guid>
       <description>Một buổi sáng như bao ngày bình thường, mình thức dậy và tự hỏi: Hôm nay mình phải làm những việc gì nhỉ? Đối với một người dù không biết sắp xếp kế hoạch như mình thì những việc cơ bản sau sẽ được thực hiện:
  Vệ sinh cá nhân. Đánh răng, rửa mặt, tắm rửa Ăn sáng và đi làm Giải quyết từng task đang tồn đọng Nghe sếp chửi.</description>
     </item>
     
     <item>
       <title>Moving from Neovim to Spacemacs</title>
-      <link>https://dev-stdout.com/post/moving-from-neovim-to-spacemacs.html</link>
+      <link>https://blog.rba.sh/post/moving-from-neovim-to-spacemacs.html</link>
       <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/post/moving-from-neovim-to-spacemacs.html</guid>
+      <guid>https://blog.rba.sh/post/moving-from-neovim-to-spacemacs.html</guid>
       <description>Một năm trước, mình nghe theo lời đường mật Di cư sang Vim [1] của CTO. Sau một năm xài Vim (thực ra là Neovim) một cách nghiêm túc, lần này mình lại bị dụ dỗ sang Spacemacs. Với những ai chưa biết, Spacemacs là một distribution của Emacs với description là The best editor is neither Emacs nor Vim, it&#39;s Emacs and Vim! cho bạn một trải nghiệm Emacs rất tuyệt vời, riêng Vimmer sẽ cảm giác thân thuộc như ở nhà.</description>
     </item>
     
     <item>
-      <title>Algorithm 001: Non-descreasing Array</title>
-      <link>https://dev-stdout.com/post/algorithm-001-non-descreasing-array.html</link>
-      <pubDate>Wed, 06 Dec 2017 23:26:00 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/post/algorithm-001-non-descreasing-array.html</guid>
-      <description>Xin chào xin chào,
-Sau một thời gian dài ngụp lặn, tới hôm nay mình mới nổi. Thời gian vừa rồi khá bận vì nhà mình có thêm thành viên mới vô cùng lém lỉnh. Công việc thời gian qua không được happy cho lắm nên gần như mình chỉ chém gió trên #random là chính. Thực tình rất phí phạm thời gian.
-Mấy hôm nay, anh em trong hội Ruby Việt Nam đang try hard Algorithm, rất nhiều siêu xayda đã lộ mặt.</description>
-    </item>
-    
-    <item>
       <title>Blog kỹ thuật nhà hàng xóm</title>
-      <link>https://dev-stdout.com/friend-sites.html</link>
+      <link>https://blog.rba.sh/friend-sites.html</link>
       <pubDate>Tue, 16 May 2017 13:51:01 +0700</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/friend-sites.html</guid>
+      <guid>https://blog.rba.sh/friend-sites.html</guid>
       <description>Viết blog là cách cực kỳ hiệu quả để học và hệ thống hóa lại kiến thức của bản thân. Mình xin phép giới thiệu một số blog chất lượng để các bạn theo dõi, chắc chắn bạn sẽ học hỏi được rất nhiều đấy.
 Đến từ các thành viên của các cộng đồng &amp;ldquo;Rust Việt Nam&amp;rdquo;, &amp;ldquo;Ruby Việt Nam&amp;rdquo;, &amp;ldquo;Kipalog&amp;rdquo; và nhiều nơi khác.  Huytd&amp;rsquo;s Blog - https://thefullsnack.</description>
     </item>
     
     <item>
       <title>Some useful bash script</title>
-      <link>https://dev-stdout.com/post/til-some-useful-bash-script.html</link>
+      <link>https://blog.rba.sh/post/til-some-useful-bash-script.html</link>
       <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/post/til-some-useful-bash-script.html</guid>
+      <guid>https://blog.rba.sh/post/til-some-useful-bash-script.html</guid>
       <description>Dạo này công việc động chạm nhiều đến bash shell. Mình note lại một số điều mà mình sử dụng trong quá trình làm việc.
 1. Array Array[1] là kiểu dữ liệu cơ bản trong tất cả các ngôn ngữ lập trình (NNLT). Bash shell cũng hỗ trợ array và bạn có thể sử dụng bằng cách khai báo như sau:
  Giống như các NNLT khác, chỉ số của mảng bắt đầu từ 0 -&amp;gt; n.</description>
     </item>
     
     <item>
-      <title>TIL: Reload updated configuration without restarting tmux</title>
-      <link>https://dev-stdout.com/post/til-reload-updated-configuration-withou-restarting-tmux.html</link>
-      <pubDate>Wed, 29 Mar 2017 10:19:00 +0000</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/post/til-reload-updated-configuration-withou-restarting-tmux.html</guid>
-      <description>Mặc định, tmux sẽ đọc cấu hình tại đường dẫn ~/.tmux.conf trừ phi nó chưa running. Vì thế, sau khi tọc mạch phải reload config cho nó. Like this:
-tmux source-file ~/.tmux.conf  Ngoài ra, bạn có thể bind key để reload cho tiện.
-bind-key R source-file ~/.tmux.conf  Hoặc bên trong tmux typing Ctrl a :source ~/.tmux.conf
- Ở đây mình bind Ctrl a thay cho Ctrl B
- tanlinhnd, 29-03-2017</description>
-    </item>
-    
-    <item>
       <title>Python for Dummies: Log sao cho đúng</title>
-      <link>https://dev-stdout.com/post/python-for-dummies-log-sao-cho-dung.html</link>
+      <link>https://blog.rba.sh/post/python-for-dummies-log-sao-cho-dung.html</link>
       <pubDate>Wed, 15 Mar 2017 16:41:00 +0000</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/post/python-for-dummies-log-sao-cho-dung.html</guid>
+      <guid>https://blog.rba.sh/post/python-for-dummies-log-sao-cho-dung.html</guid>
       <description>Có thể bạn xem nhẹ nhưng logging cực kỳ quan trọng. Khi một phần mềm hoạt động bình thường, nó thực thi hàng tá các tác vụ khác nhau. Nếu xảy ra lỗi, làm thế nào để bạn tìm ra nguyên nhân một cách nhanh nhất? Câu trả lời đó là &amp;ldquo;Log. Log và log!!!&amp;rdquo;
 Log thế nào cho đúng? Đó là nội dung của bài viết hôm nay.</description>
     </item>
     
     <item>
       <title>About me!</title>
-      <link>https://dev-stdout.com/about-me.html</link>
+      <link>https://blog.rba.sh/about-me.html</link>
       <pubDate>Fri, 10 Mar 2017 21:57:04 +0700</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/about-me.html</guid>
+      <guid>https://blog.rba.sh/about-me.html</guid>
       <description>Chao xìn,
-Mình tên là Linh, hiện tại mình đang làm chân fresher tại một công ty startup ở Hà Nội. Blog cũ của mình là Im Linh tuy nhiên cái domain kia không khoái lắm nên quyết định chuyển sang đây cho hợp với định hướng DevOps của mình.
-Vì là fresher nên mình hay trà đá chém gió, đá bóng hoặc doto là chính. Đừng có đùa nha, rank 3k trình 10k đó.</description>
+Mình tên là Linh, hiện tại mình đang làm chân DevOps Engineer tại một công ty startup ở Hà Nội. Blog cũ của mình là .. À thực ra cũng không cần để làm gì cả ^^.
+Blog này ngày xưa chẳng có gì nhiều ngoài mấy bài chất lượng thấp, là nơi mình viết về Linux hay cái gì hay ho mà mình học được trong công việc.</description>
     </item>
     
   </channel>

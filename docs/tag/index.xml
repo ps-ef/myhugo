@@ -1,132 +1,96 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tag on /dev/stdout</title>
-    <link>https://dev-stdout.com/tag.html</link>
-    <description>Recent content in Tag on /dev/stdout</description>
+    <title>Tag on rbash</title>
+    <link>https://blog.rba.sh/tag.html</link>
+    <description>Recent content in Tag on rbash</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tanlinh.hust@gmail.com (Tan Linh)</managingEditor>
     <webMaster>tanlinh.hust@gmail.com (Tan Linh)</webMaster>
-    <lastBuildDate>Mon, 08 May 2017 16:16:30 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 13 Nov 2018 00:23:57 +0700</lastBuildDate>
     
-	<atom:link href="https://dev-stdout.com/tag/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.rba.sh/tag/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Linux</title>
-      <link>https://dev-stdout.com/tag/linux.html</link>
-      <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/tag/linux.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://dev-stdout.com/tag/python.html</link>
-      <pubDate>Wed, 15 Mar 2017 16:41:00 +0000</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/tag/python.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TIL</title>
-      <link>https://dev-stdout.com/tag/til.html</link>
-      <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/tag/til.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vim</title>
-      <link>https://dev-stdout.com/tag/vim.html</link>
-      <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/tag/vim.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>algorithm</title>
-      <link>https://dev-stdout.com/tag/algorithm.html</link>
-      <pubDate>Wed, 06 Dec 2017 23:26:00 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/tag/algorithm.html</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>devops</title>
-      <link>https://dev-stdout.com/tag/devops.html</link>
+      <link>https://blog.rba.sh/tag/devops.html</link>
       <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/tag/devops.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>https://dev-stdout.com/tag/golang.html</link>
-      <pubDate>Wed, 06 Dec 2017 23:26:00 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/tag/golang.html</guid>
+      <guid>https://blog.rba.sh/tag/devops.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>https://dev-stdout.com/tag/linux.html</link>
-      <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
+      <link>https://blog.rba.sh/tag/linux.html</link>
+      <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/tag/linux.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>neovim</title>
-      <link>https://dev-stdout.com/tag/neovim.html</link>
-      <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/tag/neovim.html</guid>
+      <guid>https://blog.rba.sh/tag/linux.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>nice value</title>
-      <link>https://dev-stdout.com/tag/nice-value.html</link>
+      <link>https://blog.rba.sh/tag/nice-value.html</link>
       <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/tag/nice-value.html</guid>
+      <guid>https://blog.rba.sh/tag/nice-value.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>niceness</title>
-      <link>https://dev-stdout.com/tag/niceness.html</link>
+      <link>https://blog.rba.sh/tag/niceness.html</link>
       <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/tag/niceness.html</guid>
+      <guid>https://blog.rba.sh/tag/niceness.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>neovim</title>
+      <link>https://blog.rba.sh/tag/neovim.html</link>
+      <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://blog.rba.sh/tag/neovim.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>spacemacs</title>
-      <link>https://dev-stdout.com/tag/spacemacs.html</link>
+      <link>https://blog.rba.sh/tag/spacemacs.html</link>
       <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/tag/spacemacs.html</guid>
+      <guid>https://blog.rba.sh/tag/spacemacs.html</guid>
       <description></description>
     </item>
     
     <item>
-      <title>vim</title>
-      <link>https://dev-stdout.com/tag/vim.html</link>
+      <title>Vim</title>
+      <link>https://blog.rba.sh/tag/vim.html</link>
+      <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://blog.rba.sh/tag/vim.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TIL</title>
+      <link>https://blog.rba.sh/tag/til.html</link>
       <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://dev-stdout.com/tag/vim.html</guid>
+      <guid>https://blog.rba.sh/tag/til.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://blog.rba.sh/tag/python.html</link>
+      <pubDate>Wed, 15 Mar 2017 16:41:00 +0000</pubDate>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://blog.rba.sh/tag/python.html</guid>
       <description></description>
     </item>
     

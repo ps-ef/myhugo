@@ -1,8 +1,8 @@
-baseurl = "https://dev-stdout.com/"
+baseurl = "https://blog.rba.sh/"
 languageCode = "en-us"
-title = "/dev/stdout"
+title = "rbash"
 theme = "hugo-injoker-theme"
-googleAnalytics = "UA-75596542-1"
+googleAnalytics = ""
 disqusShortname = ""
 preserveTaxonomyNames = true
 uglyURLs = true
@@ -17,17 +17,14 @@ enableEmoji = true
     name = "Linux"
     url = "/tag/linux"
 [[menu.main]]
-    name = "Golang"
-    url = "/tag/golang"
-[[menu.main]]
     name = "TIL"
     url = "/tag/til"
 [[menu.main]]
     name = "DevOps"
     url = "/tag/devops"
 [[menu.main]]
-    name = "Friend Sites"
-    url = "/friend-sites.html"
+    name = "Database"
+    url = "/tag/database"
 [[menu.main]]
     name = "About me"
     url = "/about-me.html"
@@ -36,21 +33,21 @@ enableEmoji = true
     description = "Nói ít thôi và đưa code đây"
     quote = "“Talk is cheap. Show me the code„"
     quote_author = "~ Linus Torvalds ~"
-    copyright = "© 2017 dev-stdout.com"
-    disqus_url="https://dev-stdout.com"
+    copyright = "© 2017 rba.sh"
+    disqus_url="https://rba.sh"
     disqus_identifier="tanlinhnd"
 
     [params.logo]
     url = "logo.png"
     width = 50
     height = 50
-    alt = "/dev/stdout - Nói ít thôi và đưa code đây"
+    alt = "rbash - Nói ít thôi và đưa code đây"
 
 [Author]
   name = "Tan Linh"
   email = "tanlinh.hust@gmail.com"
   about = "Mình là Linh - Một thằng cuồng Linux. Đừng ai nhắc đến Windows trước mặt mình nhé. Hehe"
-  facebook = "https://facebook.com/tanlinh.nd"
+  facebook = "#"
   github = "https://github.com/tanlinhnd"
   twitter = "@tanlinhnd"
   reddit = "https://www.reddit.com/user/tanlinhnd/"
