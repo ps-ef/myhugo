@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="https://blog.rba.sh/images/logo.png">
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.57.2" />
 
 
     <title>Python for Dummies: Log sao cho đúng - rbash</title>
@@ -65,7 +65,7 @@
     
     <li><a href="/tag/linux">Linux</a></li>
     
-    <li><a href="/linhnguyen_devops_resume.pdf">Resume</a></li>
+    <li><a href="https://blog.rba.sh/LinhNguyen_DevOps_Resume.pdf">Resume</a></li>
     
     <li><a href="/tag/til">TIL</a></li>
     
@@ -89,155 +89,207 @@
     
 
     <div class="article-content">
-        <p>Có thể bạn xem nhẹ nhưng logging cực kỳ quan trọng. Khi một phần mềm hoạt động bình thường, nó thực thi hàng tá các tác vụ khác nhau. Nếu xảy ra lỗi, làm thế nào để bạn tìm ra nguyên nhân một cách nhanh nhất? Câu trả lời đó là &ldquo;Log. Log và log!!!&rdquo;</p>
-<p>Log thế nào cho đúng? Đó là nội dung của bài viết hôm nay.</p>
-<h2 id="1-tôi-dùng-print-có-được-không">1. Tôi dùng <code>print</code> có được không?</h2>
-<p>Được, không ai cấm bạn cả. Tuy nhiên chỉ nên sử dụng nó trong những script đơn giản. Ở những hệ thống phức tạp hơn, <strong>tuyệt đối</strong> không sử dụng <code>print</code>. Vì sao ư?</p>
-<p>Mặc định, <code>print</code> sẽ xuất nội dung ra <code>stdout</code>. Trong quá trình hoạt động, rất nhiều dữ liệu khác cũng được đẩy ra <code>stdout</code>. Sử dụng <code>print</code> sẽ tiêu tốn rất nhiều thể lực để bơi trong đống rác đó. Bạn có thể sử dụng <code>stderr</code> thay vì <code>stdout</code>, tuy nhiên điều này không làm ý tưởng này bớt tồi.</p>
-<h2 id="2-không-dùng-print-thì-dùng-gì">2. Không dùng <code>print</code> thì dùng gì?</h2>
-<p>Hãy sử dụng module <code>logging</code>. Nó là một module tiêu chuẩn do cộng đồng Python phát triển, dễ dàng sử dụng và cực kỳ linh hoạt. Bạn có thể đọc về nó ở <a href="">đây</a>.
-Điểm khác biệt giữa <code>print</code> và <code>logging</code> module đó là:</p>
-<ul>
-<li>
-<p>Logging có phân chia level cho các thông báo lỗi, bạn có thể tuỳ chọn mức độ nghiêm trọng của các thông báo này cũng như cho phép/không cho phép hiển thị chúng nếu cảm thấy không cần thiết</p>
-</li>
-<li>
-<p>Tuỳ ý cấu hình output của thông báo lỗi là console, file hay bất kể nguồn nào bạn muốn</p>
-</li>
-</ul>
-<p>Sử dụng module <code>logging</code> như sau:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> logging
+        
 
-logging<span style="color:#f92672">.</span>warning(<span style="color:#e6db74">&#39;Watch out!&#39;</span>)  <span style="color:#75715e"># Hiển thị ra màn hình console</span>
-logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#39;I told you so&#39;</span>)  <span style="color:#75715e"># Không hiển thị gì cả???</span>
-logging<span style="color:#f92672">.</span>debug(<span style="color:#e6db74">&#39;Just kidding&#39;</span>) <span style="color:#75715e"># Không hiển thị luôn :|</span>
-</code></pre></div><p>Thử thực thi xem!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">➜</span>  <span style="color:#f92672">~</span> python sample_1<span style="color:#f92672">.</span>py
-WARNING:root:Watch out<span style="color:#960050;background-color:#1e0010">!</span>
-</code></pre></div><blockquote>
+<p>Có thể bạn xem nhẹ nhưng logging cực kỳ quan trọng. Khi một phần mềm hoạt động bình thường, nó thực thi hàng tá các tác vụ khác nhau. Nếu xảy ra lỗi, làm thế nào để bạn tìm ra nguyên nhân một cách nhanh nhất? Câu trả lời đó là &ldquo;Log. Log và log!!!&rdquo;</p>
+
+<p>Log thế nào cho đúng? Đó là nội dung của bài viết hôm nay.</p>
+
+<h2 id="1-tôi-dùng-print-có-được-không">1. Tôi dùng <code>print</code> có được không?</h2>
+
+<p>Được, không ai cấm bạn cả. Tuy nhiên chỉ nên sử dụng nó trong những script đơn giản. Ở những hệ thống phức tạp hơn, <strong>tuyệt đối</strong> không sử dụng <code>print</code>. Vì sao ư?</p>
+
+<p>Mặc định, <code>print</code> sẽ xuất nội dung ra <code>stdout</code>. Trong quá trình hoạt động, rất nhiều dữ liệu khác cũng được đẩy ra <code>stdout</code>. Sử dụng <code>print</code> sẽ tiêu tốn rất nhiều thể lực để bơi trong đống rác đó. Bạn có thể sử dụng <code>stderr</code> thay vì <code>stdout</code>, tuy nhiên điều này không làm ý tưởng này bớt tồi.</p>
+
+<h2 id="2-không-dùng-print-thì-dùng-gì">2. Không dùng <code>print</code> thì dùng gì?</h2>
+
+<p>Hãy sử dụng module <code>logging</code>. Nó là một module tiêu chuẩn do cộng đồng Python phát triển, dễ dàng sử dụng và cực kỳ linh hoạt. Bạn có thể đọc về nó ở [đây]().
+Điểm khác biệt giữa <code>print</code> và <code>logging</code> module đó là:</p>
+
+<ul>
+<li><p>Logging có phân chia level cho các thông báo lỗi, bạn có thể tuỳ chọn mức độ nghiêm trọng của các thông báo này cũng như cho phép/không cho phép hiển thị chúng nếu cảm thấy không cần thiết</p></li>
+
+<li><p>Tuỳ ý cấu hình output của thông báo lỗi là console, file hay bất kể nguồn nào bạn muốn</p></li>
+</ul>
+
+<p>Sử dụng module <code>logging</code> như sau:</p>
+
+<pre><code class="language-python">import logging
+
+logging.warning('Watch out!')  # Hiển thị ra màn hình console
+logging.info('I told you so')  # Không hiển thị gì cả???
+logging.debug('Just kidding') # Không hiển thị luôn :|
+</code></pre>
+
+<p>Thử thực thi xem!</p>
+
+<pre><code class="language-python">➜  ~ python sample_1.py
+WARNING:root:Watch out!
+</code></pre>
+
+<blockquote>
 <p>WTH. Sao 2 dòng <code>INFO</code> và <code>DEBUG</code> không hiển thị???</p>
 </blockquote>
-<p>Các level của module <code>logging</code> bao gồm: <code>DEBUG</code>, <code>INFO</code>, <code>WARNING</code>, <code>ERROR</code> và <code>CRITICAL</code>. Mỗi level tương ứng với một giá trị số nguyên integer. Giá trị càng cao, mức độ ưu tiên càng cao. Mặc định, <code>logging</code> sử dụng level <code>WARNING</code>, do đó 2 dòng thông báo kia không hiển thị do level thấp hơn level <code>WARNING</code>.</p>
-<p>Sửa đoạn code trên thành:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> logging
 
-logging<span style="color:#f92672">.</span>basicConfig(level <span style="color:#f92672">=</span> logging<span style="color:#f92672">.</span>DEBUG)
-logging<span style="color:#f92672">.</span>warning(<span style="color:#e6db74">&#39;Watch out!&#39;</span>)  <span style="color:#75715e"># Hiển thị ra màn hình console</span>
-logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#39;I told you so&#39;</span>)  <span style="color:#75715e"># Cũng hiển thị luôn :D</span>
-logging<span style="color:#f92672">.</span>debug(<span style="color:#e6db74">&#39;Just kidding&#39;</span>) <span style="color:#75715e"># Ok im here</span>
-</code></pre></div><p>Kết quả là:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">➜</span>  <span style="color:#f92672">~</span> python sample_2<span style="color:#f92672">.</span>py
-WARNING:root:Watch out<span style="color:#960050;background-color:#1e0010">!</span>
+<p>Các level của module <code>logging</code> bao gồm: <code>DEBUG</code>, <code>INFO</code>, <code>WARNING</code>, <code>ERROR</code> và <code>CRITICAL</code>. Mỗi level tương ứng với một giá trị số nguyên integer. Giá trị càng cao, mức độ ưu tiên càng cao. Mặc định, <code>logging</code> sử dụng level <code>WARNING</code>, do đó 2 dòng thông báo kia không hiển thị do level thấp hơn level <code>WARNING</code>.</p>
+
+<p>Sửa đoạn code trên thành:</p>
+
+<pre><code class="language-python">import logging
+
+logging.basicConfig(level = logging.DEBUG)
+logging.warning('Watch out!')  # Hiển thị ra màn hình console
+logging.info('I told you so')  # Cũng hiển thị luôn :D
+logging.debug('Just kidding') # Ok im here
+</code></pre>
+
+<p>Kết quả là:</p>
+
+<pre><code class="language-python">➜  ~ python sample_2.py
+WARNING:root:Watch out!
 INFO:root:I told you so
 DEBUG:root:Just kidding
-</code></pre></div><blockquote>
+</code></pre>
+
+<blockquote>
 <p>WOW. Giờ thì bạn đã hiểu rồi chứ.</p>
 </blockquote>
-<h2 id="3-tôi-có-cần-format-log-message-trước-không">3. Tôi có cần format log message trước không?</h2>
-<p>Xét ví dụ sau:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">logging<span style="color:#f92672">.</span>debug(<span style="color:#e6db74">&#39;Just </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74">&#39;kidding&#39;</span>) <span style="color:#75715e">#first</span>
 
-logging<span style="color:#f92672">.</span>debug(<span style="color:#e6db74">&#39;Just </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (<span style="color:#e6db74">&#39;kidding&#39;</span>)) <span style="color:#75715e">#second</span>
-</code></pre></div><p>Ở dòng đầu tiên, các tham số được truyền vào <code>logging.debug</code> sẽ được <code>logging</code> module format theo dạng <code>'Just %s'</code></p>
+<h2 id="3-tôi-có-cần-format-log-message-trước-không">3. Tôi có cần format log message trước không?</h2>
+
+<p>Xét ví dụ sau:</p>
+
+<pre><code class="language-python">logging.debug('Just %s', 'kidding') #first
+
+logging.debug('Just %s' % ('kidding')) #second
+</code></pre>
+
+<p>Ở dòng đầu tiên, các tham số được truyền vào <code>logging.debug</code> sẽ được <code>logging</code> module format theo dạng <code>'Just %s'</code></p>
+
 <p>Ở dòng thứ hai, chuỗi <code>'Just %s'</code> được format trước, sau đó truyền vào <code>logging.debug</code>. Docs của <code>logging</code> module đã ghi rõ, <strong>msg là message format string</strong> chứ không phải message string.</p>
+
 <blockquote>
 <p>Logger.debug(msg, *args, **kwargs)</p>
-</blockquote>
-<blockquote>
+
 <p>Logs a message with level DEBUG on this logger. ==The msg is the message format string, and the args are the arguments which are merged into msg using the string formatting operator.== (Note that this means that you can use keywords in the format string, together with a single dictionary argument.)</p>
 </blockquote>
+
 <p>Vì vậy, bạn không cần format log message trước khi truyền vào <code>logging.debug</code> hay bất kể level khác. Nếu làm vậy, bạn đã format thừa một lần vì <code>logging</code> module đã làm việc này rồi.</p>
+
 <h2 id="4-muốn-ghi-log-ra-file-thì-làm-thế-nào">4. Muốn ghi log ra file thì làm thế nào?</h2>
+
 <p>Đơn giản thôi, sử dụng <code>FileHandler</code>. Ví dụ:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> logging
 
-logger <span style="color:#f92672">=</span> logging<span style="color:#f92672">.</span>getLogger(__name__)
-logger<span style="color:#f92672">.</span>setLevel(logging<span style="color:#f92672">.</span>DEBUG)
+<pre><code class="language-python">import logging
 
-<span style="color:#75715e"># create a file handler</span>
-handler <span style="color:#f92672">=</span> logging<span style="color:#f92672">.</span>FileHandler(<span style="color:#e6db74">&#39;app.log&#39;</span>)
-handler<span style="color:#f92672">.</span>setLevel(logging<span style="color:#f92672">.</span>DEBUG)
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 
-<span style="color:#75715e"># create a logging format</span>
-formatter <span style="color:#f92672">=</span> logging<span style="color:#f92672">.</span>Formatter(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%(asctime)s</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">%(name)s</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">%(levelname)s</span><span style="color:#e6db74"> - </span><span style="color:#e6db74">%(message)s</span><span style="color:#e6db74">&#39;</span>)
-handler<span style="color:#f92672">.</span>setFormatter(formatter)
+# create a file handler
+handler = logging.FileHandler('app.log')
+handler.setLevel(logging.DEBUG)
 
-<span style="color:#75715e"># add the handlers to the logger</span>
-logger<span style="color:#f92672">.</span>addHandler(handler)
+# create a logging format
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
 
-logger<span style="color:#f92672">.</span>warning(<span style="color:#e6db74">&#39;Watch out!&#39;</span>)
-logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#39;I told you so&#39;</span>)
-logger<span style="color:#f92672">.</span>debug(<span style="color:#e6db74">&#39;Just kidding&#39;</span>)
-</code></pre></div><p>Ở đây, ngoài việc sử dụng output là file, format của log message cũng được thay đổi như sau:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">➜</span>  <span style="color:#f92672">~</span> tail <span style="color:#f92672">-</span>f app<span style="color:#f92672">.</span>log
-<span style="color:#ae81ff">2017</span><span style="color:#f92672">-</span><span style="color:#ae81ff">03</span><span style="color:#f92672">-</span><span style="color:#ae81ff">15</span> <span style="color:#ae81ff">01</span>:<span style="color:#ae81ff">03</span>:<span style="color:#ae81ff">24</span>,<span style="color:#ae81ff">004</span> <span style="color:#f92672">-</span> __main__ <span style="color:#f92672">-</span> WARNING <span style="color:#f92672">-</span> Watch out<span style="color:#960050;background-color:#1e0010">!</span>
-<span style="color:#ae81ff">2017</span><span style="color:#f92672">-</span><span style="color:#ae81ff">03</span><span style="color:#f92672">-</span><span style="color:#ae81ff">15</span> <span style="color:#ae81ff">01</span>:<span style="color:#ae81ff">03</span>:<span style="color:#ae81ff">24</span>,<span style="color:#ae81ff">005</span> <span style="color:#f92672">-</span> __main__ <span style="color:#f92672">-</span> INFO <span style="color:#f92672">-</span> I told you so
-<span style="color:#ae81ff">2017</span><span style="color:#f92672">-</span><span style="color:#ae81ff">03</span><span style="color:#f92672">-</span><span style="color:#ae81ff">15</span> <span style="color:#ae81ff">01</span>:<span style="color:#ae81ff">03</span>:<span style="color:#ae81ff">24</span>,<span style="color:#ae81ff">005</span> <span style="color:#f92672">-</span> __main__ <span style="color:#f92672">-</span> DEBUG <span style="color:#f92672">-</span> Just kidding
-</code></pre></div><blockquote>
+# add the handlers to the logger
+logger.addHandler(handler)
+
+logger.warning('Watch out!')
+logger.info('I told you so')
+logger.debug('Just kidding')
+</code></pre>
+
+<p>Ở đây, ngoài việc sử dụng output là file, format của log message cũng được thay đổi như sau:</p>
+
+<pre><code class="language-python">➜  ~ tail -f app.log
+2017-03-15 01:03:24,004 - __main__ - WARNING - Watch out!
+2017-03-15 01:03:24,005 - __main__ - INFO - I told you so
+2017-03-15 01:03:24,005 - __main__ - DEBUG - Just kidding
+</code></pre>
+
+<blockquote>
 <p>Bạn tham khảo thêm phần Logging Formaters cuối bài</p>
 </blockquote>
-<h2 id="5có-cần-ghi-log-ở-mọi-nơi-không">5.Có cần ghi log ở mọi nơi không?</h2>
+
+<h2 id="5-có-cần-ghi-log-ở-mọi-nơi-không">5.Có cần ghi log ở mọi nơi không?</h2>
+
 <p>Chắc chắn rồi, tuy nhiên nên sử dụng level hợp lý cho từng trường hợp:</p>
+
 <ul>
-<li>
-<p>Level <code>DEBUG</code> chỉ nên sử dụng khi bạn debug, dùng cho những thông tin liên tục thay đổi</p>
-</li>
-<li>
-<p>Level <code>INFO</code> sử dụng cho các trường hợp thay đổi trạng thái, sự kiện xảy ra bình thường</p>
-</li>
-<li>
-<p>Level <code>WARNING</code> cho các trường hợp sự kiện quan trọng nhưng không đến mức lỗi. Ví dụ: Sai mật khẩu đăng nhập, kết nối bị delay .v.v.</p>
-</li>
-<li>
-<p>Level <code>ERROR</code> sử dụng khi gặp <code>Exception</code>, <code>IO</code> fail hay <code>Database Connection</code> fail</p>
-</li>
-<li>
-<p>Level <code>CRITICAL</code> chỉ sử dụng cho các trường hợp lỗi cực kỳ nghiêm trọng như <code>out of memory</code>, <code>disk full</code>, <code>inode full</code> .v.v</p>
-</li>
+<li><p>Level <code>DEBUG</code> chỉ nên sử dụng khi bạn debug, dùng cho những thông tin liên tục thay đổi</p></li>
+
+<li><p>Level <code>INFO</code> sử dụng cho các trường hợp thay đổi trạng thái, sự kiện xảy ra bình thường</p></li>
+
+<li><p>Level <code>WARNING</code> cho các trường hợp sự kiện quan trọng nhưng không đến mức lỗi. Ví dụ: Sai mật khẩu đăng nhập, kết nối bị delay .v.v.</p></li>
+
+<li><p>Level <code>ERROR</code> sử dụng khi gặp <code>Exception</code>, <code>IO</code> fail hay <code>Database Connection</code> fail</p></li>
+
+<li><p>Level <code>CRITICAL</code> chỉ sử dụng cho các trường hợp lỗi cực kỳ nghiêm trọng như <code>out of memory</code>, <code>disk full</code>, <code>inode full</code> .v.v</p></li>
 </ul>
-<h2 id="6-sử-dụng-__name__-cho-logger-name-làm-chi-vậy">6. Sử dụng <code>__name__</code> cho logger name làm chi vậy?</h2>
+
+<h2 id="6-sử-dụng-name-cho-logger-name-làm-chi-vậy">6. Sử dụng <code>__name__</code> cho logger name làm chi vậy?</h2>
+
 <p><code>__name__</code> là một <code>build-in variable</code>. Giá trị của <code>__name__</code> là tên của module hiện tại. Đặt tên cho <code>logger</code> là <code>__name__</code> mục đích để bạn dễ dàng phân biệt được message log của từng module. Đơn giản vậy thôi :D</p>
+
 <h2 id="7-nếu-gặp-exception-thì-log-như-nào">7. Nếu gặp <code>Exception</code> thì log như nào?</h2>
+
 <p>Bạn nên ghi log kèm theo traceback. Nếu không có nó, message log của bạn không mang nhiều ý nghĩa. Sử dụng tham số <code>exc_info = True</code> để đạt được điều đó. Ví dụ:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">try</span>:
-    open(<span style="color:#e6db74">&#39;/path/to/does/not/exist&#39;</span>, <span style="color:#e6db74">&#39;rb&#39;</span>)
-<span style="color:#66d9ef">except</span> (<span style="color:#a6e22e">SystemExit</span>, <span style="color:#a6e22e">KeyboardInterrupt</span>):
-    <span style="color:#66d9ef">raise</span>
-<span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span>, e:
-    logger<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#39;Failed to open file&#39;</span>, exc_info<span style="color:#f92672">=</span>True)
-</code></pre></div><p>Ouput:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">➜</span>  <span style="color:#f92672">~</span> tail <span style="color:#f92672">-</span>f app<span style="color:#f92672">.</span>log
-<span style="color:#ae81ff">2017</span><span style="color:#f92672">-</span><span style="color:#ae81ff">03</span><span style="color:#f92672">-</span><span style="color:#ae81ff">15</span> <span style="color:#ae81ff">01</span>:<span style="color:#ae81ff">05</span>:<span style="color:#ae81ff">45</span>,<span style="color:#ae81ff">757</span> <span style="color:#f92672">-</span> __main__ <span style="color:#f92672">-</span> ERROR <span style="color:#f92672">-</span> Failed to open file
+
+<pre><code class="language-python">try:
+    open('/path/to/does/not/exist', 'rb')
+except (SystemExit, KeyboardInterrupt):
+    raise
+except Exception, e:
+    logger.error('Failed to open file', exc_info=True)
+</code></pre>
+
+<p>Ouput:</p>
+
+<pre><code class="language-python">➜  ~ tail -f app.log
+2017-03-15 01:05:45,757 - __main__ - ERROR - Failed to open file
 Traceback (most recent call last):
-  File <span style="color:#e6db74">&#34;test.py&#34;</span>, line <span style="color:#ae81ff">16</span>, <span style="color:#f92672">in</span> <span style="color:#f92672">&lt;</span>module<span style="color:#f92672">&gt;</span>
-    open(<span style="color:#e6db74">&#39;/path/to/does/not/exist&#39;</span>, <span style="color:#e6db74">&#39;rb&#39;</span>)
-<span style="color:#a6e22e">IOError</span>: [Errno <span style="color:#ae81ff">2</span>] No such file <span style="color:#f92672">or</span> directory: <span style="color:#e6db74">&#39;/path/to/does/not/exist&#39;</span>
-</code></pre></div><h2 id="8-tôi-có-nên-khai-báo-logger-ở-level-module-không">8. Tôi có nên khai báo <code>logger</code> ở level module không?</h2>
+  File &quot;test.py&quot;, line 16, in &lt;module&gt;
+    open('/path/to/does/not/exist', 'rb')
+IOError: [Errno 2] No such file or directory: '/path/to/does/not/exist'
+</code></pre>
+
+<h2 id="8-tôi-có-nên-khai-báo-logger-ở-level-module-không">8. Tôi có nên khai báo <code>logger</code> ở level module không?</h2>
+
 <p>Không nên, bạn hãy theo dõi ví dụ sau:</p>
+
 <p><strong>my_module.py</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> logging
 
-logger <span style="color:#f92672">=</span> logging<span style="color:#f92672">.</span>getLogger(__name__)
+<pre><code class="language-python">import logging
 
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">foo</span>():
-    logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#39;Hi, foo&#39;</span>)
+logger = logging.getLogger(__name__)
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Bar</span>(object):
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bar</span>(self):
-        logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#39;Hi, bar&#39;</span>)
-</code></pre></div><p><strong>main.py</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> logging
+def foo():
+    logger.info('Hi, foo')
 
-<span style="color:#75715e"># load my module</span>
-<span style="color:#f92672">import</span> my_module
+class Bar(object):
+    def bar(self):
+        logger.info('Hi, bar')
+</code></pre>
 
-<span style="color:#75715e"># load the logging configuration</span>
-logging<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>fileConfig(<span style="color:#e6db74">&#39;logging.ini&#39;</span>)
+<p><strong>main.py</strong></p>
 
-my_module<span style="color:#f92672">.</span>foo()
-bar <span style="color:#f92672">=</span> my_module<span style="color:#f92672">.</span>Bar()
-bar<span style="color:#f92672">.</span>bar()
-</code></pre></div><p><strong>logging.ini</strong></p>
+<pre><code class="language-python">import logging
+
+# load my module
+import my_module
+
+# load the logging configuration
+logging.config.fileConfig('logging.ini')
+
+my_module.foo()
+bar = my_module.Bar()
+bar.bar()
+</code></pre>
+
+<p><strong>logging.ini</strong></p>
+
 <pre><code>[loggers]
 keys=root
 
@@ -260,113 +312,146 @@ args=(sys.stdout,)
 [formatter_simpleFormatter]
 format=%(asctime)s - %(name)s - %(levelname)s - %(message)s
 datefmt=
-</code></pre><p>Ngay lúc này, bạn mong muốn message log sẽ xuất hiện. Nhưng rất tiếc điều này không xảy ra. Bởi vì bạn khai báo <code>logger</code> tại module level và import module trước khi load cấu hình từ file <code>logging.ini</code>. Mặc định, <code>logging.fileConfig</code> và <code>logging.dictConfig</code> sẽ vô hiệu <code>logger</code> đã tồn tại. Do đó tất cả cấu hình trong file <code>logging.ini</code> sẽ không được áp dụng.</p>
+</code></pre>
+
+<p>Ngay lúc này, bạn mong muốn message log sẽ xuất hiện. Nhưng rất tiếc điều này không xảy ra. Bởi vì bạn khai báo <code>logger</code> tại module level và import module trước khi load cấu hình từ file <code>logging.ini</code>. Mặc định, <code>logging.fileConfig</code> và <code>logging.dictConfig</code> sẽ vô hiệu <code>logger</code> đã tồn tại. Do đó tất cả cấu hình trong file <code>logging.ini</code> sẽ không được áp dụng.</p>
+
 <p>Một cách tốt hơn hết, bạn chỉ nên khai báo <code>logger</code> tại thời điểm bạn cần sử dụng nó. Mã nguồn trên sẽ thanh đổi như sau:</p>
+
 <p><strong>my_module.py</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> logging
 
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">foo</span>():
-    logger <span style="color:#f92672">=</span> logging<span style="color:#f92672">.</span>getLogger(__name__)
-    logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#39;Hi, foo&#39;</span>)
+<pre><code class="language-python">import logging
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Bar</span>(object):
-    <span style="color:#66d9ef">def</span> __init__(self, logger<span style="color:#f92672">=</span>None):
-        self<span style="color:#f92672">.</span>logger <span style="color:#f92672">=</span> logger <span style="color:#f92672">or</span> logging<span style="color:#f92672">.</span>getLogger(__name__)
+def foo():
+    logger = logging.getLogger(__name__)
+    logger.info('Hi, foo')
 
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bar</span>(self):
-        self<span style="color:#f92672">.</span>logger<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#39;Hi, bar&#39;</span>)
-</code></pre></div><blockquote>
+class Bar(object):
+    def __init__(self, logger=None):
+        self.logger = logger or logging.getLogger(__name__)
+
+    def bar(self):
+        self.logger.info('Hi, bar')
+</code></pre>
+
+<blockquote>
 <p>Bạn có thể set tham số <code>disable_existing_loggers = False</code> trong file <code>logging.ini</code> để giải quyết vấn đề này</p>
 </blockquote>
+
 <h2 id="9-tôi-nên-đặt-cấu-hình-logging-ở-đâu">9. Tôi nên đặt cấu hình logging ở đâu?</h2>
+
 <p>Bạn nên sử dụng file JSON hoặc YAML để cấu hình logging. Tất nhiên bạn cũng có thể sử dụng định dạng .INI cũ để thực hiện điều đó. Tuy nhiên, sử dụng JSON hoặc YAML sẽ dễ đọc và viết hơn.</p>
+
 <p>Với trường hợp sử dụng file YAML, file cấu hình sẽ như vầy:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-<span style="color:#f92672">version</span>: <span style="color:#ae81ff">1</span>
-<span style="color:#f92672">disable_existing_loggers</span>: <span style="color:#66d9ef">False</span>
-<span style="color:#f92672">formatters</span>:
-    <span style="color:#f92672">simple</span>:
-        <span style="color:#f92672">format</span>: <span style="color:#e6db74">&#34;%(asctime)s - %(name)s - %(levelname)s - %(message)s&#34;</span>
 
-<span style="color:#f92672">handlers</span>:
-    <span style="color:#f92672">console</span>:
-        <span style="color:#f92672">class</span>: <span style="color:#ae81ff">logging.StreamHandler</span>
-        <span style="color:#f92672">level</span>: <span style="color:#ae81ff">DEBUG</span>
-        <span style="color:#f92672">formatter</span>: <span style="color:#ae81ff">simple</span>
-        <span style="color:#f92672">stream</span>: <span style="color:#ae81ff">ext://sys.stdout</span>
+<pre><code class="language-yaml">---
+version: 1
+disable_existing_loggers: False
+formatters:
+    simple:
+        format: &quot;%(asctime)s - %(name)s - %(levelname)s - %(message)s&quot;
 
-    <span style="color:#f92672">info_file_handler</span>:
-        <span style="color:#f92672">class</span>: <span style="color:#ae81ff">logging.handlers.RotatingFileHandler</span>
-        <span style="color:#f92672">level</span>: <span style="color:#ae81ff">INFO</span>
-        <span style="color:#f92672">formatter</span>: <span style="color:#ae81ff">simple</span>
-        <span style="color:#f92672">filename</span>: <span style="color:#ae81ff">info.log</span>
-        <span style="color:#f92672">maxBytes</span>: <span style="color:#ae81ff">10485760</span> <span style="color:#75715e"># 10MB</span>
-        <span style="color:#f92672">backupCount</span>: <span style="color:#ae81ff">20</span>
-        <span style="color:#f92672">encoding</span>: <span style="color:#ae81ff">utf8</span>
+handlers:
+    console:
+        class: logging.StreamHandler
+        level: DEBUG
+        formatter: simple
+        stream: ext://sys.stdout
 
-    <span style="color:#f92672">error_file_handler</span>:
-        <span style="color:#f92672">class</span>: <span style="color:#ae81ff">logging.handlers.RotatingFileHandler</span>
-        <span style="color:#f92672">level</span>: <span style="color:#ae81ff">ERROR</span>
-        <span style="color:#f92672">formatter</span>: <span style="color:#ae81ff">simple</span>
-        <span style="color:#f92672">filename</span>: <span style="color:#ae81ff">errors.log</span>
-        <span style="color:#f92672">maxBytes</span>: <span style="color:#ae81ff">10485760</span> <span style="color:#75715e"># 10MB</span>
-        <span style="color:#f92672">backupCount</span>: <span style="color:#ae81ff">20</span>
-        <span style="color:#f92672">encoding</span>: <span style="color:#ae81ff">utf8</span>
+    info_file_handler:
+        class: logging.handlers.RotatingFileHandler
+        level: INFO
+        formatter: simple
+        filename: info.log
+        maxBytes: 10485760 # 10MB
+        backupCount: 20
+        encoding: utf8
 
-<span style="color:#f92672">loggers</span>:
-    <span style="color:#f92672">my_module</span>:
-        <span style="color:#f92672">level</span>: <span style="color:#ae81ff">ERROR</span>
-        <span style="color:#f92672">handlers</span>: [<span style="color:#ae81ff">console]</span>
-        <span style="color:#f92672">propagate</span>: <span style="color:#66d9ef">no</span>
+    error_file_handler:
+        class: logging.handlers.RotatingFileHandler
+        level: ERROR
+        formatter: simple
+        filename: errors.log
+        maxBytes: 10485760 # 10MB
+        backupCount: 20
+        encoding: utf8
 
-<span style="color:#f92672">root</span>:
-    <span style="color:#f92672">level</span>: <span style="color:#ae81ff">INFO</span>
-    <span style="color:#f92672">handlers</span>: [<span style="color:#ae81ff">console, info_file_handler, error_file_handler]</span>
+loggers:
+    my_module:
+        level: ERROR
+        handlers: [console]
+        propagate: no
+
+root:
+    level: INFO
+    handlers: [console, info_file_handler, error_file_handler]
 ...
-</code></pre></div><p>Lúc này, bạn có thể load cấu hình log bằng cách sau:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> os
-<span style="color:#f92672">import</span> logging.config
+</code></pre>
 
-<span style="color:#f92672">import</span> yaml
+<p>Lúc này, bạn có thể load cấu hình log bằng cách sau:</p>
 
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">setup_logging</span>(
-    default_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;logging.yaml&#39;</span>,
-    default_level<span style="color:#f92672">=</span>logging<span style="color:#f92672">.</span>INFO,
-    env_key<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;LOG_CFG&#39;</span>
+<pre><code class="language-python">import os
+import logging.config
+
+import yaml
+
+def setup_logging(
+    default_path='logging.yaml',
+    default_level=logging.INFO,
+    env_key='LOG_CFG'
 ):
-    <span style="color:#e6db74">&#34;&#34;&#34;Setup logging configuration
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
-    path <span style="color:#f92672">=</span> default_path
-    value <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>getenv(env_key, None)
-    <span style="color:#66d9ef">if</span> value:
-        path <span style="color:#f92672">=</span> value
-    <span style="color:#66d9ef">if</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>exists(path):
-        <span style="color:#66d9ef">with</span> open(path, <span style="color:#e6db74">&#39;rt&#39;</span>) <span style="color:#66d9ef">as</span> f:
-            config <span style="color:#f92672">=</span> yaml<span style="color:#f92672">.</span>safe_load(f<span style="color:#f92672">.</span>read())
-        logging<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>dictConfig(config)
-    <span style="color:#66d9ef">else</span>:
-        logging<span style="color:#f92672">.</span>basicConfig(level<span style="color:#f92672">=</span>default_level)
-</code></pre></div><p>Khi khởi động chương trình, bạn chỉ việc gọi <code>func setup_logging()</code>, nó sẽ đọc cấu hình mặc định trong file <code>logging.yaml</code>. Bạn cũng có thể sử dụng biến môi trường <code>LOG_CFG</code> để load cấu hình từ một tập tin khác. Ví dụ:</p>
+    &quot;&quot;&quot;Setup logging configuration
+
+    &quot;&quot;&quot;
+    path = default_path
+    value = os.getenv(env_key, None)
+    if value:
+        path = value
+    if os.path.exists(path):
+        with open(path, 'rt') as f:
+            config = yaml.safe_load(f.read())
+        logging.config.dictConfig(config)
+    else:
+        logging.basicConfig(level=default_level)
+</code></pre>
+
+<p>Khi khởi động chương trình, bạn chỉ việc gọi <code>func setup_logging()</code>, nó sẽ đọc cấu hình mặc định trong file <code>logging.yaml</code>. Bạn cũng có thể sử dụng biến môi trường <code>LOG_CFG</code> để load cấu hình từ một tập tin khác. Ví dụ:</p>
+
 <pre><code>LOG_CFG=/path/custom_logging.yaml python main.py
-</code></pre><h2 id="10-file-log-của-tôi-quá-lớn-làm-thế-nào-bây-giờ">10. File log của tôi quá lớn, làm thế nào bây giờ?</h2>
+</code></pre>
+
+<h2 id="10-file-log-của-tôi-quá-lớn-làm-thế-nào-bây-giờ">10. File log của tôi quá lớn, làm thế nào bây giờ?</h2>
+
 <p>File log lớn dần theo thời gian là điều hiển nhiên, nó ảnh hưởng trực tiếp đến dung lượng đĩa cứng. Để tránh vấn đề này, bạn nên sử dụng <code>RotatingFileHandler</code> thay cho <code>FileHandler</code>. Lúc này, các file log của bạn sẽ như sau:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">➜</span>  <span style="color:#f92672">~</span> ls <span style="color:#f92672">-</span>al <span style="color:#f92672">/</span>var<span style="color:#f92672">/</span>log <span style="color:#f92672">|</span> grep opendi
-<span style="color:#f92672">-</span>rw<span style="color:#f92672">-</span>r<span style="color:#f92672">-----</span>   <span style="color:#ae81ff">1</span> root             admin               <span style="color:#ae81ff">2898</span> Apr  <span style="color:#ae81ff">8</span> <span style="color:#ae81ff">22</span>:<span style="color:#ae81ff">21</span> opendirectoryd<span style="color:#f92672">.</span>log
-<span style="color:#f92672">-</span>rw<span style="color:#f92672">-</span>r<span style="color:#f92672">-----</span>   <span style="color:#ae81ff">1</span> root             admin               <span style="color:#ae81ff">2898</span> Apr  <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">19</span>:<span style="color:#ae81ff">38</span> opendirectoryd<span style="color:#f92672">.</span>log<span style="color:#f92672">.</span><span style="color:#ae81ff">0</span>
-<span style="color:#f92672">-</span>rw<span style="color:#f92672">-</span>r<span style="color:#f92672">-----</span>   <span style="color:#ae81ff">1</span> root             admin              <span style="color:#ae81ff">16078</span> Apr  <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">18</span>:<span style="color:#ae81ff">34</span> opendirectoryd<span style="color:#f92672">.</span>log<span style="color:#f92672">.</span><span style="color:#ae81ff">1</span>
-<span style="color:#f92672">-</span>rw<span style="color:#f92672">-</span>r<span style="color:#f92672">-----</span>   <span style="color:#ae81ff">1</span> root             admin               <span style="color:#ae81ff">2898</span> Mar <span style="color:#ae81ff">30</span> <span style="color:#ae81ff">14</span>:<span style="color:#ae81ff">47</span> opendirectoryd<span style="color:#f92672">.</span>log<span style="color:#f92672">.</span><span style="color:#ae81ff">2</span>
-<span style="color:#f92672">-</span>rw<span style="color:#f92672">-</span>r<span style="color:#f92672">-----</span>   <span style="color:#ae81ff">1</span> root             admin              <span style="color:#ae81ff">36946</span> Mar <span style="color:#ae81ff">30</span> <span style="color:#ae81ff">14</span>:<span style="color:#ae81ff">46</span> opendirectoryd<span style="color:#f92672">.</span>log<span style="color:#f92672">.</span><span style="color:#ae81ff">3</span>
-</code></pre></div><p>Bạn tham khảo thêm thuộc tính <code>maxBytes</code> và <code>backupCount</code> tại phần <em>Logging Handlers</em> cuối bài</p>
-<hr>
+
+<pre><code class="language-python">➜  ~ ls -al /var/log | grep opendi
+-rw-r-----   1 root             admin               2898 Apr  8 22:21 opendirectoryd.log
+-rw-r-----   1 root             admin               2898 Apr  7 19:38 opendirectoryd.log.0
+-rw-r-----   1 root             admin              16078 Apr  6 18:34 opendirectoryd.log.1
+-rw-r-----   1 root             admin               2898 Mar 30 14:47 opendirectoryd.log.2
+-rw-r-----   1 root             admin              36946 Mar 30 14:46 opendirectoryd.log.3
+</code></pre>
+
+<p>Bạn tham khảo thêm thuộc tính <code>maxBytes</code> và <code>backupCount</code> tại phần <em>Logging Handlers</em> cuối bài</p>
+
+<hr />
+
 <p>Bài viết này dựa vào phần lớn nội dung trong bài viết <em>&ldquo;Good logging practice in Python&rdquo;</em> khi mình ôn lại Python để sử dụng nó cho dự án cá nhân. Gần như không có trang Tiếng Việt nào đề cập chi tiết về vấn đề này. Do vậy bài viết này là cách mình hệ thống hoá lại kiến thức và tập viết một cách bài bản.</p>
+
 <p>Rất vui nếu giúp ích được bạn và mình rất sẵn lòng tiếp thu mọi ý kiến đóng góp từ các bạn.</p>
+
 <p>Many thanks,</p>
+
 <h2 id="references">References</h2>
+
 <p>[1] Fangpelin &ldquo;<em>Good logging practice in Python</em>&rdquo; <a href="https://fangpenlin.com/posts/2012/08/26/good-logging-practice-in-python/">Fang&rsquo;s coding note</a></p>
+
 <p>[2] Python Software Foundation &ldquo;<em>Logging facility for Python</em>&rdquo; <a href="https://docs.python.org/2/library/logging.html">Python 2.7.13 Documentation</a></p>
+
 <p>[3] Python Software Foundation &ldquo;<em>Logging Formaters</em>&rdquo; <a href="https://docs.python.org/2/howto/logging.html#formatters">Python 2.7.13 Documentation</a></p>
+
 <p>[4] Python Software Foundation &ldquo;<em>Logging Handlers</em>&rdquo; <a href="https://docs.python.org/2/library/logging.handlers.html#logging.handlers.RotatingFileHandler">Python 2.7.13 Documentation</a></p>
+
 <p>[5] Hưng Nguyễn Việt &ldquo;<em>[python] logging: đừng format log message!</em>&rdquo; <a href="http://www.familug.org/2014/09/python-logging-ung-format-log-message.html">FAMILUG</a></p>
 
     </div>

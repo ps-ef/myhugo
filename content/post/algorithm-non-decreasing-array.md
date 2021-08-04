@@ -1,12 +1,12 @@
-+++ 
++++
 author = "Tan Linh"
 
-date = 2017-12-06T23:26:00+07:00 
-description = "Bài viết mở đầu cho chuỗi ngày try easy Algorithm của mình. Problem hôm nay cực kỳ đơn giản, đó là Non-descreasing array" 
-draft = true
-slug = "algorithm-001-non-descreasing-array" 
-tag = ["algorithm", "golang"] 
-title = "Algorithm 001: Non-descreasing Array" 
+date = 2017-12-06T23:26:00+07:00
+description = "Bài viết mở đầu cho chuỗi ngày try easy Algorithm của mình. Problem hôm nay cực kỳ đơn giản, đó là Non-descreasing array"
+draft = false
+slug = "algorithm-001-non-descreasing-array"
+tag = ["algorithm", "golang"]
+title = "Algorithm 001: Non-descreasing Array"
 
 +++
 

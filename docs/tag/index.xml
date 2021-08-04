@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tag on rbash</title>
@@ -8,7 +8,11 @@
     <language>en-us</language>
     <managingEditor>tanlinh.hust@gmail.com (Tan Linh)</managingEditor>
     <webMaster>tanlinh.hust@gmail.com (Tan Linh)</webMaster>
-    <lastBuildDate>Tue, 13 Nov 2018 00:23:57 +0700</lastBuildDate><atom:link href="https://blog.rba.sh/tag/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Nov 2018 00:23:57 +0700</lastBuildDate>
+    
+	<atom:link href="https://blog.rba.sh/tag/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>devops</title>
       <link>https://blog.rba.sh/tag/devops.html</link>
@@ -64,11 +68,29 @@
     </item>
     
     <item>
-      <title>vim</title>
+      <title>Vim</title>
       <link>https://blog.rba.sh/tag/vim.html</link>
       <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
       <guid>https://blog.rba.sh/tag/vim.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>algorithm</title>
+      <link>https://blog.rba.sh/tag/algorithm.html</link>
+      <pubDate>Wed, 06 Dec 2017 23:26:00 +0700</pubDate>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://blog.rba.sh/tag/algorithm.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://blog.rba.sh/tag/golang.html</link>
+      <pubDate>Wed, 06 Dec 2017 23:26:00 +0700</pubDate>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://blog.rba.sh/tag/golang.html</guid>
       <description></description>
     </item>
     

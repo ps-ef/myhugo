@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on rbash</title>
@@ -8,7 +8,11 @@
     <language>en-us</language>
     <managingEditor>tanlinh.hust@gmail.com (Tan Linh)</managingEditor>
     <webMaster>tanlinh.hust@gmail.com (Tan Linh)</webMaster>
-    <lastBuildDate>Wed, 15 Mar 2017 16:41:00 +0000</lastBuildDate><atom:link href="https://blog.rba.sh/tag/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Mar 2017 16:41:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.rba.sh/tag/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Python for Dummies: Log sao cho đúng</title>
       <link>https://blog.rba.sh/post/python-for-dummies-log-sao-cho-dung.html</link>
@@ -16,8 +20,7 @@
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
       <guid>https://blog.rba.sh/post/python-for-dummies-log-sao-cho-dung.html</guid>
       <description>Có thể bạn xem nhẹ nhưng logging cực kỳ quan trọng. Khi một phần mềm hoạt động bình thường, nó thực thi hàng tá các tác vụ khác nhau. Nếu xảy ra lỗi, làm thế nào để bạn tìm ra nguyên nhân một cách nhanh nhất? Câu trả lời đó là &amp;ldquo;Log. Log và log!!!&amp;rdquo;
-Log thế nào cho đúng? Đó là nội dung của bài viết hôm nay.
-1. Tôi dùng print có được không?</description>
+Log thế nào cho đúng? Đó là nội dung của bài viết hôm nay.</description>
     </item>
     
   </channel>

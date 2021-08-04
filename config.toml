@@ -27,7 +27,7 @@ enableEmoji = true
     url = "/tag/database"
 [[menu.main]]
     name = "Resume"
-    url = "/LinhNguyen_DevOps_Resume.pdf"
+    url = "https://blog.rba.sh/LinhNguyen_DevOps_Resume.pdf"
 [[menu.main]]
     name = "About me"
     url = "/about-me.html"
