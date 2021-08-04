@@ -11,14 +11,7 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-}
-
-body {
-    /* font-family: 'Merriweather', serif; */
-    /* text-rendering: optimizeLegibility; */
-    /* -webkit-font-smoothing: antialiased; */
-    /* -moz-osx-font-smoothing: grayscale; */
-    /* -moz-font-feature-settings: "liga" on; */
+    font-family: 'Nunito', sans-serif;
 }
 
 h1,
@@ -27,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Nunito', sans-serif;
     color: #dd4814;
     font-weight: bold;
 }
@@ -52,7 +45,7 @@ a {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 15px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Nunito', sans-serif;
     text-align: right;
 }
 
@@ -227,6 +220,7 @@ a {
     font-size: 16px;
     line-height: 1.7;
     color: #555;
+    text-align: justify;
 }
 
 .tags-cloud {
@@ -258,7 +252,7 @@ a {
     margin-top: 12px;
     float: right;
     font-size: 10px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Nunito', sans-serif;
     padding: 1px 5px;
     font-weight: bold;
     border-radius: 3px;
@@ -267,21 +261,28 @@ a {
 }
 
 .article-content p {
-    margin: 15px 0 25px;
+    margin: 15px 0 15px;
+}
+
+.article-content img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .article-content a {
     text-decoration: none;
     color: inherit;
-    border-bottom: 3px solid #CBF8DF;
-    box-shadow: inset 0 -4px 0 #CBF8DF;
+    border-bottom: 1px solid #9e9e9e;
+    /*box-shadow: inset 0 -4px 0 #3e3e3e;*/
     background: transparent;
     transition: background 150ms ease;
 }
 
 .article-content a:hover,
 .article-content a:focus {
-    background: #CBF8DF;
+    /*background: #CBF8DF;*/
+    border-bottom: 1px solid #1d1d1d;
 }
 
 .article-content hr {
@@ -294,7 +295,7 @@ a {
 }
 
 code, kbd, pre,
-samp { font-family: monospace, serif; font-size: 1em; }
+samp { font-family: monospace, serif; font-size: 0.9em; color: #D14; background: #ececec;}
 pre { white-space: pre-wrap; }
 pre {
     -moz-box-sizing: border-box;
@@ -433,7 +434,7 @@ blockquote cite a { font-weight: normal; }
     display: inline-block;
     text-decoration: none;
     font-size: 21px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: bold;
     color: #222;
     padding: 5px 0;
@@ -447,7 +448,7 @@ blockquote cite a { font-weight: normal; }
 .footer {
     padding: 25px 0;
     text-align: center;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 .footer-links {

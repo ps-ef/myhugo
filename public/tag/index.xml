@@ -1,70 +1,92 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tag on Im Linh</title>
-    <link>https://imlinh.com/tag.html</link>
-    <description>Recent content in Tag on Im Linh</description>
+    <title>Tag on rbash</title>
+    <link>https://blog.rba.sh/tag.html</link>
+    <description>Recent content in Tag on rbash</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>hi@imlinh.com (Tan Linh)</managingEditor>
-    <webMaster>hi@imlinh.com (Tan Linh)</webMaster>
-    <copyright>© 2017 Im Linh</copyright>
-    <lastBuildDate>Wed, 05 Apr 2017 01:29:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://imlinh.com/tag/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <managingEditor>tanlinh.hust@gmail.com (Tan Linh)</managingEditor>
+    <webMaster>tanlinh.hust@gmail.com (Tan Linh)</webMaster>
+    <lastBuildDate>Tue, 13 Nov 2018 00:23:57 +0700</lastBuildDate><atom:link href="https://blog.rba.sh/tag/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Face recognition</title>
-      <link>https://imlinh.com/tag/face-recognition.html</link>
-      <pubDate>Wed, 05 Apr 2017 01:29:00 +0000</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/tag/face-recognition.html</guid>
+      <title>devops</title>
+      <link>https://blog.rba.sh/tag/devops.html</link>
+      <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://blog.rba.sh/tag/devops.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://imlinh.com/tag/linux.html</link>
-      <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/tag/linux.html</guid>
+      <link>https://blog.rba.sh/tag/linux.html</link>
+      <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://blog.rba.sh/tag/linux.html</guid>
       <description></description>
     </item>
     
     <item>
-      <title>OpenCV</title>
-      <link>https://imlinh.com/tag/opencv.html</link>
-      <pubDate>Wed, 05 Apr 2017 01:29:00 +0000</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/tag/opencv.html</guid>
+      <title>nice value</title>
+      <link>https://blog.rba.sh/tag/nice-value.html</link>
+      <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://blog.rba.sh/tag/nice-value.html</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Python</title>
-      <link>https://imlinh.com/tag/python.html</link>
-      <pubDate>Wed, 05 Apr 2017 01:29:00 +0000</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/tag/python.html</guid>
+      <title>niceness</title>
+      <link>https://blog.rba.sh/tag/niceness.html</link>
+      <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://blog.rba.sh/tag/niceness.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>neovim</title>
+      <link>https://blog.rba.sh/tag/neovim.html</link>
+      <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://blog.rba.sh/tag/neovim.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spacemacs</title>
+      <link>https://blog.rba.sh/tag/spacemacs.html</link>
+      <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://blog.rba.sh/tag/spacemacs.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>https://blog.rba.sh/tag/vim.html</link>
+      <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://blog.rba.sh/tag/vim.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>TIL</title>
-      <link>https://imlinh.com/tag/til.html</link>
+      <link>https://blog.rba.sh/tag/til.html</link>
       <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/tag/til.html</guid>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://blog.rba.sh/tag/til.html</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Vim</title>
-      <link>https://imlinh.com/tag/vim.html</link>
-      <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
-      <author>hi@imlinh.com (Tan Linh)</author>
-      <guid>https://imlinh.com/tag/vim.html</guid>
+      <title>Python</title>
+      <link>https://blog.rba.sh/tag/python.html</link>
+      <pubDate>Wed, 15 Mar 2017 16:41:00 +0000</pubDate>
+      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <guid>https://blog.rba.sh/tag/python.html</guid>
       <description></description>
     </item>
     

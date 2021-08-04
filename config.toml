@@ -26,6 +26,9 @@ enableEmoji = true
     name = "Database"
     url = "/tag/database"
 [[menu.main]]
+    name = "Resume"
+    url = "/LinhNguyen_DevOps_Resume.pdf"
+[[menu.main]]
     name = "About me"
     url = "/about-me.html"
 
