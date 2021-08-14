@@ -1,4 +1,4 @@
-baseurl = "https://blog.dmesg.sh"
+baseurl = "https://blog.dmesg.sh/"
 languageCode = "en-us"
 title = "dmesg.sh"
 theme = "hugo-injoker-theme"
