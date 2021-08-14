@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>nice value on rbash</title>
-    <link>https://blog.rba.sh/tag/nice-value.html</link>
-    <description>Recent content in nice value on rbash</description>
+    <title>nice value on dmesg.sh</title>
+    <link>https://blog.dmesg.sh/tag/nice-value.html</link>
+    <description>Recent content in nice value on dmesg.sh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tanlinh.hust@gmail.com (Tan Linh)</managingEditor>
     <webMaster>tanlinh.hust@gmail.com (Tan Linh)</webMaster>
     <lastBuildDate>Tue, 13 Nov 2018 00:23:57 +0700</lastBuildDate>
     
-	<atom:link href="https://blog.rba.sh/tag/nice-value/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.dmesg.sh/tag/nice-value/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Understanding Priority on Linux Processes</title>
-      <link>https://blog.rba.sh/post/understanding-priority-on-linux-processes.html</link>
+      <link>https://blog.dmesg.sh/post/understanding-priority-on-linux-processes.html</link>
       <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://blog.rba.sh/post/understanding-priority-on-linux-processes.html</guid>
+      <guid>https://blog.dmesg.sh/post/understanding-priority-on-linux-processes.html</guid>
       <description>Một buổi sáng như bao ngày bình thường, mình thức dậy và tự hỏi: Hôm nay mình phải làm những việc gì nhỉ? Đối với một người dù không biết sắp xếp kế hoạch như mình thì những việc cơ bản sau sẽ được thực hiện:
  Vệ sinh cá nhân. Đánh răng, rửa mặt, tắm rửa Ăn sáng và đi làm Giải quyết từng task đang tồn đọng Nghe sếp chửi.</description>
     </item>

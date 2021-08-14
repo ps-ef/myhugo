@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pages on rbash</title>
-    <link>https://blog.rba.sh/page.html</link>
-    <description>Recent content in Pages on rbash</description>
+    <title>Pages on dmesg.sh</title>
+    <link>https://blog.dmesg.sh/page.html</link>
+    <description>Recent content in Pages on dmesg.sh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>tanlinh.hust@gmail.com (Tan Linh)</managingEditor>
     <webMaster>tanlinh.hust@gmail.com (Tan Linh)</webMaster>
     <lastBuildDate>Tue, 16 May 2017 13:51:01 +0700</lastBuildDate>
     
-	<atom:link href="https://blog.rba.sh/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.dmesg.sh/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blog kỹ thuật nhà hàng xóm</title>
-      <link>https://blog.rba.sh/friend-sites.html</link>
+      <link>https://blog.dmesg.sh/friend-sites.html</link>
       <pubDate>Tue, 16 May 2017 13:51:01 +0700</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://blog.rba.sh/friend-sites.html</guid>
+      <guid>https://blog.dmesg.sh/friend-sites.html</guid>
       <description>Viết blog là cách cực kỳ hiệu quả để học và hệ thống hóa lại kiến thức của bản thân. Mình xin phép giới thiệu một số blog chất lượng để các bạn theo dõi, chắc chắn bạn sẽ học hỏi được rất nhiều đấy.
 Đến từ các thành viên của các cộng đồng &amp;ldquo;Rust Việt Nam&amp;rdquo;, &amp;ldquo;Ruby Việt Nam&amp;rdquo;, &amp;ldquo;Kipalog&amp;rdquo; và nhiều nơi khác.  Huytd&amp;rsquo;s Blog - https://thefullsnack.</description>
     </item>
     
     <item>
       <title>About me!</title>
-      <link>https://blog.rba.sh/about-me.html</link>
+      <link>https://blog.dmesg.sh/about-me.html</link>
       <pubDate>Fri, 10 Mar 2017 21:57:04 +0700</pubDate>
       <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://blog.rba.sh/about-me.html</guid>
+      <guid>https://blog.dmesg.sh/about-me.html</guid>
       <description>Chao xìn,
 Mình tên là Linh, hiện tại mình đang làm chân DevOps Engineer tại một công ty startup ở Hà Nội. Blog cũ của mình là .. À thực ra cũng không cần để làm gì cả ^^.
 Blog này ngày xưa chẳng có gì nhiều ngoài mấy bài chất lượng thấp, là nơi mình viết về Linux hay cái gì hay ho mà mình học được trong công việc.</description>
