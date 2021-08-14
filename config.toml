@@ -1,6 +1,6 @@
-baseurl = "https://blog.rba.sh/"
+baseurl = "https://blog.dmesg.sh"
 languageCode = "en-us"
-title = "rbash"
+title = "dmesg.sh"
 theme = "hugo-injoker-theme"
 googleAnalytics = ""
 disqusShortname = ""
@@ -10,52 +10,52 @@ publishDir = "docs"
 enableEmoji = true
 
 [permalinks]
-    post = "post/:slug/"
-    page = "/:slug/"
+post = "post/:slug/"
+page = "/:slug/"
 
 [[menu.main]]
-    name = "Linux"
-    url = "/tag/linux"
+name = "Linux"
+url = "/tag/linux"
 [[menu.main]]
-    name = "TIL"
-    url = "/tag/til"
+name = "TIL"
+url = "/tag/til"
 [[menu.main]]
-    name = "DevOps"
-    url = "/tag/devops"
+name = "DevOps"
+url = "/tag/devops"
 [[menu.main]]
-    name = "Database"
-    url = "/tag/database"
+name = "Database"
+url = "/tag/database"
 [[menu.main]]
-    name = "Resume"
-    url = "https://blog.rba.sh/LinhNguyen_DevOps_Resume.pdf"
+name = "Resume"
+url = "https://blog.dmesg.sh/LinhNguyen_DevOps_Resume.pdf"
 [[menu.main]]
-    name = "About me"
-    url = "/about-me.html"
+name = "About me"
+url = "/about-me.html"
 
 [params]
-    description = "Nói ít thôi và đưa code đây"
-    quote = "“Talk is cheap. Show me the code„"
-    quote_author = "~ Linus Torvalds ~"
-    copyright = "© 2017 rba.sh"
-    disqus_url="https://rba.sh"
-    disqus_identifier="tanlinhnd"
+description = "Nói ít thôi và đưa code đây"
+quote = "“Talk is cheap. Show me the code„"
+quote_author = "~ Linus Torvalds ~"
+copyright = "© 2017 dmesg.sh"
+disqus_url = "https://dmesg.sh"
+disqus_identifier = "tanlinhnd"
 
-    [params.logo]
-    url = "logo.png"
-    width = 50
-    height = 50
-    alt = "rbash - Nói ít thôi và đưa code đây"
+[params.logo]
+url = "logo.png"
+width = 50
+height = 50
+alt = "rbash - Nói ít thôi và đưa code đây"
 
 [Author]
-  name = "Tan Linh"
-  email = "tanlinh.hust@gmail.com"
-  about = "Mình là Linh - Một thằng cuồng Linux. Đừng ai nhắc đến Windows trước mặt mình nhé. Hehe"
-  facebook = "#"
-  github = "https://github.com/tanlinhnd"
-  twitter = "@tanlinhnd"
-  reddit = "https://www.reddit.com/user/tanlinhnd/"
-  instagram = "https://www.instagram.com/tanlinhnd/"
-  linkedin = "https://linkedin.com/in/tanlinhnd/"
+name = "Tan Linh"
+email = "tanlinh.hust@gmail.com"
+about = "Mình là Linh - Một thằng cuồng Linux. Đừng ai nhắc đến Windows trước mặt mình nhé. Hehe"
+facebook = "#"
+github = "https://github.com/tanlinhnd"
+twitter = "@tanlinhnd"
+reddit = "https://www.reddit.com/user/tanlinhnd/"
+instagram = "https://www.instagram.com/tanlinhnd/"
+linkedin = "https://linkedin.com/in/tanlinhnd/"
 
 [taxonomies]
-    tag = "tag"
+tag = "tag"
