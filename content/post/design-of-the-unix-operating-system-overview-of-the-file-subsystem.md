@@ -104,7 +104,7 @@ Kiểm tra status của Nginx bằng `systemctl`, chúng ta thu được:
 
 Nginx sử dụng một Master Process và 1 vài Child Processes để handle requests. Trong đó:
 
-* Master process thực hiện quản lý các cấu hình, binding các port cần listen và create 1 số cá child processes con. Có 3 loại process con như sau
+* Master process thực hiện quản lý các cấu hình, binding các port cần listen và create 1 số các child processes con. Có 3 loại process con như sau
 * Cache Loader process, run lúc startup để load disk-based cache vào memory
 * Cache Manager rocess chạy định kỳ và prune entries từ disk cache
 * Worker processes thực hiện handle network connections, read và write content vào disk cũng như communicate với upstream servers.
@@ -113,7 +113,7 @@ Và bỗng dưng trong đầu bạn lóe lên 1 câu hỏi. "Ủa, Master proces
 
 Tại sao lại như vậy? Như đã nói ở trên, tất cả mọi thứ trong Unix đều là file, và socket cũng là file. Đúng không nhỉ :sunglasses:. Vấn đề còn lại chỉ là làm thế nào để Master process share socket với Worker process.
 
-Quay lại model của Nginx, chúng ta nhận ra răng Work processes được sinh ra bởi Master process và cụ thể bằng hàm fork(2). Hàm fork(2) create một process con và copy file descriptor của process cha. Do vậy, file descriptor của process con refer tới cùng một open file description tương ứng trong file descriptor của process cha. Đồng nghĩa với việc 2 file descriptor share cho nhau open file status flags, file offset và cả signal-driven I/O attribures. Các bạn có thể xem diagram bên dưới.
+Quay lại model của Nginx, chúng ta nhận ra rằng Worker processes được sinh ra bởi Master process và cụ thể bằng hàm fork(2). Hàm fork(2) create một process con và copy file descriptor của process cha. Do vậy, file descriptor của process con refer tới cùng một open file description tương ứng trong file descriptor của process cha. Đồng nghĩa với việc 2 file descriptor share cho nhau open file status flags, file offset và cả signal-driven I/O attribures. Các bạn có thể xem diagram bên dưới.
 
 ![File descriptor table of child process](/design-of-the-unix-os/fork-child-process-table.png)
 
