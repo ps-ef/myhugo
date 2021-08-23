@@ -1,5 +1,5 @@
 +++
-author = "Tan Linh"
+author = "Linh Nguyen"
 date = 2017-03-15T16:41:00Z
 description = "Nếu phần mềm thực thi lỗi, làm thế nào để bạn tìm ra nguyên nhân một cách nhanh nhất? Câu trả lời đó là: Log. Log và log!!!"
 draft = false
@@ -45,7 +45,7 @@ Thử thực thi xem!
 WARNING:root:Watch out!
 ```
 
->WTH. Sao 2 dòng `INFO` và `DEBUG` không hiển thị??? 
+>WTH. Sao 2 dòng `INFO` và `DEBUG` không hiển thị???
 
 Các level của module `logging` bao gồm: `DEBUG`, `INFO`, `WARNING`, `ERROR` và `CRITICAL`. Mỗi level tương ứng với một giá trị số nguyên integer. Giá trị càng cao, mức độ ưu tiên càng cao. Mặc định, `logging` sử dụng level `WARNING`, do đó 2 dòng thông báo kia không hiển thị do level thấp hơn level `WARNING`.
 
@@ -336,7 +336,7 @@ Many thanks,
 ## References
 [1] Fangpelin "*Good logging practice in Python*" [Fang's coding note](https://fangpenlin.com/posts/2012/08/26/good-logging-practice-in-python/)
 
-[2] Python Software Foundation "*Logging facility for Python*" [Python 2.7.13 Documentation](https://docs.python.org/2/library/logging.html) 
+[2] Python Software Foundation "*Logging facility for Python*" [Python 2.7.13 Documentation](https://docs.python.org/2/library/logging.html)
 
 [3] Python Software Foundation "*Logging Formaters*" [Python 2.7.13 Documentation](https://docs.python.org/2/howto/logging.html#formatters)
 

@@ -1,5 +1,5 @@
 +++
-author = "Tan Linh"
+author = "Linh Nguyen"
 
 date = 2017-04-05T01:29:00Z
 lastmode = 2017-05-05T02:00:00Z
@@ -24,7 +24,7 @@ Bắt đầu từ phiên bản OpenCV 2.4, lớp `FaceRecognizer` cung cấp cho
 
 Với con người, việc nhận diện hay phân biệt khuôn mặt cực kỳ đơn giản. Một đứa trẻ từ 1-3 tuổi đã có khả năng phân biệt được các khuôn mặt khác nhau mà nó từng gặp. Với máy tính, mọi việc không đơn giản như vậy. Những đặc điểm như hình dáng khuôn mặt, mắt, mũi, miệng liệu đã đủ ? David Hubel và Torsten Wiesel đã nghiên cứu về não bộ con người và đưa ra kết luận. Thay vì nhìn thế giới xung quanh như những mảnh ghép riêng biệt, phần vỏ não thị giác kết hợp các mảnh ghép đó thành một mô hình xác định để đưa ra kết quả chính xác. Với nhận diện khuôn mặt cũng vậy.
 
-Face recognition dựa trên các đặc điểm hình học của khuôn mặt là hướng tiếp cận trực quan nhất và được công nhận rộng rãi nhất. Nó được thực hiện như sau: 
+Face recognition dựa trên các đặc điểm hình học của khuôn mặt là hướng tiếp cận trực quan nhất và được công nhận rộng rãi nhất. Nó được thực hiện như sau:
 
 - Đánh dấu vị trí của những đặc điểm như mắt, mũi .v.v.
 - Sử dụng những thông số đó để xây dựng vector đặc trưng thể hiện khoảng cách, góc giữa các đặc điểm

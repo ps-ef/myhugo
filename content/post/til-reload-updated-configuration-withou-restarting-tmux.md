@@ -1,5 +1,5 @@
 +++
-author = "Tan Linh"
+author = "Linh Nguyen"
 date = 2017-03-29T10:19:00Z
 description = "Mặc định, tmux sẽ đọc cấu hình tại đường dẫn ~/.tmux.conf trừ phi nó chưa running. Vì thế, sau khi tọc mạch phải reload config cho nó. "
 draft = true
@@ -9,7 +9,7 @@ title = "TIL: Reload updated configuration without restarting tmux"
 
 +++
 
-Mặc định, `tmux` sẽ đọc cấu hình tại đường dẫn `~/.tmux.conf` trừ phi nó chưa running. Vì thế, sau khi tọc mạch phải reload config cho nó. 
+Mặc định, `tmux` sẽ đọc cấu hình tại đường dẫn `~/.tmux.conf` trừ phi nó chưa running. Vì thế, sau khi tọc mạch phải reload config cho nó.
 Like this:
 ```shell
 tmux source-file ~/.tmux.conf

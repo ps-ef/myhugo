@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="https://blog.dmesg.sh/images/logo.png">
+<meta name="generator" content="Hugo 0.57.2" />
+
+
+    <title>Design of the Unix Operating System: General Overview of Filesystem - dmesg.sh</title>
+    <meta property="og:title" content="Design of the Unix Operating System: General Overview of Filesystem - dmesg.sh">
+    <meta property="og:site_name" content="dmesg.sh" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="" />
+       
+    <meta property="og:url" content="https://blog.dmesg.sh/post/design-of-the-unix-operating-system-general-overview-of-file-system.html" />
+    <meta property="article:published_time" content="2021-08-17T23:53:22Z" />
+    
+
+    <meta property="article:publisher" content="#" />
+    <meta property="article:author" content="#" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Design of the Unix Operating System: General Overview of Filesystem - dmesg.sh" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:url" content="https://blog.dmesg.sh/post/design-of-the-unix-operating-system-general-overview-of-file-system.html" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Linh Nguyen" />
+    <meta name="twitter:site" content="https://twitter.com/@tanlinhnd" />
+    <meta name="twitter:creator" content="@tanlinhnd" />
+
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://blog.dmesg.sh/css/main.css?v=1.0.2" media="all">
+<link rel="stylesheet" href="https://blog.dmesg.sh/css/font-awesome.min.css" media="all">
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://blog.dmesg.sh/" class="nav-logo">
+    <img src="https://blog.dmesg.sh/images/logo.png" 
+         width="50" 
+         height="50" 
+         alt="rbash - Nói ít thôi và đưa code đây">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about-me.html">About me</a></li>
+    
+    <li><a href="/tag/database">Database</a></li>
+    
+    <li><a href="/tag/devops">DevOps</a></li>
+    
+    <li><a href="/tag/linux">Linux</a></li>
+    
+    <li><a href="https://blog.dmesg.sh/LinhNguyen_DevOps_Resume.pdf">Resume</a></li>
+    
+    <li><a href="/tag/til">TIL</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+<article class="article">
+    
+    <span class="article-duration"><i class="fa fa-clock-o"></i> 8 min read</span>
+    
+
+    <h1 class="article-title">Design of the Unix Operating System: General Overview of Filesystem</h1>
+
+    
+    <span class="article-date"><i class="fa fa-calendar"></i> August 17, 2021</span>
+    
+
+    <div class="article-content">
+        
+
+<p>Hi, lâu ngày quá. Thực sự thì lười lắm lắm, gần 3 năm rồi mình mới mở lại cái blog sau 2 lần đổi domain 😆</p>
+
+<p>Gần đây, trong một lần lang thang thì bắt gặp comment của anh huydx về cuốn &ldquo;Design of The Unix Operating System&rdquo;. Tiện lúc đang tìm job mới nên mình quyết tâm dành thời gian đọc và nghiên cứu sâu hơn về OS cũng như Kernel. Tèn ten, do vậy chúng ta có post này đây. Đi thôi nào.</p>
+
+<blockquote>
+<p>Có nhiều phần mình viết lại không thoát nghĩa nên sẽ ghi chú thêm phần nguyên văn nhé hoặc dùng luôn tiếng anh nhé.</p>
+</blockquote>
+
+<h2 id="1-why-unix-became-so-popular">1. Why UNIX became so popular?</h2>
+
+<p>Từ những năm 1984, đã có khoảng 100,000 Unix system được sử dụng trên thế giới, chạy trên nhiều nền tảng khác nhau từ microprocessors đến các máy mainframes. Chưa từng có một OS nào khác có thể làm điều tương tự. Và để trả lời cho câu hỏi trên, chúng ta có vài ý như sau:</p>
+
+<ul>
+<li>Được viết bởi high-level language, do đó dễ dàng đọc hiểu cũng như thay đổi, hoạt động trên nhiều nền tảng khác nhau. Denis Ritchie [1] tính toán rằng first system viết bằng C thì chậm hơn và lớn hơn từ 20-40% so với viết bằng Assembly. Đổi lại, những ưu điểm khi viết bằng high-level language là vượt trội nếu so với những khuyết điểm còn lại.</li>
+<li>Unix cung cấp 1 interface đơn giản nhưng cực kỳ mạnh mẽ. Những chương trình phức tạp có thể build từ những chương trình đơn giản hơn (Nguyên văn: It provides primitives that permit complex programs to be built from simpler
+programs)</li>
+<li>Unix sử dụng một file system dạng phân cấp, dễ dàng để maintain cũng như implement</li>
+<li>Sử dụng byte stream cho định dạng file, các chương trình sẽ dễ dàng để write hơn.</li>
+<li>Cung cấp một interface đơn giản và nhất quán cho các thiết bị ngoại vi</li>
+<li>Multi user, multi process system, mỗi user có thể  nhiều tác vụ đồng thời</li>
+<li>Ẩn đi các kiến trúc của phần cứng với người dùng, giúp cho họ dễ dàng viết những chương trình hoạt động trên nhiều phần cứng khác nhau.</li>
+</ul>
+
+<h2 id="2-architecture-of-the-unix-operating-system">2. Architecture of the UNIX Operating System</h2>
+
+<p><img src="/design-of-the-unix-os/2-concepts-of-unix.png" alt="2 concepts in the Unix system model" /></p>
+
+<p>File và process là 2 central concepts của Unix system model. Ở đây, có 3 level mà chúng ta dễ dàng nhận thấy đó là: user, kernel và hardware.</p>
+
+<p>Với kiến trúc của Unix, Kernel tương tác trực tiếp với phần cứng, cung cấp các interface cho chương trình cũng như cô lập chúng khỏi phần cứng. Ví dụ những chương trình như sh, vi hay wc ở layer ngoài sẽ tương tác với Kernel thông qua các API gọi là system call.</p>
+
+<p>Syscall cho phép các chương trình bên ngoài yêu cầu Kernel thực thi các tác vụ cụ thể và cung cấp cơ chế trao đổi dữ liệu giữa chương trình và Kernel.</p>
+
+<h2 id="3-an-overview-of-the-filesystem">3. An Overview of the Filesystem</h2>
+
+<p>Trên Unix, file system đặc trưng bởi các tính chất sau:</p>
+
+<ul>
+<li>Cấu trúc phân cấp</li>
+<li>Xử lý nhất quán dữ liệu trong file</li>
+<li>Khả năng tạo cũng như xóa files</li>
+<li>Khả năng mở rộng file</li>
+<li>Khả năng bảo vệ dữ liệu trong file</li>
+<li>Khả năng xử lý các thiết bị ngoại vi dưới dạng file</li>
+</ul>
+
+<p><img src="/design-of-the-unix-os/sample-file-system-tree.png" alt="Sample file system tree" /></p>
+
+<p>Chắc rằng mọi người ai cũng biết, file system được tổ chức như một cái cây với gốc của nó (root) được viết là <code>/</code>. Các node non-leaf sẽ là các thư mục (directory) và các files sẽ là lá. Đường dẫn của file (path name) sẽ thể hiện việc file được lưu trữ thế nào trong hệ thống phân cấp của file system. Ví dụ một path name sẽ có dạng như sau: <code>/usr/src/cmd/who.c</code>.</p>
+
+<p>Inode (index node) là một data-structure trong Unix file system chứa thông tin về disk layout của dữ liệu trong file và các thông tin khác như owner, access permission, access times. Mỗi một file hoặc directory đại diện bởi 1 inode. Tuy nhiên, có trường hợp file có nhiều hơn 1 path name, và tất cả chúng map tới một inode, trường hợp này còn gọi là hard-link.</p>
+
+<p>Khi một process create một file mới, Kernel sẽ assign nó với một unused inode. Một lỗi mà có thể các bạn đã từng gặp đó là kiểm tra dung lượng partition bằng <code>df -h</code> vẫn còn trống nhưng không tạo thêm được file mới do không còn inode trống.</p>
+
+<p>Kernel chứa 2 loại data-structure là <code>file table</code> và <code>user file descriptor table</code>. Với <code>file table</code> là global kernel structure, còn <code>file descriptor</code> được allocate cho mỗi process.</p>
+
+<p>Mỗi khi process open hoặc create một file, Kernel sẽ cấp phát 1 entry trên <code>file table</code> và <code>descriptor table</code> tương ứng với inode table. Entry trên 3 table này cung cấp trạng thái của file và user nào access nó. <code>file table</code> sẽ keep track byte offset của file, việc read và write của user sẽ bắt đầu từ offset nào. <code>desriptor table</code> định danh tất cả các file đang mở của một process.</p>
+
+<!-- ![3 table](/design-of-the-unix-os/3-table-file-data-structure.png) -->
+
+<p><img src="/design-of-the-unix-os/relationship-between-3-tables.png" alt="Relationship between 3 tables" /></p>
+
+<p>Kernel khi nhận được system call để open or create 1 một, sẽ return lại một <code>file descriptor table</code>, cụ thể nó là 1 index trong user file descriptor table. Với mỗi process, <code>file descriptor table</code> sẽ có 1 entry cho mỗi FD và 1 pointer tới <code>file table</code>. Struct của fdtable được define trong <code>include/linux/fdtable.h</code>. Các bạn có thể tham khảo tại đây <a href="https://elixir.bootlin.com/linux/latest/source/include/linux/fdtable.h">https://elixir.bootlin.com/linux/latest/source/include/linux/fdtable.h</a></p>
+
+<p>Về mặt logic, Kernel deal với file system thay vì disk. Unix chia physical disk thành các logical disk gọi là partition. Với mỗi partition là một file system riêng biệt, từ đây về sau, file system sẽ refer tới một single partition. Mỗi disk sẽ được đại diện bởi 1 major device number, và mỗi partition sẽ gắn với 1 minor device number.</p>
+
+<p>File system chứa một số lượng logical blocks tuần tự, có thể chứa 512, 1024, 2048 hoặc một bội số của 512 bytes. Size của local block là đồng nhất trong file system, có thể khác tùy vào cấu hình của từng file system.</p>
+
+<p><img src="/design-of-the-unix-os/file-system-structure.png" alt="file system structure" /></p>
+
+<p>Mỗi file system sẽ có cấu trúc như trên, trong đó:</p>
+
+<ul>
+<li>Một <code>boot block</code> nằm trong 1 vài sector đầu tiên của file system. Nó chứa boootstrap code dùng để boot hoặc init OS. Chỉ cần 1 <code>boot block</code> để boot OS, và thường các file system khác sẽ có <code>boot block</code> rỗng.</li>
+<li>Một <code>super block</code> mô tả trạng thái của file system, ví dụ như: total size của partition, block size, pointer tới các free block, inode number của root directory, magic number .v.v.</li>
+<li>Tiếp theo của <code>super block</code> là một mảng các inode (<code>inode list</code>). Một inode sẽ là root inode của file system và là cấu trúc thư mục có thể truy cập được sau khi thực hiện system call <code>mount</code>. User sẽ làm việc với file qua file name, còn Kernel sẽ qua inode.</li>
+<li>Cuối cùng là <code>data block</code> chứa dữ liệu của file.</li>
+</ul>
+
+<p>Ở trên, chúng ta có nói qua về một số thông tin mà inode lưu trữ. Cụ thể và chi tiết nhất, inode lưu trữ các thông tin sau:</p>
+
+<ul>
+<li>Chủ sở hữu của file</li>
+<li>Định dạng file (ví dụ như: regular, directory, special device, pipe .v.v)</li>
+<li>Quyền truy cập file</li>
+<li>Thời gian access và chỉnh sửa cuối cùng</li>
+<li>Số lượng link trỏ đến file</li>
+<li>Pointers tới data block của file</li>
+<li>Dung lượng file bằng bytes (với regular file), major và minor device number cho các device đặc biệt</li>
+<li>path name của file</li>
+</ul>
+
+<h2 id="4-duplicated-file-descriptors-between-processes">4. Duplicated file descriptors (between processes)</h2>
+
+<p>Hẳn các bạn đã biết về Nginx, một HTTP server cũng như một reverse proxy. Process model của Nginx được thể hiện như sau:</p>
+
+<p><img src="/design-of-the-unix-os/infographic-Inside-NGINX_process-model.png" alt="The Nginx Process model" /></p>
+
+<p>Kiểm tra status của Nginx bằng <code>systemctl</code>, chúng ta thu được:</p>
+
+<p><img src="/design-of-the-unix-os/nginx-status.png" alt="Nginx status" /></p>
+
+<p>Nginx sử dụng một Master Process và 1 vài Child Processes để handle requests. Trong đó:</p>
+
+<ul>
+<li>Master process thực hiện quản lý các cấu hình, binding các port cần listen và create 1 số cá child processes con. Có 3 loại process con như sau</li>
+<li>Cache Loader process, run lúc startup để load disk-based cache vào memory</li>
+<li>Cache Manager rocess chạy định kỳ và prune entries từ disk cache</li>
+<li>Worker processes thực hiện handle network connections, read và write content vào disk cũng như communicate với upstream servers.</li>
+</ul>
+
+<p>Và bỗng dưng trong đầu bạn lóe lên 1 câu hỏi. &ldquo;Ủa, Master process quản lý binding port, làm thế nào mà Worker lại handle được network connection vậy?&rdquo;. Câu trả lời là file.</p>
+
+<p>Tại sao lại như vậy? Như đã nói ở trên, tất cả mọi thứ trong Unix đều là file, và socket cũng là file. Đúng không nhỉ 😎. Vấn đề còn lại chỉ là làm thế nào để Master process share socket với Worker process.</p>
+
+<p>Quay lại model của Nginx, chúng ta nhận ra răng Work processes được sinh ra bởi Master process và cụ thể bằng hàm fork(2). Hàm fork(2) create một process con và copy file descriptor của process cha. Do vậy, file descriptor của process con refer tới cùng một open file description tương ứng trong file descriptor của process cha. Đồng nghĩa với việc 2 file descriptor share cho nhau open file status flags, file offset và cả signal-driven I/O attribures. Các bạn có thể xem diagram bên dưới.</p>
+
+<p><img src="/design-of-the-unix-os/fork-child-process-table.png" alt="File descriptor table of child process" /></p>
+
+<p>Từ đây, câu chuyện làm thế nào để Master process có thể share socket với Worker process đã sáng tỏ. Một ví dụ bằng python các bạn có thể xem qua. Source code tại <a href="https://gist.github.com/wjzhangq/474997">https://gist.github.com/wjzhangq/474997</a></p>
+
+<p>Chạy đoạn code trên. Kết quả thu được như bên dưới. Clear đúng không 😄</p>
+
+<p><img src="/design-of-the-unix-os/fork-child-process-example.png" alt="Example of fork child process" /></p>
+
+<p>Thank các bạn đã dành thời gian để đọc đến đây. Nếu có gì sai sót,rất mong được góp ý chân thành ở phần comment.</p>
+
+<p>P/s: Sẽ bổ sung phần comment sớm 😝</p>
+
+<h2 id="references">References</h2>
+
+<p>[1] Denis Ritchie <a href="https://en.wikipedia.org/wiki/Dennis_Ritchie">https://en.wikipedia.org/wiki/Dennis_Ritchie</a></p>
+
+<p>[2] Design of Unix Operating System <a href="https://bit.ly/2XPvvEE">https://bit.ly/2XPvvEE</a></p>
+
+<p>[3] Unix Filesystem Organiztion <a href="https://web.cs.wpi.edu/~rek/DCS/D04/UnixFileSystems.html">https://web.cs.wpi.edu/~rek/DCS/D04/UnixFileSystems.html</a></p>
+
+<p>[4] Relationship between fd and open files <a href="https://man7.org/training/download/lusp_fileio_slides.pdf">https://man7.org/training/download/lusp_fileio_slides.pdf</a></p>
+
+<p>[5] Inside NGINX: How We Designed for Performance &amp; Scale <a href="https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/">https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/</a></p>
+
+<p>[6] Man fork(2) <a href="https://man7.org/linux/man-pages/man2/fork.2.html">https://man7.org/linux/man-pages/man2/fork.2.html</a></p>
+
+    </div>
+    
+    <h2>Tags:</h2>
+        
+        <a href="/tag/linux" class="tags"><i class="fa fa-hashtag"></i> linux</a>
+        
+        <a href="/tag/unix" class="tags"><i class="fa fa-hashtag"></i> unix</a>
+        
+        <a href="/tag/os" class="tags"><i class="fa fa-hashtag"></i> os</a>
+        
+    
+
+    
+</article>
+
+
+</main>
+<footer class="footer">
+    <ul class="footer-links">
+        <li>
+            <a href="https://blog.dmesg.sh/">© 2017 dmesg.sh</a>
+        </li>
+        <li>
+            <a href="https://blog.dmesg.sh/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+        </li>
+        <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <i class="fa fa-heart" style="color:#D14;"></i> using <img src="https://blog.dmesg.sh/images/hugo-logo.png" width="22" height="22"></a>
+        </li>
+    </ul>
+    <ul class="footer-social">
+        <li><a href="https://github.com/tanlinhnd" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+        <li><a href="https://linkedin.com/in/tanlinhnd/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+        <li><a href="https://www.instagram.com/tanlinhnd/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
+    </ul>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>
+</footer>
+
+</div>
+
+
+</body>
+
+</html>
+

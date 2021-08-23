@@ -6,28 +6,46 @@
     <description>Recent content in Tag on dmesg.sh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>tanlinh.hust@gmail.com (Tan Linh)</managingEditor>
-    <webMaster>tanlinh.hust@gmail.com (Tan Linh)</webMaster>
-    <lastBuildDate>Tue, 13 Nov 2018 00:23:57 +0700</lastBuildDate>
+    <managingEditor>linh@dmesg.sh (Linh Nguyen)</managingEditor>
+    <webMaster>linh@dmesg.sh (Linh Nguyen)</webMaster>
+    <lastBuildDate>Tue, 17 Aug 2021 23:53:22 +0700</lastBuildDate>
     
 	<atom:link href="https://blog.dmesg.sh/tag/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>devops</title>
-      <link>https://blog.dmesg.sh/tag/devops.html</link>
-      <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://blog.dmesg.sh/tag/devops.html</guid>
+      <title>linux</title>
+      <link>https://blog.dmesg.sh/tag/linux.html</link>
+      <pubDate>Tue, 17 Aug 2021 23:53:22 +0700</pubDate>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <guid>https://blog.dmesg.sh/tag/linux.html</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Linux</title>
-      <link>https://blog.dmesg.sh/tag/linux.html</link>
+      <title>os</title>
+      <link>https://blog.dmesg.sh/tag/os.html</link>
+      <pubDate>Tue, 17 Aug 2021 23:53:22 +0700</pubDate>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <guid>https://blog.dmesg.sh/tag/os.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unix</title>
+      <link>https://blog.dmesg.sh/tag/unix.html</link>
+      <pubDate>Tue, 17 Aug 2021 23:53:22 +0700</pubDate>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <guid>https://blog.dmesg.sh/tag/unix.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devops</title>
+      <link>https://blog.dmesg.sh/tag/devops.html</link>
       <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
-      <guid>https://blog.dmesg.sh/tag/linux.html</guid>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <guid>https://blog.dmesg.sh/tag/devops.html</guid>
       <description></description>
     </item>
     
@@ -35,7 +53,7 @@
       <title>nice value</title>
       <link>https://blog.dmesg.sh/tag/nice-value.html</link>
       <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
       <guid>https://blog.dmesg.sh/tag/nice-value.html</guid>
       <description></description>
     </item>
@@ -44,7 +62,7 @@
       <title>niceness</title>
       <link>https://blog.dmesg.sh/tag/niceness.html</link>
       <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
       <guid>https://blog.dmesg.sh/tag/niceness.html</guid>
       <description></description>
     </item>
@@ -53,7 +71,7 @@
       <title>neovim</title>
       <link>https://blog.dmesg.sh/tag/neovim.html</link>
       <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
       <guid>https://blog.dmesg.sh/tag/neovim.html</guid>
       <description></description>
     </item>
@@ -62,16 +80,16 @@
       <title>spacemacs</title>
       <link>https://blog.dmesg.sh/tag/spacemacs.html</link>
       <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
       <guid>https://blog.dmesg.sh/tag/spacemacs.html</guid>
       <description></description>
     </item>
     
     <item>
-      <title>vim</title>
+      <title>Vim</title>
       <link>https://blog.dmesg.sh/tag/vim.html</link>
       <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
       <guid>https://blog.dmesg.sh/tag/vim.html</guid>
       <description></description>
     </item>
@@ -80,7 +98,7 @@
       <title>algorithm</title>
       <link>https://blog.dmesg.sh/tag/algorithm.html</link>
       <pubDate>Wed, 06 Dec 2017 23:26:00 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
       <guid>https://blog.dmesg.sh/tag/algorithm.html</guid>
       <description></description>
     </item>
@@ -89,7 +107,7 @@
       <title>golang</title>
       <link>https://blog.dmesg.sh/tag/golang.html</link>
       <pubDate>Wed, 06 Dec 2017 23:26:00 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
       <guid>https://blog.dmesg.sh/tag/golang.html</guid>
       <description></description>
     </item>
@@ -98,7 +116,7 @@
       <title>TIL</title>
       <link>https://blog.dmesg.sh/tag/til.html</link>
       <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
       <guid>https://blog.dmesg.sh/tag/til.html</guid>
       <description></description>
     </item>
@@ -107,7 +125,7 @@
       <title>Python</title>
       <link>https://blog.dmesg.sh/tag/python.html</link>
       <pubDate>Wed, 15 Mar 2017 16:41:00 +0000</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
       <guid>https://blog.dmesg.sh/tag/python.html</guid>
       <description></description>
     </item>

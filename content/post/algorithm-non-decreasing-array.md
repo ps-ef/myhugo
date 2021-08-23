@@ -1,5 +1,5 @@
 +++
-author = "Tan Linh"
+author = "Linh Nguyen"
 
 date = 2017-12-06T23:26:00+07:00
 description = "Bài viết mở đầu cho chuỗi ngày try easy Algorithm của mình. Problem hôm nay cực kỳ đơn giản, đó là Non-descreasing array"

@@ -1,0 +1,3 @@
+[submodule "themes/hugo-injoker-theme"]
+	path = themes/hugo-injoker-theme
+	url = git@github.com:tanlinhnd/hugo-injoker-theme.git

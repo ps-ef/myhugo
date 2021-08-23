@@ -6,8 +6,8 @@
     <description>Recent content in Pages on dmesg.sh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>tanlinh.hust@gmail.com (Tan Linh)</managingEditor>
-    <webMaster>tanlinh.hust@gmail.com (Tan Linh)</webMaster>
+    <managingEditor>linh@dmesg.sh (Linh Nguyen)</managingEditor>
+    <webMaster>linh@dmesg.sh (Linh Nguyen)</webMaster>
     <lastBuildDate>Tue, 16 May 2017 13:51:01 +0700</lastBuildDate>
     
 	<atom:link href="https://blog.dmesg.sh/page/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +17,7 @@
       <title>Blog kỹ thuật nhà hàng xóm</title>
       <link>https://blog.dmesg.sh/friend-sites.html</link>
       <pubDate>Tue, 16 May 2017 13:51:01 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
       <guid>https://blog.dmesg.sh/friend-sites.html</guid>
       <description>Viết blog là cách cực kỳ hiệu quả để học và hệ thống hóa lại kiến thức của bản thân. Mình xin phép giới thiệu một số blog chất lượng để các bạn theo dõi, chắc chắn bạn sẽ học hỏi được rất nhiều đấy.
 Đến từ các thành viên của các cộng đồng &amp;ldquo;Rust Việt Nam&amp;rdquo;, &amp;ldquo;Ruby Việt Nam&amp;rdquo;, &amp;ldquo;Kipalog&amp;rdquo; và nhiều nơi khác.  Huytd&amp;rsquo;s Blog - https://thefullsnack.</description>
@@ -27,7 +27,7 @@
       <title>About me!</title>
       <link>https://blog.dmesg.sh/about-me.html</link>
       <pubDate>Fri, 10 Mar 2017 21:57:04 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
       <guid>https://blog.dmesg.sh/about-me.html</guid>
       <description>Chao xìn,
 Mình tên là Linh, hiện tại mình đang làm chân DevOps Engineer tại một công ty startup ở Hà Nội. Blog cũ của mình là .. À thực ra cũng không cần để làm gì cả ^^.

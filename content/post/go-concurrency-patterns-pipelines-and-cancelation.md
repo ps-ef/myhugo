@@ -1,5 +1,5 @@
 +++
-author = "Tan Linh"
+author = "Linh Nguyen"
 
 date = 2018-04-09T11:27:39+07:00
 description = ""
@@ -36,8 +36,8 @@ Giả sử như mình cần tính bình phương của mỗi số từ 1-1000 v�
 Đối chiếu với định nghĩa pipeline ở trên, chúng ta sẽ có 3 stage:
 
 * Stage 1: Ném lần lượt từng số integer của list 1-1000 vào inbound channel
-* Stage 2: Với mỗi số integer nhận được từ inbound channel, bình phương nó lên rồi ném vào outbound channel 
-* Stage 3: Nhận giá trị integer từ Stage 2 và print out. 
+* Stage 2: Với mỗi số integer nhận được từ inbound channel, bình phương nó lên rồi ném vào outbound channel
+* Stage 3: Nhận giá trị integer từ Stage 2 và print out.
 
 Và cuối cùng, code mẫu sẽ như sau:
 
@@ -85,7 +85,7 @@ func main() {
 }
 ```
 
-Đến đây các bạn đã hiểu idea của pipeline chưa nào? Chúng ta đi sang tiếp Fan-in và Fan-out nhé 
+Đến đây các bạn đã hiểu idea của pipeline chưa nào? Chúng ta đi sang tiếp Fan-in và Fan-out nhé
 
 # Fan-in, Fan-out
 

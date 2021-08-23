@@ -1,5 +1,5 @@
 +++
-author = "Tan Linh"
+author = "Linh Nguyen"
 
 date = 2018-03-14T22:20:08+07:00
 description = "Mình đã chuyển từ Neovim sang Spacemacs như thế nào"
@@ -16,7 +16,7 @@ Một năm trước, mình nghe theo lời đường mật Di cư sang Vim <sup>
 Sau một tuần sử dụng Spacemacs, mình thấy một số điểm như sau:
 
 - UI đẹp, nuột, rất giống `hắc cơ`
-- Cảm giác nhanh mà nuột hơn Neovim. Trừ việc startup time cực lâu nếu so với vim thì còn lại là tuyệt vời. Nếu muốn giảm thời gian startup time, bạn có thể tham khảo bài viết <sup>[[2]](#references)</sup> của lão Huytd 
+- Cảm giác nhanh mà nuột hơn Neovim. Trừ việc startup time cực lâu nếu so với vim thì còn lại là tuyệt vời. Nếu muốn giảm thời gian startup time, bạn có thể tham khảo bài viết <sup>[[2]](#references)</sup> của lão Huytd
 - Toàn bộ command sẽ bắt đầu bằng `leader key`. Mặc định là `SPC` (spacebar) khi sử dụng Vim style hoặc hybrid style, `M-m` khi sử dụng emacs style. Mình thấy điểm này khá hay khi toàn bộ command bắt nguồn từ một phím cố định, nếu bạn nhỡ quên một chút thôi thì đã có `Spacemacs root menu` gợi ý với giao diện cực kỳ trực quan. Bạn có thể xem ở screenshot bên dưới.
 
 ![Spacemacs root](https://i.imgur.com/cLhYhlw.png)
@@ -25,7 +25,7 @@ Sau một tuần sử dụng Spacemacs, mình thấy một số điểm như sau
 
 # Installation
 
-Cài đặt Spacemacs khá đơn giản, bạn cần Emacs version 24.4 hoặc cao hơn, sau đó clone repository của Spacemacs về là xong. 
+Cài đặt Spacemacs khá đơn giản, bạn cần Emacs version 24.4 hoặc cao hơn, sau đó clone repository của Spacemacs về là xong.
 
 ```
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
@@ -37,7 +37,7 @@ Mở emacs từ terminal và chờ Spacemacs hoàn thành phần cài đặt là
 
 # Migrate from Vim
 
-Về cơ bản, những concept như `mode`, `buffer`, `plugin` .v.v. bên Vim có thì Spacemacs hay nói đúng hơn là Emacs cũng có nhưng với một tên gọi khác. Anh em Vimmer có thể đọc ở bài viết Migration from Vim <sup>[[3]](#references)</sup> để hiểu rõ hơn. 
+Về cơ bản, những concept như `mode`, `buffer`, `plugin` .v.v. bên Vim có thì Spacemacs hay nói đúng hơn là Emacs cũng có nhưng với một tên gọi khác. Anh em Vimmer có thể đọc ở bài viết Migration from Vim <sup>[[3]](#references)</sup> để hiểu rõ hơn.
 
 Để bắt đầu cấu hình Spacemacs, bạn có thể dùng Vim edit file `~/.spacemacs` :troll:. Mình đùa thôi, bạn có thể sửa file `.spacemacs` ngay trong Spacemacs bằng tổ hợp phím `SPC f e d` và apply modifications bằng tổ hợp `SPC f e R`. Vô cùng tiện lợi.
 
@@ -74,13 +74,13 @@ dotspacemacs-configuration-layers
 
 Hiện tại, Spacemacs có hơn 150 layers <sup>[[4]](#references)</sup> chia làm 20 group. Với số lượng layer lớn như vậy, mình tin là thỏa mãn đại đa số nhu cầu của mọi người. Muốn cài đặt layer nào, bạn chỉ việc thêm nó vào block `dotspacemacs-configuration-layers` và apply để cài đặt là xong. Cực kỳ nhanh gọn phải khôngfo nào
 
-# Usage  
- 
-Nếu bạn không cấu hình linh tinh, mặc định Spacemacs có editing style là `vim`. Điều này có nghĩa là gì? Anh em Vimmer sẽ thấy thoải mái như ở nhà. Di chuyển, select, copy, paste, undo .. vân vân và vân vân dễ như ăn kẹo. 
+# Usage
+
+Nếu bạn không cấu hình linh tinh, mặc định Spacemacs có editing style là `vim`. Điều này có nghĩa là gì? Anh em Vimmer sẽ thấy thoải mái như ở nhà. Di chuyển, select, copy, paste, undo .. vân vân và vân vân dễ như ăn kẹo.
 
 [![https://gyazo.com/820e09e1d46e8b4a5fc8042cb3a6e7ab](https://i.gyazo.com/820e09e1d46e8b4a5fc8042cb3a6e7ab.gif)](https://gyazo.com/820e09e1d46e8b4a5fc8042cb3a6e7ab)
 
-Nếu bạn không phải là Vimmer hoặc lần đầu tiên sử dụng Spacemacs? Không sao cả, hãy tìm đọc bài viết "Làm quen với Vim trong 5 phút" <sup>[[5]](#references) </sup> ở phần References 
+Nếu bạn không phải là Vimmer hoặc lần đầu tiên sử dụng Spacemacs? Không sao cả, hãy tìm đọc bài viết "Làm quen với Vim trong 5 phút" <sup>[[5]](#references) </sup> ở phần References
 
 Khi đã làm quen với các thao tác cơ bản trong bài viết trên, chúng ta cùng tìm hiểu về `Helm` và `Projectile`. Bạn chắc chắn sẽ dành phần lớn thời gian làm việc với chúng đấy.
 
@@ -88,7 +88,7 @@ Khi đã làm quen với các thao tác cơ bản trong bài viết trên, chún
 
 Helm <sup>[[6]](#references)</sup> là một layer tiêu chuẩn mặc định của Spacemacs, vì vậy bạn không cần động tay chân thêm một giây nào nữa để cài đặt nó. Người anh em với `Helm` là `Ivy` nhưng thú thật mình chưa biết nó ngang dọc như nào nên cũng chẳng nói thêm gì được. Nói một cách chính xác, `Helm` là một `completion framework` và nếu dùng một mỹ từ dành cho `Helm` thì nó là bộ não của Spacemacs. Helm được dùng để manage buffer, projects, search results, configuration layers và hàng tá công việc khác..
 
-Ví dụ về vụ tìm kiếm file siêu nhanh, cho phép tìm kiếm đồng thời cả buffer và file. 
+Ví dụ về vụ tìm kiếm file siêu nhanh, cho phép tìm kiếm đồng thời cả buffer và file.
 
 [![https://gyazo.com/71d263102b40f3a956fcaff1eb7c5afc](https://i.gyazo.com/71d263102b40f3a956fcaff1eb7c5afc.gif)](https://gyazo.com/71d263102b40f3a956fcaff1eb7c5afc)
 
@@ -142,7 +142,7 @@ Mình xin phép liệt kê một số hotkeys mà mình thấy hữu ích:
 - `SPC w d` : Delete active window
 - `SPC m g g` : Go to definition
 
-Biển trời hotkey biết đâu là bờ, mình sẽ liên tục cập nhật list hotkeys để các bạn theo dõi. Với những bạn muốn trải nghiệm Vim, có thể tham khảo dotfiles <sup>[[7]](#references)</sup>  của mình. 
+Biển trời hotkey biết đâu là bờ, mình sẽ liên tục cập nhật list hotkeys để các bạn theo dõi. Với những bạn muốn trải nghiệm Vim, có thể tham khảo dotfiles <sup>[[7]](#references)</sup>  của mình.
 
 Cuối cùng, bài viết này chỉ duy nhất một mục đích là lôi kéo và rủ rê, mặc dù sau khi đọc lại bài viết mình chẳng thấy nó có gì bổ ích. Anh em quan tâm có thể comment bên dưới nhé. Rất mong nhận được góp ý từ anh em.
 
@@ -156,7 +156,7 @@ Many thanks,
 
 [3] [Migration from Vim](http://spacemacs.org/doc/VIMUSERS.html), Spacemacs
 
-[4] [Configuration Layers](http://spacemacs.org/layers/LAYERS.html), Spacemacs 
+[4] [Configuration Layers](http://spacemacs.org/layers/LAYERS.html), Spacemacs
 
 [5] Huytd, [Làm quen với vim trong 5 phút](https://kipalog.com/posts/Lam-quen-VIM-trong-5-phut), Kipalog
 

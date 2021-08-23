@@ -3,17 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://blog.dmesg.sh/tag/devops.html</loc>
-    <lastmod>2018-11-13T00:23:57+07:00</lastmod>
+    <loc>https://blog.dmesg.sh/post/design-of-the-unix-operating-system-general-overview-of-file-system.html</loc>
+    <lastmod>2021-08-17T23:53:22+07:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.dmesg.sh/</loc>
-    <lastmod>2018-11-13T00:23:57+07:00</lastmod>
+    <lastmod>2021-08-17T23:53:22+07:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.dmesg.sh/tag/linux.html</loc>
+    <lastmod>2021-08-17T23:53:22+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.dmesg.sh/tag/os.html</loc>
+    <lastmod>2021-08-17T23:53:22+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.dmesg.sh/post.html</loc>
+    <lastmod>2021-08-17T23:53:22+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.dmesg.sh/tag.html</loc>
+    <lastmod>2021-08-17T23:53:22+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.dmesg.sh/tag/unix.html</loc>
+    <lastmod>2021-08-17T23:53:22+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.dmesg.sh/tag/devops.html</loc>
     <lastmod>2018-11-13T00:23:57+07:00</lastmod>
   </url>
   
@@ -24,16 +49,6 @@
   
   <url>
     <loc>https://blog.dmesg.sh/tag/niceness.html</loc>
-    <lastmod>2018-11-13T00:23:57+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.dmesg.sh/post.html</loc>
-    <lastmod>2018-11-13T00:23:57+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.dmesg.sh/tag.html</loc>
     <lastmod>2018-11-13T00:23:57+07:00</lastmod>
   </url>
   

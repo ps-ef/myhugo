@@ -1,5 +1,5 @@
 +++
-author = "Tan Linh"
+author = "Linh Nguyen"
 date = "2017-05-08T16:16:30+07:00"
 description = "Dạo này công việc động chạm nhiều đến bash shell. Mình note lại một số điều mà mình sử dụng trong quá trình làm việc. "
 draft = false
@@ -9,7 +9,7 @@ title = "Some useful bash script"
 
 +++
 
-Dạo này công việc động chạm nhiều đến bash shell. Mình note lại một số điều mà mình sử dụng trong quá trình làm việc. 
+Dạo này công việc động chạm nhiều đến bash shell. Mình note lại một số điều mà mình sử dụng trong quá trình làm việc.
 
 ## 1. Array
 

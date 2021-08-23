@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on dmesg.sh</title>
+    <title>linux on dmesg.sh</title>
     <link>https://blog.dmesg.sh/tag/linux.html</link>
-    <description>Recent content in Linux on dmesg.sh</description>
+    <description>Recent content in linux on dmesg.sh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>tanlinh.hust@gmail.com (Tan Linh)</managingEditor>
-    <webMaster>tanlinh.hust@gmail.com (Tan Linh)</webMaster>
-    <lastBuildDate>Tue, 13 Nov 2018 00:23:57 +0700</lastBuildDate>
+    <managingEditor>linh@dmesg.sh (Linh Nguyen)</managingEditor>
+    <webMaster>linh@dmesg.sh (Linh Nguyen)</webMaster>
+    <lastBuildDate>Tue, 17 Aug 2021 23:53:22 +0700</lastBuildDate>
     
 	<atom:link href="https://blog.dmesg.sh/tag/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Design of the Unix Operating System: General Overview of Filesystem</title>
+      <link>https://blog.dmesg.sh/post/design-of-the-unix-operating-system-general-overview-of-file-system.html</link>
+      <pubDate>Tue, 17 Aug 2021 23:53:22 +0700</pubDate>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <guid>https://blog.dmesg.sh/post/design-of-the-unix-operating-system-general-overview-of-file-system.html</guid>
+      <description>Hi, lâu ngày quá. Thực sự thì lười lắm lắm, gần 3 năm rồi mình mới mở lại cái blog sau 2 lần đổi domain 😆
+Gần đây, trong một lần lang thang thì bắt gặp comment của anh huydx về cuốn &amp;ldquo;Design of The Unix Operating System&amp;rdquo;. Tiện lúc đang tìm job mới nên mình quyết tâm dành thời gian đọc và nghiên cứu sâu hơn về OS cũng như Kernel.</description>
+    </item>
+    
+    <item>
       <title>Understanding Priority on Linux Processes</title>
       <link>https://blog.dmesg.sh/post/understanding-priority-on-linux-processes.html</link>
       <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
       <guid>https://blog.dmesg.sh/post/understanding-priority-on-linux-processes.html</guid>
       <description>Một buổi sáng như bao ngày bình thường, mình thức dậy và tự hỏi: Hôm nay mình phải làm những việc gì nhỉ? Đối với một người dù không biết sắp xếp kế hoạch như mình thì những việc cơ bản sau sẽ được thực hiện:
  Vệ sinh cá nhân. Đánh răng, rửa mặt, tắm rửa Ăn sáng và đi làm Giải quyết từng task đang tồn đọng Nghe sếp chửi.</description>
@@ -27,7 +37,7 @@
       <title>Some useful bash script</title>
       <link>https://blog.dmesg.sh/post/til-some-useful-bash-script.html</link>
       <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
-      <author>tanlinh.hust@gmail.com (Tan Linh)</author>
+      <author>linh@dmesg.sh (Linh Nguyen)</author>
       <guid>https://blog.dmesg.sh/post/til-some-useful-bash-script.html</guid>
       <description>Dạo này công việc động chạm nhiều đến bash shell. Mình note lại một số điều mà mình sử dụng trong quá trình làm việc.
 1. Array Array[1] là kiểu dữ liệu cơ bản trong tất cả các ngôn ngữ lập trình (NNLT). Bash shell cũng hỗ trợ array và bạn có thể sử dụng bằng cách khai báo như sau:
