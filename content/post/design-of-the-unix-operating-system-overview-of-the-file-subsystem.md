@@ -104,10 +104,8 @@ Kiểm tra status của Nginx bằng `systemctl`, chúng ta thu được:
 
 Nginx sử dụng một Master Process và 1 vài Child Processes để handle requests. Trong đó:
 
-* Master process thực hiện quản lý các cấu hình, binding các port cần listen và create 1 số các child processes con. Có 3 loại process con như sau
-* Cache Loader process, run lúc startup để load disk-based cache vào memory
-* Cache Manager rocess chạy định kỳ và prune entries từ disk cache
-* Worker processes thực hiện handle network connections, read và write content vào disk cũng như communicate với upstream servers.
+* Master process thực hiện quản lý các cấu hình, binding các port cần listen và create 1 số các child processes con. Có 3 loại process con là Cache Manager, Cache Loader và Worker. Tuy nhiên chúng ta sẽ quan tâm đến Worker process
+* Worker processes thực hiện handle network connections, read & write content vào disk cũng như communicate với upstream servers.
 
 Và bỗng dưng trong đầu bạn lóe lên 1 câu hỏi. "Ủa, Master process quản lý binding port, làm thế nào mà Worker lại handle được network connection vậy?". Câu trả lời là file.
 
