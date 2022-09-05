@@ -44,18 +44,18 @@ disqus_identifier = "tanlinhnd"
 url = "logo.png"
 width = 50
 height = 50
-alt = "rbash - Nói ít thôi và đưa code đây"
+alt = "blog.dmesg.sh - Nói ít thôi và đưa code đây"
 
 [Author]
 name = "Linh Nguyen"
 email = "linh@dmesg.sh"
 about = "Mình là Linh - Một thằng cuồng Linux. Đừng ai nhắc đến Windows trước mặt mình nhé. Hehe"
 facebook = "#"
-github = "https://github.com/tanlinhnd"
-twitter = "@tanlinhnd"
-reddit = "https://www.reddit.com/user/wolverine_f1/"
-instagram = "https://www.instagram.com/tanlinhnd/"
-linkedin = "https://linkedin.com/in/tanlinhnd/"
+github = "https://github.com/ps-ef"
+twitter = "#"
+reddit = "https://www.reddit.com/user/liam_ng/"
+instagram = "#"
+linkedin = "#"
 
 [taxonomies]
 tag = "tag"
