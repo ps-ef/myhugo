@@ -6,8 +6,8 @@
     <description>Recent content in algorithm on Linh Nguyen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>linh@dmesg.sh (Linh Nguyen)</managingEditor>
-    <webMaster>linh@dmesg.sh (Linh Nguyen)</webMaster>
+    <managingEditor>hi@linh-ng.dev (Linh Nguyen)</managingEditor>
+    <webMaster>hi@linh-ng.dev (Linh Nguyen)</webMaster>
     <lastBuildDate>Wed, 06 Dec 2017 23:26:00 +0700</lastBuildDate>
     
 	<atom:link href="https://linh-ng.dev/tag/algorithm/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +17,7 @@
       <title>Algorithm 001: Non-descreasing Array</title>
       <link>https://linh-ng.dev/post/algorithm-001-non-descreasing-array.html</link>
       <pubDate>Wed, 06 Dec 2017 23:26:00 +0700</pubDate>
-      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <author>hi@linh-ng.dev (Linh Nguyen)</author>
       <guid>https://linh-ng.dev/post/algorithm-001-non-descreasing-array.html</guid>
       <description>Xin chào xin chào,
 Sau một thời gian dài ngụp lặn, tới hôm nay mình mới nổi. Thời gian vừa rồi khá bận vì nhà mình có thêm thành viên mới vô cùng lém lỉnh. Công việc thời gian qua không được happy cho lắm nên gần như mình chỉ chém gió trên #random là chính. Thực tình rất phí phạm thời gian.

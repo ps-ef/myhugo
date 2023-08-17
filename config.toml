@@ -37,7 +37,7 @@ description = "Nói ít thôi và đưa code đây"
 quote = "“Talk is cheap. Show me the code„"
 quote_author = "~ Linus Torvalds ~"
 copyright = "© 2017 linh-ng.dev"
-disqus_url = "https://dmesg.sh"
+disqus_url = "https://linh-ng.dev"
 disqus_identifier = "tanlinhnd"
 
 [params.logo]
@@ -48,7 +48,7 @@ alt = "linh-ng.dev - Nói ít thôi và đưa code đây"
 
 [Author]
 name = "Linh Nguyen"
-email = "linh@dmesg.sh"
+email = "hi@linh-ng.dev"
 about = "Mình là Linh - Một thằng cuồng Linux. Đừng ai nhắc đến Windows trước mặt mình nhé. Hehe"
 facebook = "#"
 github = "https://github.com/ps-ef"

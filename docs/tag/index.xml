@@ -6,18 +6,18 @@
     <description>Recent content in Tag on Linh Nguyen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>linh@dmesg.sh (Linh Nguyen)</managingEditor>
-    <webMaster>linh@dmesg.sh (Linh Nguyen)</webMaster>
+    <managingEditor>hi@linh-ng.dev (Linh Nguyen)</managingEditor>
+    <webMaster>hi@linh-ng.dev (Linh Nguyen)</webMaster>
     <lastBuildDate>Tue, 17 Aug 2021 23:53:22 +0700</lastBuildDate>
     
 	<atom:link href="https://linh-ng.dev/tag/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>linux</title>
+      <title>Linux</title>
       <link>https://linh-ng.dev/tag/linux.html</link>
       <pubDate>Tue, 17 Aug 2021 23:53:22 +0700</pubDate>
-      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <author>hi@linh-ng.dev (Linh Nguyen)</author>
       <guid>https://linh-ng.dev/tag/linux.html</guid>
       <description></description>
     </item>
@@ -26,7 +26,7 @@
       <title>os</title>
       <link>https://linh-ng.dev/tag/os.html</link>
       <pubDate>Tue, 17 Aug 2021 23:53:22 +0700</pubDate>
-      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <author>hi@linh-ng.dev (Linh Nguyen)</author>
       <guid>https://linh-ng.dev/tag/os.html</guid>
       <description></description>
     </item>
@@ -35,7 +35,7 @@
       <title>unix</title>
       <link>https://linh-ng.dev/tag/unix.html</link>
       <pubDate>Tue, 17 Aug 2021 23:53:22 +0700</pubDate>
-      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <author>hi@linh-ng.dev (Linh Nguyen)</author>
       <guid>https://linh-ng.dev/tag/unix.html</guid>
       <description></description>
     </item>
@@ -44,7 +44,7 @@
       <title>devops</title>
       <link>https://linh-ng.dev/tag/devops.html</link>
       <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
-      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <author>hi@linh-ng.dev (Linh Nguyen)</author>
       <guid>https://linh-ng.dev/tag/devops.html</guid>
       <description></description>
     </item>
@@ -53,7 +53,7 @@
       <title>nice value</title>
       <link>https://linh-ng.dev/tag/nice-value.html</link>
       <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
-      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <author>hi@linh-ng.dev (Linh Nguyen)</author>
       <guid>https://linh-ng.dev/tag/nice-value.html</guid>
       <description></description>
     </item>
@@ -62,7 +62,7 @@
       <title>niceness</title>
       <link>https://linh-ng.dev/tag/niceness.html</link>
       <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
-      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <author>hi@linh-ng.dev (Linh Nguyen)</author>
       <guid>https://linh-ng.dev/tag/niceness.html</guid>
       <description></description>
     </item>
@@ -71,7 +71,7 @@
       <title>neovim</title>
       <link>https://linh-ng.dev/tag/neovim.html</link>
       <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
-      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <author>hi@linh-ng.dev (Linh Nguyen)</author>
       <guid>https://linh-ng.dev/tag/neovim.html</guid>
       <description></description>
     </item>
@@ -80,16 +80,16 @@
       <title>spacemacs</title>
       <link>https://linh-ng.dev/tag/spacemacs.html</link>
       <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
-      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <author>hi@linh-ng.dev (Linh Nguyen)</author>
       <guid>https://linh-ng.dev/tag/spacemacs.html</guid>
       <description></description>
     </item>
     
     <item>
-      <title>vim</title>
+      <title>Vim</title>
       <link>https://linh-ng.dev/tag/vim.html</link>
       <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
-      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <author>hi@linh-ng.dev (Linh Nguyen)</author>
       <guid>https://linh-ng.dev/tag/vim.html</guid>
       <description></description>
     </item>
@@ -98,7 +98,7 @@
       <title>algorithm</title>
       <link>https://linh-ng.dev/tag/algorithm.html</link>
       <pubDate>Wed, 06 Dec 2017 23:26:00 +0700</pubDate>
-      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <author>hi@linh-ng.dev (Linh Nguyen)</author>
       <guid>https://linh-ng.dev/tag/algorithm.html</guid>
       <description></description>
     </item>
@@ -107,7 +107,7 @@
       <title>golang</title>
       <link>https://linh-ng.dev/tag/golang.html</link>
       <pubDate>Wed, 06 Dec 2017 23:26:00 +0700</pubDate>
-      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <author>hi@linh-ng.dev (Linh Nguyen)</author>
       <guid>https://linh-ng.dev/tag/golang.html</guid>
       <description></description>
     </item>
@@ -116,7 +116,7 @@
       <title>TIL</title>
       <link>https://linh-ng.dev/tag/til.html</link>
       <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
-      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <author>hi@linh-ng.dev (Linh Nguyen)</author>
       <guid>https://linh-ng.dev/tag/til.html</guid>
       <description></description>
     </item>
@@ -125,7 +125,7 @@
       <title>Python</title>
       <link>https://linh-ng.dev/tag/python.html</link>
       <pubDate>Wed, 15 Mar 2017 16:41:00 +0000</pubDate>
-      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <author>hi@linh-ng.dev (Linh Nguyen)</author>
       <guid>https://linh-ng.dev/tag/python.html</guid>
       <description></description>
     </item>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vim on Linh Nguyen&#39;s Blog</title>
+    <title>Vim on Linh Nguyen&#39;s Blog</title>
     <link>https://linh-ng.dev/tag/vim.html</link>
-    <description>Recent content in vim on Linh Nguyen&#39;s Blog</description>
+    <description>Recent content in Vim on Linh Nguyen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>linh@dmesg.sh (Linh Nguyen)</managingEditor>
-    <webMaster>linh@dmesg.sh (Linh Nguyen)</webMaster>
+    <managingEditor>hi@linh-ng.dev (Linh Nguyen)</managingEditor>
+    <webMaster>hi@linh-ng.dev (Linh Nguyen)</webMaster>
     <lastBuildDate>Wed, 14 Mar 2018 22:20:08 +0700</lastBuildDate>
     
 	<atom:link href="https://linh-ng.dev/tag/vim/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +17,7 @@
       <title>Moving from Neovim to Spacemacs</title>
       <link>https://linh-ng.dev/post/moving-from-neovim-to-spacemacs.html</link>
       <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
-      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <author>hi@linh-ng.dev (Linh Nguyen)</author>
       <guid>https://linh-ng.dev/post/moving-from-neovim-to-spacemacs.html</guid>
       <description>Một năm trước, mình nghe theo lời đường mật Di cư sang Vim [1] của CTO. Sau một năm xài Vim (thực ra là Neovim) một cách nghiêm túc, lần này mình lại bị dụ dỗ sang Spacemacs. Với những ai chưa biết, Spacemacs là một distribution của Emacs với description là The best editor is neither Emacs nor Vim, it&#39;s Emacs and Vim! cho bạn một trải nghiệm Emacs rất tuyệt vời, riêng Vimmer sẽ cảm giác thân thuộc như ở nhà.</description>
     </item>
@@ -26,7 +26,7 @@
       <title>Some useful bash script</title>
       <link>https://linh-ng.dev/post/til-some-useful-bash-script.html</link>
       <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
-      <author>linh@dmesg.sh (Linh Nguyen)</author>
+      <author>hi@linh-ng.dev (Linh Nguyen)</author>
       <guid>https://linh-ng.dev/post/til-some-useful-bash-script.html</guid>
       <description>Dạo này công việc động chạm nhiều đến bash shell. Mình note lại một số điều mà mình sử dụng trong quá trình làm việc.
 1. Array Array[1] là kiểu dữ liệu cơ bản trong tất cả các ngôn ngữ lập trình (NNLT). Bash shell cũng hỗ trợ array và bạn có thể sử dụng bằng cách khai báo như sau:

@@ -1,6 +1,6 @@
 baseurl = "http://127.0.0.1:1313/"
 languageCode = "en-us"
-title = "dmesg.sh"
+title = "linh-ng.dev"
 theme = "hugo-redlounge"
 googleAnalytics = "UA-75596542-1"
 disqusShortname = ""
@@ -29,17 +29,17 @@ url = "/tag/linh-ba-tinh/"
 
 [params]
 description = "Ghi chép linh ba tinh"
-copyright = "© 2017 dmesg.sh"
+copyright = "© 2017 linh-ng.dev"
 
 [params.logo]
 url = "logo.jpg"
 width = 50
 height = 50
-alt = "dmesg.sh"
+alt = "linh-ng.dev"
 
 [Author]
 name = "Linh Nguyen"
-email = "linh@dmesg.sh"
+email = "linh@linh-ng.dev"
 about = "Mình là Linh - Một thằng cuồng Linux. Đừng ai nhắc đến Windows trước mặt mình nhé. Hehe"
 facebook = "https://facebook.com/tanlinh.nd"
 github = "https://github.com/tanlinhnd"
