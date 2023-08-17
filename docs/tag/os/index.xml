@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>os on Linh Nguyen&#39;s Blog</title>
-    <link>https://blog.dmesg.sh/tag/os.html</link>
+    <link>https://linh-ng.dev/tag/os.html</link>
     <description>Recent content in os on Linh Nguyen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,15 +10,15 @@
     <webMaster>linh@dmesg.sh (Linh Nguyen)</webMaster>
     <lastBuildDate>Tue, 17 Aug 2021 23:53:22 +0700</lastBuildDate>
     
-	<atom:link href="https://blog.dmesg.sh/tag/os/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://linh-ng.dev/tag/os/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Design of the Unix Operating System: General Overview of Filesystem</title>
-      <link>https://blog.dmesg.sh/post/design-of-the-unix-operating-system-general-overview-of-file-system.html</link>
+      <link>https://linh-ng.dev/post/design-of-the-unix-operating-system-general-overview-of-file-system.html</link>
       <pubDate>Tue, 17 Aug 2021 23:53:22 +0700</pubDate>
       <author>linh@dmesg.sh (Linh Nguyen)</author>
-      <guid>https://blog.dmesg.sh/post/design-of-the-unix-operating-system-general-overview-of-file-system.html</guid>
+      <guid>https://linh-ng.dev/post/design-of-the-unix-operating-system-general-overview-of-file-system.html</guid>
       <description>Hi, lâu ngày quá. Thực sự thì lười lắm lắm, gần 3 năm rồi mình mới mở lại cái blog sau 2 lần đổi domain 😆
 Gần đây, trong một lần lang thang thì bắt gặp comment của anh huydx về cuốn &amp;ldquo;Design of The Unix Operating System&amp;rdquo;. Tiện lúc đang tìm job mới nên mình quyết tâm dành thời gian đọc và nghiên cứu sâu hơn về OS cũng như Kernel.</description>
     </item>

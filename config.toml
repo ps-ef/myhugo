@@ -1,4 +1,4 @@
-baseurl = "https://blog.dmesg.sh/"
+baseurl = "https://linh-ng.dev/"
 languageCode = "en-us"
 title = "Linh Nguyen's Blog"
 theme = "hugo-injoker-theme"
@@ -27,7 +27,7 @@ name = "Database"
 url = "/tag/database"
 [[menu.main]]
 name = "Resume"
-url = "https://blog.dmesg.sh/LinhNguyen_DevOps_Resume.pdf"
+url = "https://linh-ng.dev/LinhNguyen_DevOps_Resume.pdf"
 [[menu.main]]
 name = "About me"
 url = "/about-me.html"
@@ -36,7 +36,7 @@ url = "/about-me.html"
 description = "Nói ít thôi và đưa code đây"
 quote = "“Talk is cheap. Show me the code„"
 quote_author = "~ Linus Torvalds ~"
-copyright = "© 2017 dmesg.sh"
+copyright = "© 2017 linh-ng.dev"
 disqus_url = "https://dmesg.sh"
 disqus_identifier = "tanlinhnd"
 
@@ -44,7 +44,7 @@ disqus_identifier = "tanlinhnd"
 url = "logo.png"
 width = 50
 height = 50
-alt = "blog.dmesg.sh - Nói ít thôi và đưa code đây"
+alt = "linh-ng.dev - Nói ít thôi và đưa code đây"
 
 [Author]
 name = "Linh Nguyen"

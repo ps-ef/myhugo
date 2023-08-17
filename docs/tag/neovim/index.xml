@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>neovim on Linh Nguyen&#39;s Blog</title>
-    <link>https://blog.dmesg.sh/tag/neovim.html</link>
+    <link>https://linh-ng.dev/tag/neovim.html</link>
     <description>Recent content in neovim on Linh Nguyen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,15 +10,15 @@
     <webMaster>linh@dmesg.sh (Linh Nguyen)</webMaster>
     <lastBuildDate>Wed, 14 Mar 2018 22:20:08 +0700</lastBuildDate>
     
-	<atom:link href="https://blog.dmesg.sh/tag/neovim/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://linh-ng.dev/tag/neovim/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Moving from Neovim to Spacemacs</title>
-      <link>https://blog.dmesg.sh/post/moving-from-neovim-to-spacemacs.html</link>
+      <link>https://linh-ng.dev/post/moving-from-neovim-to-spacemacs.html</link>
       <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
       <author>linh@dmesg.sh (Linh Nguyen)</author>
-      <guid>https://blog.dmesg.sh/post/moving-from-neovim-to-spacemacs.html</guid>
+      <guid>https://linh-ng.dev/post/moving-from-neovim-to-spacemacs.html</guid>
       <description>Một năm trước, mình nghe theo lời đường mật Di cư sang Vim [1] của CTO. Sau một năm xài Vim (thực ra là Neovim) một cách nghiêm túc, lần này mình lại bị dụ dỗ sang Spacemacs. Với những ai chưa biết, Spacemacs là một distribution của Emacs với description là The best editor is neither Emacs nor Vim, it&#39;s Emacs and Vim! cho bạn một trải nghiệm Emacs rất tuyệt vời, riêng Vimmer sẽ cảm giác thân thuộc như ở nhà.</description>
     </item>
     

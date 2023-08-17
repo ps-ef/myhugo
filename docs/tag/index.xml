@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tag on Linh Nguyen&#39;s Blog</title>
-    <link>https://blog.dmesg.sh/tag.html</link>
+    <link>https://linh-ng.dev/tag.html</link>
     <description>Recent content in Tag on Linh Nguyen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,123 +10,123 @@
     <webMaster>linh@dmesg.sh (Linh Nguyen)</webMaster>
     <lastBuildDate>Tue, 17 Aug 2021 23:53:22 +0700</lastBuildDate>
     
-	<atom:link href="https://blog.dmesg.sh/tag/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://linh-ng.dev/tag/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>linux</title>
-      <link>https://blog.dmesg.sh/tag/linux.html</link>
+      <link>https://linh-ng.dev/tag/linux.html</link>
       <pubDate>Tue, 17 Aug 2021 23:53:22 +0700</pubDate>
       <author>linh@dmesg.sh (Linh Nguyen)</author>
-      <guid>https://blog.dmesg.sh/tag/linux.html</guid>
+      <guid>https://linh-ng.dev/tag/linux.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>os</title>
-      <link>https://blog.dmesg.sh/tag/os.html</link>
+      <link>https://linh-ng.dev/tag/os.html</link>
       <pubDate>Tue, 17 Aug 2021 23:53:22 +0700</pubDate>
       <author>linh@dmesg.sh (Linh Nguyen)</author>
-      <guid>https://blog.dmesg.sh/tag/os.html</guid>
+      <guid>https://linh-ng.dev/tag/os.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>unix</title>
-      <link>https://blog.dmesg.sh/tag/unix.html</link>
+      <link>https://linh-ng.dev/tag/unix.html</link>
       <pubDate>Tue, 17 Aug 2021 23:53:22 +0700</pubDate>
       <author>linh@dmesg.sh (Linh Nguyen)</author>
-      <guid>https://blog.dmesg.sh/tag/unix.html</guid>
+      <guid>https://linh-ng.dev/tag/unix.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>devops</title>
-      <link>https://blog.dmesg.sh/tag/devops.html</link>
+      <link>https://linh-ng.dev/tag/devops.html</link>
       <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
       <author>linh@dmesg.sh (Linh Nguyen)</author>
-      <guid>https://blog.dmesg.sh/tag/devops.html</guid>
+      <guid>https://linh-ng.dev/tag/devops.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>nice value</title>
-      <link>https://blog.dmesg.sh/tag/nice-value.html</link>
+      <link>https://linh-ng.dev/tag/nice-value.html</link>
       <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
       <author>linh@dmesg.sh (Linh Nguyen)</author>
-      <guid>https://blog.dmesg.sh/tag/nice-value.html</guid>
+      <guid>https://linh-ng.dev/tag/nice-value.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>niceness</title>
-      <link>https://blog.dmesg.sh/tag/niceness.html</link>
+      <link>https://linh-ng.dev/tag/niceness.html</link>
       <pubDate>Tue, 13 Nov 2018 00:23:57 +0700</pubDate>
       <author>linh@dmesg.sh (Linh Nguyen)</author>
-      <guid>https://blog.dmesg.sh/tag/niceness.html</guid>
+      <guid>https://linh-ng.dev/tag/niceness.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>neovim</title>
-      <link>https://blog.dmesg.sh/tag/neovim.html</link>
+      <link>https://linh-ng.dev/tag/neovim.html</link>
       <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
       <author>linh@dmesg.sh (Linh Nguyen)</author>
-      <guid>https://blog.dmesg.sh/tag/neovim.html</guid>
+      <guid>https://linh-ng.dev/tag/neovim.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>spacemacs</title>
-      <link>https://blog.dmesg.sh/tag/spacemacs.html</link>
+      <link>https://linh-ng.dev/tag/spacemacs.html</link>
       <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
       <author>linh@dmesg.sh (Linh Nguyen)</author>
-      <guid>https://blog.dmesg.sh/tag/spacemacs.html</guid>
+      <guid>https://linh-ng.dev/tag/spacemacs.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>vim</title>
-      <link>https://blog.dmesg.sh/tag/vim.html</link>
+      <link>https://linh-ng.dev/tag/vim.html</link>
       <pubDate>Wed, 14 Mar 2018 22:20:08 +0700</pubDate>
       <author>linh@dmesg.sh (Linh Nguyen)</author>
-      <guid>https://blog.dmesg.sh/tag/vim.html</guid>
+      <guid>https://linh-ng.dev/tag/vim.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>algorithm</title>
-      <link>https://blog.dmesg.sh/tag/algorithm.html</link>
+      <link>https://linh-ng.dev/tag/algorithm.html</link>
       <pubDate>Wed, 06 Dec 2017 23:26:00 +0700</pubDate>
       <author>linh@dmesg.sh (Linh Nguyen)</author>
-      <guid>https://blog.dmesg.sh/tag/algorithm.html</guid>
+      <guid>https://linh-ng.dev/tag/algorithm.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>https://blog.dmesg.sh/tag/golang.html</link>
+      <link>https://linh-ng.dev/tag/golang.html</link>
       <pubDate>Wed, 06 Dec 2017 23:26:00 +0700</pubDate>
       <author>linh@dmesg.sh (Linh Nguyen)</author>
-      <guid>https://blog.dmesg.sh/tag/golang.html</guid>
+      <guid>https://linh-ng.dev/tag/golang.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>TIL</title>
-      <link>https://blog.dmesg.sh/tag/til.html</link>
+      <link>https://linh-ng.dev/tag/til.html</link>
       <pubDate>Mon, 08 May 2017 16:16:30 +0700</pubDate>
       <author>linh@dmesg.sh (Linh Nguyen)</author>
-      <guid>https://blog.dmesg.sh/tag/til.html</guid>
+      <guid>https://linh-ng.dev/tag/til.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>https://blog.dmesg.sh/tag/python.html</link>
+      <link>https://linh-ng.dev/tag/python.html</link>
       <pubDate>Wed, 15 Mar 2017 16:41:00 +0000</pubDate>
       <author>linh@dmesg.sh (Linh Nguyen)</author>
-      <guid>https://blog.dmesg.sh/tag/python.html</guid>
+      <guid>https://linh-ng.dev/tag/python.html</guid>
       <description></description>
     </item>
     
