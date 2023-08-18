@@ -18,8 +18,7 @@ Với bạn nào thắc mắc thì mình sử dụng [Hugo](https://gohugo.io/) 
 
 # Bạn có thể tìm mình ở:
 
-- [Github](https://github.com/tanlinhnd)
-- [Instagram](https://instagram.com/tanlinhnd)
+- [Github](https://github.com/ps-ef)
 - [Linkedin](https://linkedin.com/in/tanlinhnd/)
 
 Cảm ơn vì bạn đã chịu khó đọc đến đây :troll:
